@@ -169,11 +169,16 @@ jobs:
             --prerelease \
             ${{ runner.temp }}/release-assets/*
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
-        with:
-          ref: gh-pages
-          path: gh-pages
+      - name: Checkout or create gh-pages branch
+        run: | 
+          mkdir -p gh-pages
+          cd gh-pages
+          git init
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote add origin "https://github.com/${{ github.repository }}.git"
+          git fetch origin gh-pages 2>/dev/null || git checkout --orphan gh-pages
+          cd ..
 
       - name: Update README with latest mobile build links
         run: |
