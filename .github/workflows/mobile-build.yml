@@ -262,4 +262,4 @@ jobs:
             exit 0
           fi
           git commit -m "Update mobile download links for ${{ needs.prepare.outputs.version }}"
-          git push
+          git push --set-upstream origin gh-pages
