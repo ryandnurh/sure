@@ -1,0 +1,12 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        rule:
+          min_actions: harus memiliki setidaknya satu tindakan
+          duplicate_actions: Aturan tidak boleh punya aksi duplikat %{types}
+          nested_conditions: Kondisi majemuk tidak bisa disarangkan
+  rule:
+    conditions:
+      unsupported_label: Tidak didukung (%{type})

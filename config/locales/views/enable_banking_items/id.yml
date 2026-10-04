@@ -1,0 +1,115 @@
+---
+id:
+  enable_banking_items:
+    errors:
+      api_error: Terjadi kesalahan komunikasi dengan bank.
+      network_unreachable: Layanan perbankan untuk sementara tidak bisa dijangkau. Coba lagi nanti.
+      session_invalid: Sesi kedaluwarsa. Hubungkan ulang bank Anda.
+      unexpected: Terjadi kesalahan tak terduga saat sinkronisasi.
+    authorize:
+      authorization_failed: 'Gagal memulai otorisasi: %{message}'
+      bank_required: Pilih bank.
+      invalid_redirect: URL otorisasi yang diterima tidak valid. Coba lagi.
+      redirect_uri_not_allowed: Redirect tidak diizinkan. Konfigurasikan `%{callback_url}` di pengaturan aplikasi Enable Banking Anda.
+      unexpected_error: Terjadi kesalahan tak terduga. Silakan coba lagi.
+    callback:
+      authorization_error: Otorisasi gagal
+      invalid_callback: Parameter callback tidak valid.
+      item_not_found: Koneksi tidak ditemukan.
+      session_failed: Gagal menyelesaikan otorisasi
+      success: Berhasil terhubung ke bank kamu. Akun-akun kamu sedang disinkronkan.
+      unexpected_error: Terjadi kesalahan tak terduga. Silakan coba lagi.
+    complete_account_setup:
+      all_skipped: Semua akun dilewati. Kamu bisa menyiapkannya nanti di halaman akun.
+      no_accounts: Tidak ada akun yang tersedia untuk diatur.
+      success: Berhasil membuat %{count} akun!
+    create:
+      success: Konfigurasi Enable Banking berhasil.
+    destroy:
+      success: Koneksi Enable Banking telah diantrekan untuk dihapus.
+    link_accounts:
+      already_linked: Akun yang dipilih sudah ditautkan.
+      link_failed: Gagal menautkan akun
+      no_accounts_selected: Tidak ada akun yang dipilih.
+      no_session: Tidak ada koneksi Enable Banking yang aktif. Hubungkan ke bank terlebih dahulu.
+      success: Berhasil menautkan %{count} akun.
+    link_existing_account:
+      success: Akun berhasil ditautkan ke Enable Banking
+      errors:
+        only_manual: Hanya akun manual yang dapat ditautkan
+        invalid_enable_banking_account: Akun Enable Banking yang dipilih tidak valid
+    enable_banking_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      provider_name: Aktifkan Perbankan
+      syncing: Menyinkronkan...
+      reconnect: Hubungkan ulang
+      last_synced: Terakhir disinkronkan %{time} lalu
+      never_synced: Belum pernah disinkronkan
+      update: Perbarui
+      delete: Hapus
+      setup_needed: Butuh pengaturan
+      setup_needed_description:
+        one: 1 akun yang diimpor dari Enable Banking perlu disiapkan
+        other: '%{count} akun yang diimpor dari Enable Banking perlu disiapkan'
+      set_up_accounts: Siapkan akun
+      no_accounts_found: Tidak ada akun yang ditemukan
+      no_accounts_found_description: Tidak ada akun yang ditemukan dari Enable Banking. Coba sinkronisasi lagi.
+    select_existing_account:
+      title: Tautkan akun Enable Banking
+      all_linked: Semua akun Enable Banking sepertinya sudah tertaut.
+      try_after_sync: Kalau kamu baru saja menghubungkan atau menyinkronkan, coba lagi setelah sinkronisasi selesai.
+      unlink_to_move: Untuk menautkan akun lain, lepaskan dulu tautannya dari menu aksi akun.
+      balance: Saldo
+      link: Tautan
+      cancel: Batal
+    setup_accounts:
+      title: Siapkan Akun Enable Banking Anda
+      header_subtitle: Pilih tipe akun yang tepat untuk akun-akun imporanmu
+      choose_account_type: 'Pilih tipe akun yang tepat untuk tiap akun Enable Banking:'
+      historical_data_range: 'Rentang Data Historis:'
+      sync_start_date_label: 'Mulai sinkronisasi transaksi dari:'
+      sync_start_date_help: Pilih seberapa jauh ke belakang riwayat transaksi yang ingin disinkronkan. Maksimal 2 tahun riwayat tersedia.
+      account_type_label: 'Tipe Akun:'
+      balance: Saldo
+      create_accounts: Buat Akun-akun
+      creating_accounts: Membuat Akun...
+      cancel: Batal
+    new:
+      link_enable_banking_title: Tautkan Enable Banking
+      session_expired: Sesi kedaluwarsa - perlu otorisasi ulang
+      connected_bank: Bank Terhubung
+      session_expires: Sesi berakhir
+      unknown: Tidak diketahui
+      connection: Koneksi
+      configured: Terkonfigurasi
+      ready_to_connect: Siap menghubungkan bank
+      sync: Sinkron
+      reconnect: Hubungkan ulang
+      connect_bank: Hubungkan Bank
+      remove_confirm: Yakin ingin menghapus koneksi ini?
+      remove: Hapus
+      add_connection: Tambah Koneksi
+      not_configured: Koneksi Enable Banking belum dikonfigurasi
+      not_configured_description: Sebelum menautkan akun Enable Banking, kamu perlu mengonfigurasi koneksi Enable Banking-mu.
+      setup_steps_title: 'Langkah Pengaturan:'
+      setup_step_1_html: Buka <strong>Pengaturan → Penyedia</strong>
+      setup_step_2_html: Cari bagian <strong>Enable Banking</strong>
+      setup_step_3: Masukkan kredensial Enable Banking-mu
+      setup_step_4: Kembali ke sini untuk menautkan akun Anda
+      go_to_provider_settings: Buka Pengaturan Penyedia
+    reauthorize:
+      invalid_redirect: URL otorisasi yang diterima tidak valid. Coba lagi.
+      reauthorization_failed: Otorisasi ulang gagal
+    select_bank:
+      beta_label: Beta
+      cancel: Batal
+      check_country: Periksa pengaturan kode negara Anda.
+      credentials_required: Konfigurasikan dulu kredensial Enable Banking Anda.
+      description: Pilih bank yang ingin dihubungkan ke akun Anda.
+      no_banks: Tidak ada bank yang tersedia untuk negara/wilayah ini.
+      no_search_results: Tidak ada bank yang cocok dengan pencarian Anda.
+      search_label: Cari bank Anda
+      search_placeholder: Cari bank Anda...
+      title: Pilih Bank Anda
+    update:
+      success: Konfigurasi Enable Banking diperbarui.

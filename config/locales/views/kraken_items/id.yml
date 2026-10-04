@@ -1,0 +1,85 @@
+---
+id:
+  kraken_items:
+    provider_connection:
+      default_name: Kraken
+      default_description: Tautkan ke akun exchange Kraken
+      name: Kraken - %{name}
+      description: Tautkan ke %{name}
+    create:
+      default_name: Kraken
+      success: Berhasil terhubung ke Kraken. Akun exchange kamu sedang disinkronkan.
+    update:
+      success: Berhasil memperbarui koneksi Kraken.
+    destroy:
+      success: Koneksi Kraken dijadwalkan untuk dihapus.
+    select_accounts:
+      select_connection: Pilih koneksi Kraken di Pengaturan Provider.
+      no_credentials_configured: Tambahkan kredensial API Kraken sebelum menyiapkan akun.
+    link_accounts:
+      select_connection: Pilih koneksi Kraken sebelum menautkan akun.
+    select_existing_account:
+      title: Tautkan Akun Kraken
+      no_accounts_found: Tidak ada akun Kraken yang ditemukan.
+      wait_for_sync: Tunggu Kraken selesai menyinkronkan.
+      check_provider_health: Pastikan kredensial API Kraken-mu valid.
+      link: Tautan
+      cancel: Batal
+    link_existing_account:
+      success: Berhasil terhubung ke akun Kraken
+      select_connection: Pilih koneksi Kraken sebelum menautkan akun.
+      errors:
+        only_manual: Hanya akun bursa kripto manual tanpa tautan penyedia yang dapat ditautkan ke Kraken
+        invalid_kraken_account: Akun Kraken tidak valid
+        kraken_account_already_linked: Akun Kraken ini sudah ditautkan
+    setup_accounts:
+      title: Impor Akun Kraken
+      subtitle: Pilih akun bursa untuk dipantau
+      instructions: Kraken mengimpor satu akun exchange kripto gabungan untuk koneksi ini, hanya dengan kepemilikan dan fill trading spot.
+      no_accounts: Semua akun Kraken sudah diimpor.
+      accounts_count:
+        one: '%{count} akun tersedia'
+        other: '%{count} akun tersedia'
+      select_all: Pilih semua
+      import_selected: Impor yang Dipilih
+      cancel: Batal
+      creating: Mengimpor...
+    complete_account_setup:
+      success:
+        one: '%{count} akun diimpor'
+        other: '%{count} akun diimpor'
+      none_selected: Tidak ada akun yang dipilih
+      no_accounts: Tidak ada akun untuk diimpor
+    kraken_item:
+      provider_name: Kraken
+      syncing: Menyinkronkan...
+      reconnect: Kredensial perlu diperbarui
+      deletion_in_progress: Menghapus...
+      sync_status:
+        no_accounts: Tidak ada akun yang ditemukan
+        all_synced:
+          one: '%{count} akun tersinkron'
+          other: '%{count} akun tersinkron'
+        partial_sync: '%{linked_count} tersinkron, %{unlinked_count} perlu disiapkan'
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      status_never: Belum pernah disinkronkan
+      delete: Hapus
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_message: Akun exchange Kraken Anda akan muncul di sini setelah sinkronisasi.
+      setup_needed: Akun siap diimpor
+      setup_description: Impor koneksi Kraken ini sebagai akun exchange kripto.
+      setup_action: Impor Akun
+      import_accounts_menu: Impor Akun
+      stale_rate_warning: Saldo bersifat perkiraan karena kurs pasti untuk %{date} tidak tersedia. Akan diperbarui pada sinkronisasi berikutnya.
+  kraken_item:
+    syncer:
+      checking_credentials: Mengecek kredensial...
+      credentials_invalid: Kredensial API Kraken tidak valid. Periksa API key dan secret-mu.
+      importing_accounts: Mengimpor akun dari Kraken...
+      checking_configuration: Mengecek konfigurasi akun...
+      accounts_need_setup:
+        one: '%{count} akun perlu disiapkan'
+        other: '%{count} akun perlu disiapkan'
+      processing_accounts: Memproses data akun...
+      calculating_balances: Menghitung saldo...

@@ -1,0 +1,92 @@
+---
+id:
+  coinspot_items:
+    provider_connection:
+      default_name: CoinSpot
+      default_description: Tautkan ke akun exchange CoinSpot
+      name: CoinSpot - %{name}
+      description: Tautkan ke %{name}
+    create:
+      default_name: CoinSpot
+      success: Berhasil terhubung ke CoinSpot. Akun exchange kamu sedang disinkronkan.
+    update:
+      success: Berhasil memperbarui koneksi CoinSpot.
+    destroy:
+      success: Koneksi CoinSpot dijadwalkan untuk dihapus.
+      unlink_failed: Tidak bisa memutuskan koneksi CoinSpot
+    select_accounts:
+      select_connection: Pilih koneksi CoinSpot di Pengaturan Provider.
+      no_credentials_configured: Tambahkan kredensial API CoinSpot sebelum menyiapkan akun.
+    link_accounts:
+      select_connection: Pilih koneksi CoinSpot sebelum menautkan akun.
+    select_existing_account:
+      title: Tautkan Akun CoinSpot
+      no_accounts_found: Tidak ada akun CoinSpot yang ditemukan.
+      wait_for_sync: Tunggu CoinSpot selesai menyinkronkan.
+      check_provider_health: Pastikan kredensial API CoinSpot-mu valid.
+      link: Tautan
+      cancel: Batal
+    link_existing_account:
+      success: Berhasil terhubung ke akun CoinSpot
+      select_connection: Pilih koneksi CoinSpot sebelum menautkan akun.
+      errors:
+        only_manual: Hanya akun bursa kripto manual tanpa tautan penyedia yang dapat ditautkan ke CoinSpot
+        invalid_coinspot_account: Akun CoinSpot tidak valid
+        coinspot_account_already_linked: Akun CoinSpot ini sudah ditautkan
+    setup_accounts:
+      title: Impor Akun CoinSpot
+      subtitle: Pilih akun bursa untuk dipantau
+      instructions: CoinSpot mengimpor satu akun exchange Kripto gabungan untuk koneksi ini, berisi saldo, nilai AUD, transfer, setoran, penarikan, dan riwayat order.
+      no_accounts: Semua akun CoinSpot sudah diimpor.
+      accounts_count:
+        one: '%{count} akun tersedia'
+        other: '%{count} akun tersedia'
+      select_all: Pilih semua
+      import_selected: Impor yang Dipilih
+      cancel: Batal
+      creating: Mengimpor...
+    complete_account_setup:
+      success:
+        one: '%{count} akun diimpor'
+        other: '%{count} akun diimpor'
+      none_selected: Tidak ada akun yang dipilih
+      no_accounts: Tidak ada akun untuk diimpor
+      setup_failed:
+        one: Gagal mengimpor %{count} akun
+        other: Gagal mengimpor %{count} akun
+    coinspot_item:
+      provider_name: CoinSpot
+      syncing: Menyinkronkan...
+      reconnect: Kredensial perlu diperbarui
+      deletion_in_progress: Menghapus...
+      sync_status:
+        no_accounts: Tidak ada akun yang ditemukan
+        all_synced:
+          one: '%{count} akun tersinkron'
+          other: '%{count} akun tersinkron'
+        partial_sync: '%{linked_count} tersinkron, %{unlinked_count} perlu disiapkan'
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      status_never: Belum pernah disinkronkan
+      delete: Hapus
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_message: Akun exchange CoinSpot Anda akan muncul di sini setelah sinkronisasi.
+      setup_needed: Akun siap diimpor
+      setup_description: Impor koneksi CoinSpot ini sebagai akun exchange kripto.
+      setup_action: Impor Akun
+      import_accounts_menu: Impor Akun
+      stale_rate_warning: Saldo bersifat perkiraan karena kurs pasti untuk %{date} tidak tersedia. Akan diperbarui pada sinkronisasi berikutnya.
+  coinspot_item:
+    syncer:
+      checking_credentials: Mengecek kredensial...
+      credentials_invalid: Kredensial API CoinSpot tidak valid. Periksa API key dan secret-mu.
+      importing_accounts: Mengimpor akun dari CoinSpot...
+      checking_configuration: Mengecek konfigurasi akun...
+      accounts_need_setup:
+        one: '%{count} akun perlu disiapkan'
+        other: '%{count} akun perlu disiapkan'
+      processing_accounts: Memproses data akun...
+      processing_failed:
+        one: '%{count} akun CoinSpot gagal diproses'
+        other: '%{count} akun CoinSpot gagal diproses'
+      calculating_balances: Menghitung saldo...

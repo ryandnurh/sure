@@ -1,0 +1,20 @@
+---
+id:
+  activerecord:
+    attributes:
+      goal_pledge:
+        amount: Jumlah
+        currency: Mata Uang
+        account: Akun
+        kind: Jenis
+        status: Status
+        expires_at: Kedaluwarsa pada
+    errors:
+      models:
+        goal_pledge:
+          attributes:
+            account:
+              must_be_linked_to_goal: Pilih salah satu akun yang terhubung ke tujuan ini.
+            currency:
+              must_match_goal: Mata uang pledge harus sama dengan mata uang target.
+          duplicate_open_pledge: Anda sudah memiliki komitmen terbuka untuk jumlah ini di akun ini. Batalkan atau perpanjang yang sudah ada sebelum mencatat yang baru.

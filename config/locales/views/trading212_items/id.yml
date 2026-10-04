@@ -1,0 +1,102 @@
+---
+id:
+  providers:
+    trading212:
+      name: Trading 212
+      connection_description: Hubungkan akun investasi Trading 212 via API key
+      institution_name: Trading 212
+  trading212_items:
+    defaults:
+      name: Trading 212
+    trading212_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      environment_label_live: Akun live
+      environment_label_demo: Akun demo
+      syncing: Menyinkronkan
+      requires_update: Kunci API perlu perhatian
+      error: Error
+      synced: Tersinkron %{time} yang lalu. %{summary}.
+      never_synced: Belum pernah disinkronkan.
+      setup_accounts: Siapkan akun
+      delete: Hapus
+      accounts_need_setup: Akun perlu disiapkan
+      accounts_need_setup_description: Akun Trading 212 Anda perlu ditautkan ke akun Sure.
+      no_accounts_discovered: Belum ada akun Trading 212 yang ditemukan.
+      no_accounts_discovered_description: Jalankan sinkronisasi setelah menyimpan API key untuk menemukan akun Anda.
+    setup_accounts:
+      page_title: Siapkan Akun Trading 212
+      dialog_title: Siapkan Akun Trading 212 Anda
+      subtitle: Tautkan akun investasi Trading 212-mu.
+      info_box:
+        title: Impor API Trading 212
+        items:
+          item_1: Posisi saat ini beserta harga dan jumlahnya
+          item_2: Riwayat order penuh (beli dan jual)
+          item_3: Dividen dan transaksi tunai
+      status:
+        fetching_accounts: Mengambil akun dari Trading 212...
+        no_accounts_found_title: Tidak ada akun yang ditemukan.
+        no_accounts_found_description: Sure tidak menemukan akun Trading 212. Pastikan API key kamu valid.
+      available_accounts:
+        title: Akun tersedia
+        account_type_investment: Investasi
+        account_summary: '%{account_type} • Saldo: %{balance}'
+        account_id: 'ID Akun: %{account_id}'
+      link_existing:
+        description: Atau tautkan akun Trading 212 yang ditemukan ke akun investasi manual yang sudah ada.
+        manual_account_option: '%{name} (%{balance})'
+        select_prompt: Pilih akun...
+      linked_accounts:
+        title: Sudah tertaut
+        linked_to_html: 'Tertaut ke: %{account}'
+      buttons:
+        refresh: Segarkan
+        cancel: Batal
+        back_to_settings: Kembali ke Pengaturan
+        create_selected_accounts: Buat akun yang dipilih
+        link: Tautan
+        done: Selesai
+    sync:
+      status:
+        checking_credentials: Mengecek kredensial Trading 212...
+        importing_account: Mengimpor akun Trading 212...
+        checking_configuration: Mengecek konfigurasi akun...
+        accounts_need_setup:
+          one: 1 akun Trading 212 perlu disiapkan...
+          other: '%{count} akun Trading 212 perlu disiapkan...'
+        processing_activity: Memproses posisi dan aktivitas...
+        calculating_balances: Menghitung saldo...
+    sync_status:
+      no_accounts: Belum ada akun Trading 212 yang ditemukan
+      all_linked:
+        one: 1 akun tertaut
+        other: '%{count} akun tertaut'
+      partial: '%{linked} tertaut, %{unlinked} perlu disiapkan'
+    select_existing_account:
+      title: Tautkan akun Trading 212
+      no_accounts_available: Belum ada akun Trading 212 yang belum ditautkan tersedia.
+      run_sync_hint: Jalankan sinkronisasi dari Pengaturan > Provider setelah menyimpan API key.
+      wait_for_sync: Tunggu sinkronisasi penemuan akun selesai.
+      balance: Saldo
+      link: Tautan
+      cancel: Batal
+    create:
+      success: Trading 212 berhasil dikonfigurasi.
+    update:
+      success: Berhasil memperbarui konfigurasi Trading 212.
+    destroy:
+      success: Koneksi Trading 212 dijadwalkan untuk dihapus.
+    select_accounts:
+      not_configured: Trading 212 belum dikonfigurasi.
+    link_existing_account:
+      not_found: Konfigurasi Akun atau Trading 212 tidak ditemukan.
+      only_manual_investment: Hanya akun investasi manual yang dapat ditautkan ke Trading 212.
+      already_linked: Akun Trading 212 ini sudah ditautkan.
+      success: Berhasil terhubung ke akun Trading 212.
+      failed: Gagal menautkan akun Trading 212.
+    complete_account_setup:
+      success:
+        one: Berhasil membuat %{count} akun Trading 212.
+        other: Berhasil membuat %{count} akun Trading 212.
+      none_selected: Tidak ada akun yang dipilih.
+      none_created: Tidak ada akun yang dibuat.

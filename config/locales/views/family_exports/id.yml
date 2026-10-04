@@ -1,0 +1,48 @@
+---
+id:
+  family_exports:
+    access_denied: Akses ditolak
+    create:
+      success: Ekspor dimulai. Kamu bisa mengunduhnya sebentar lagi.
+    delete_confirmation: Yakin ingin menghapus ekspor ini? Tindakan ini tidak bisa dibatalkan.
+    delete_failed_confirmation: Yakin ingin menghapus ekspor yang gagal ini?
+    cancel:
+      cancelled: Ekspor ditandai gagal. Kamu bisa langsung membuat ekspor baru.
+      not_cancellable: Ekspor ini tidak bisa ditandai gagal saat ini — job-nya mungkin masih berjalan. Coba lagi setelah tidak aktif selama satu jam.
+    destroy:
+      success: Ekspor berhasil dihapus
+    export_not_ready: Ekspor belum siap diunduh
+    exporting: Mengekspor...
+    new:
+      dialog_title: Ekspor datamu
+      dialog_subtitle: Unduh semua data keuanganmu
+      whats_included: 'Yang termasuk:'
+      accounts_and_balances: Semua akun dan saldo
+      transaction_history: Riwayat transaksi
+      investment_trades: Trading investasi
+      categories_tags_rules: Kategori, tag, dan aturan
+      note_label: Catatan
+      note_description: Ekspor ini mencakup semua data kamu, tetapi hanya sebagian yang bisa diimpor kembali lewat fitur impor CSV. Kami mendukung impor akun, transaksi (dengan kategori dan tag), dan trade. Data akun lainnya tidak bisa diimpor dan hanya untuk arsip kamu.
+      cancel: Batal
+      export_data: Ekspor data
+    index:
+      title: Ekspor
+      new: Ekspor Baru
+    table:
+      title: Ekspor
+      header:
+        date: Tanggal
+        filename: Nama file
+        status: Status
+        actions: Aksi
+      row:
+        status:
+          in_progress: Sedang berjalan
+          complete: Selesai
+          failed: Gagal
+        actions:
+          delete: Hapus
+          download: Unduh
+          mark_failed: Tandai sebagai gagal
+          confirm_mark_failed: Ekspor ini sudah tidak aktif cukup lama dan pekerjaan latarnya kemungkinan terputus. Tandai sebagai gagal? Kamu bisa langsung membuat ekspor baru.
+      empty: Belum ada ekspor.

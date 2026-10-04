@@ -1,0 +1,138 @@
+---
+id:
+  rules:
+    no_action: Tidak ada tindakan
+    no_condition: Tidak ada kondisi
+    category_rule_cta:
+      close: Tutup
+      create_rule: Buat aturan
+      description: Anda bisa membuat aturan untuk mengategorikan transaksi seperti ini secara otomatis
+      dont_show_again: Jangan tampilkan lagi
+      hide_for_today: Sembunyikan untuk hari ini
+      hide_for_today_hint: Menyembunyikan untuk hari ini akan menjeda saran-saran ini selama 24 jam.
+      message: Diperbarui ke %{category_name}
+    rule:
+      edit: Edit
+      re_apply_rule: Terapkan ulang aturan
+      delete: Hapus
+      then: THEN
+      and_more_conditions:
+        one: dan 1 kondisi lainnya
+        other: dan %{count} kondisi lainnya
+      and_more_actions:
+        one: dan 1 tindakan lainnya
+        other: dan %{count} tindakan lainnya
+      action_label_to: '%{label} ke %{value}'
+      all_past_and_future: Semua %{resource} yang lalu dan yang akan datang
+      on_or_after: '%{resource} pada atau setelah %{date}'
+    form:
+      rule_name_label: Nama aturan (opsional)
+      rule_name_placeholder: Masukkan nama untuk aturan ini
+      add_condition: Tambah kondisi
+      add_condition_group: Tambah grup kondisi
+      add_action: Tambah aksi
+      all_past_and_future: Semua %{resource} yang lalu dan yang akan datang
+      starting_from: Mulai dari
+      then: THEN
+    index:
+      page_title: Aturan
+      delete_all_rules: Hapus semua aturan
+      new_rule: Aturan baru
+      ai_cost_warning: Aksi aturan berbasis AI berbayar.  Pastikan filternya sesempit mungkin agar tidak ada biaya yang tidak perlu.
+      rules_heading: Aturan
+      sort_by: 'Urutkan berdasarkan:'
+      sort_name: Nama
+      sort_updated_at: Diperbarui Pada
+      toggle_sort_direction: Alihkan arah pengurutan
+      no_rules_title: Belum ada aturan
+      no_rules_description: Siapkan aturan untuk menjalankan aksi ke transaksi dan data lain Anda di setiap sinkronisasi akun.
+    confirm:
+      title: Konfirmasi perubahan
+      title_with_name: Konfirmasi perubahan pada "%{name}"
+      apply_notice_html: Anda akan menerapkan aturan ini ke <span class="text-primary font-medium">%{count} %{resource}</span> yang memenuhi kriteria aturan yang ditentukan. Konfirmasi jika Anda ingin melanjutkan perubahan ini.
+      ai_cost_title: Estimasi Biaya AI
+      ai_cost_with_estimate_html: 'Ini akan menggunakan AI untuk mengkategorikan %{count} transaksi. Perkiraan biaya: <span class="font-semibold">~$%{cost}</span>'
+      ai_cost_no_estimate_html: Ini akan menggunakan AI untuk mengkategorikan %{count} transaksi.
+      cost_unavailable_model: Estimasi biaya tidak tersedia untuk model "%{model}".
+      cost_unavailable_no_provider: Estimasi biaya tidak tersedia (belum ada provider LLM yang dikonfigurasi).
+      cost_warning: Anda mungkin dikenakan biaya, silakan cek ke penyedia model untuk harga terbaru.
+      view_usage_history: Lihat histori pemakaian
+      confirm_changes: Konfirmasi perubahan
+    actions:
+      to_label: ke
+      value_placeholder: Masukkan nilai
+    update:
+      success: Aturan diperbarui
+    destroy:
+      success: Aturan dihapus
+    destroy_all:
+      success: Semua aturan dihapus
+    apply_all:
+      button: Terapkan Semua
+      confirm_title: Terapkan Semua Aturan
+      confirm_message: Anda akan menerapkan %{count} aturan yang memengaruhi %{transactions} transaksi unik. Konfirmasi jika Anda ingin melanjutkan.
+      confirm_button: Konfirmasi dan Terapkan Semua
+      success: Semua aturan sudah antre untuk dijalankan
+      ai_cost_title: Estimasi Biaya AI
+      ai_cost_message: Ini akan menggunakan AI untuk mengkategorikan hingga %{transactions} transaksi.
+      estimated_cost: 'Estimasi biaya: ~$%{cost}'
+      cost_unavailable_model: Estimasi biaya tidak tersedia untuk model "%{model}".
+      cost_unavailable_no_provider: Estimasi biaya tidak tersedia (belum ada provider LLM yang dikonfigurasi).
+      cost_warning: Anda mungkin dikenakan biaya, silakan cek ke penyedia model untuk harga terbaru.
+      view_usage: Lihat histori pemakaian
+    recent_runs:
+      title: Proses Terbaru
+      description: Lihat histori eksekusi aturanmu termasuk status berhasil/gagal dan jumlah transaksi.
+      unnamed_rule: Aturan Tanpa Nama
+      columns:
+        date_time: Tanggal/Waktu
+        execution_type: Jenis
+        status: Status
+        rule_name: Nama Aturan
+        transactions_counts:
+          queued: Diantrekan
+          processed: Diproses
+          modified: Diubah
+          blocked: Diblokir
+      execution_types:
+        manual: Manual
+        scheduled: Terjadwal
+      statuses:
+        pending: Tertunda
+        success: Berhasil
+        failed: Gagal
+    clear_ai_cache:
+      button: Atur ulang cache AI
+      confirm_title: Atur ulang cache AI?
+      confirm_body: Yakin ingin mereset cache AI? Ini memungkinkan aturan AI memproses ulang semua transaksi. Mungkin ada biaya API tambahan.
+      confirm_button: Atur Ulang Cache
+      success: Cache AI sedang dibersihkan. Mungkin butuh beberapa saat.
+    condition_filters:
+      transaction_type:
+        income: Pemasukan
+        expense: Pengeluaran
+        transfer: Transfer
+        equal_to: Sama dengan
+      operators:
+        contains: Mengandung
+        does_not_contain: Tidak mengandung
+        equal_to: Sama dengan
+        is_equal_to: Sama dengan
+        not_equal_to: Tidak sama dengan
+        is_empty: Kosong
+        is_not_empty: Tidak kosong
+        greater_than: Lebih dari
+        greater_or_equal_to: Lebih dari atau sama dengan
+        less_than: Kurang dari
+        less_than_or_equal_to: Kurang dari atau sama dengan
+  rule:
+    conditions:
+      condition_group:
+        and_prefix: dan
+        match: cocok
+        all: semua
+        any: apa pun
+        of_the_following_conditions: dari kondisi berikut
+        add_condition: Tambah kondisi
+      condition:
+        value_placeholder: Masukkan nilai

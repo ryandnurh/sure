@@ -1,0 +1,116 @@
+---
+id:
+  providers:
+    up:
+      name: Up
+      description: Hubungkan rekening bank Up Australia via personal access token
+  family:
+    up:
+      create_up_item:
+        default_name: Koneksi Up
+  up_account:
+    fallback: akun Up
+  up_item:
+    errors:
+      account_processing_failed: Tidak bisa menyinkronkan akun Up
+      account_sync_schedule_failed: Tidak bisa menjadwalkan sinkronisasi akun Up
+      transactions_failed: Tidak bisa mengambil transaksi Up
+      sync_failed: Tidak bisa menyinkronkan koneksi Up
+    sync_status:
+      no_accounts: Tidak ada akun yang ditemukan
+      all_synced:
+        one: 1 akun tersinkron
+        other: '%{count} akun tersinkron'
+      partial: '%{linked} tersinkron, %{unlinked} perlu disiapkan'
+    institution_summary:
+      none: Belum ada institusi yang terhubung
+      one: 1 institusi
+      count:
+        one: 1 institusi
+        other: '%{count} institusi'
+  up_items:
+    provider_panel:
+      default_connection_name: Koneksi Up
+      add_connection: Tambah koneksi Up
+      update_connection: Perbarui koneksi
+      connection_name_label: Nama koneksi
+      connection_name_placeholder: Up Utama
+      access_token_label: Personal Access Token
+      access_token_placeholder: Tempel personal access token Up Anda
+      keep_access_token_placeholder: Kosongkan untuk mempertahankan token yang ada
+      setup_accounts: Siapkan akun
+      syncing: Menyinkronkan...
+      sync: Sinkron
+      disconnect: Putuskan
+      disconnect_confirm: Yakin ingin memutuskan %{name}?
+    create:
+      success: Koneksi Up tersimpan.
+    update:
+      success: Koneksi Up diperbarui.
+    destroy:
+      success: Koneksi Up dijadwalkan untuk dihapus.
+      unlink_failed: Tidak bisa memutuskan koneksi Up
+    select_accounts:
+      title: Tautkan akun-akun Up
+      description: Pilih akun Up yang akan ditambahkan.
+      no_accounts_found: Tidak ada akun Up yang belum ditautkan ditemukan.
+      no_credentials_configured: Konfigurasikan Up di pengaturan provider dulu.
+      cancel: Batal
+      link_accounts: Tautkan akun-akun
+    link_accounts:
+      success:
+        one: 1 akun Up tertaut.
+        other: '%{count} akun Up tertaut.'
+      no_accounts_selected: Pilih minimal satu akun.
+      no_credentials_configured: Konfigurasikan Up di pengaturan provider dulu.
+      unsupported_account_type: Up tidak mendukung jenis akun itu.
+      link_failed: Tidak ada akun yang dihubungkan.
+    select_existing_account:
+      title: Tautkan akun Up ke %{account_name}
+      description: Pilih akun Up yang belum tertaut untuk dihubungkan ke akun ini.
+      no_accounts_found: Tidak ada akun Up yang belum ditautkan ditemukan.
+      no_credentials_configured: Konfigurasikan Up di pengaturan provider dulu.
+      account_already_linked: Akun ini sudah ditautkan ke provider.
+      cancel: Batal
+      link_account: Tautkan akun
+    link_existing_account:
+      success: Akun Up tertaut ke %{account_name}.
+      account_already_linked: Akun ini sudah ditautkan ke provider.
+      up_account_already_linked: Akun Up ini sudah ditautkan.
+      no_account_selected: Pilih akun Up untuk ditautkan.
+    setup_accounts:
+      title: Tautkan Akun-akun Up
+      subtitle: Pilih tampilan tiap akun Up di Sure.
+      no_credentials: Konfigurasikan kredensial Up dulu.
+      api_error: Tidak bisa mengambil akun Up.
+      fetch_failed: Tidak bisa mengambil akun
+      no_accounts_to_setup: Tidak ada akun untuk diatur
+      all_accounts_linked: Semua akun Up sudah tertaut.
+      choose_account_type: Pilih tipe akun
+      choose_account_type_description: Lewati akun yang tidak ingin Anda lacak.
+      account_type_label: Tipe akun
+      account_types:
+        skip: Lewati
+        depository: Tunai
+        loan: Pinjaman
+      create_accounts: Buat akun
+      cancel: Batal
+    complete_account_setup:
+      success:
+        one: Membuat 1 akun Up.
+        other: Membuat %{count} akun Up.
+      all_skipped: Tidak ada akun Up yang dibuat.
+      no_accounts: Tidak ada akun Up yang dipilih.
+      creation_failed: Tidak bisa membuat akun Up.
+    up_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      syncing: Menyinkronkan
+      error: Error
+      status_with_summary: Tersinkron %{timestamp} yang lalu · %{summary}
+      status_never: Belum pernah disinkronkan
+      delete: Hapus
+      setup_needed: Akun perlu disiapkan
+      setup_description: '%{linked} dari %{total} akun tertaut.'
+      setup_action: Siapkan akun
+      no_accounts_title: Belum ada akun yang diimpor
+      no_accounts_description: Ambil akun Up dan pilih mana yang ditautkan.

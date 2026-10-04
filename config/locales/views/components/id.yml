@@ -1,0 +1,189 @@
+---
+id:
+  UI:
+    period_picker:
+      aria_label: 'Periode waktu: %{period}'
+    account:
+      activity_feed:
+        toggle_selection_checkboxes: Alihkan pilihan
+      balance_reconciliation:
+        labels:
+          adjustments: Penyesuaian
+          buys: Pembelian
+          change_in_brokerage_cash: Perubahan kas broker
+          change_in_holdings_market: Perubahan holding (aktivitas harga pasar)
+          change_in_holdings_trades: Perubahan holding (beli/jual)
+          charges: Biaya
+          end_balance: Saldo akhir
+          end_principal: Pokok akhir
+          end_value: Nilai akhir
+          final_balance: Saldo akhir
+          final_principal: Pokok akhir
+          final_value: Nilai akhir
+          market_changes: Perubahan pasar
+          net_cash_flow: Arus kas bersih
+          net_principal_change: Perubahan pokok bersih
+          net_value_change: Perubahan nilai bersih
+          payments: Pembayaran
+          sells: Penjualan
+          start_balance: Saldo awal
+          start_principal: Pokok awal
+          start_value: Nilai awal
+        tooltips:
+          adjustments: Rekonsiliasi manual atau penyesuaian lainnya
+          adjustments_asset: Penyesuaian nilai atau appraisal manual
+          buys: Pembelian kripto hari ini
+          change_in_brokerage_cash: Perubahan bersih kas dari setoran, penarikan, dan perdagangan
+          change_in_holdings_market: Perubahan nilai holding dari pergerakan harga pasar
+          change_in_holdings_trades: Dampak pada kepemilikan dari jual beli sekuritas
+          charges: Biaya baru yang dibuat hari ini
+          end_balance: Saldo terhitung setelah semua transaksi
+          end_balance_investment: Saldo terhitung setelah semua aktivitas
+          end_principal: Pokok terhitung setelah semua transaksi
+          end_value: Nilai terhitung setelah semua perubahan
+          final_balance: Saldo akun akhir hari ini
+          final_balance_credit: Saldo utang akhir hari ini
+          final_balance_crypto: Nilai kepemilikan kripto akhir hari ini
+          final_balance_investment: Nilai portofolio akhir hari ini
+          final_principal: Saldo pokok akhir hari ini
+          final_value: Nilai aset akhir hari ini
+          market_changes: Perubahan nilai dari pergerakan harga pasar
+          net_cash_flow: Perubahan bersih saldo dari seluruh transaksi hari ini
+          net_principal_change: Pembayaran pokok dan pinjaman baru hari ini
+          net_value_change: Semua perubahan nilai termasuk peningkatan dan penyusutan
+          payments: Pembayaran yang dilakukan ke kartu hari ini
+          sells: Penjualan kripto hari ini
+          start_balance: Saldo akun pada awal hari ini
+          start_balance_credit: Saldo utang pada awal hari ini
+          start_balance_crypto: Nilai kepemilikan kripto pada awal hari ini
+          start_balance_investment: Total nilai portofolio pada awal hari ini
+          start_principal: Saldo pokok pada awal hari ini
+          start_value: Nilai aset pada awal hari ini
+      chart:
+        loan:
+          actual: Saldo tercatat
+          scheduled: Jadwal asli
+          projected: Diproyeksikan dari hari ini
+          today: Hari ini
+          interactive_chart: grafik interaktif
+          no_payoff: tidak pada pembayaran kembali saat ini
+          aria_description: Grafik saldo pinjaman. Saldo tercatat %{current_balance}. Pelunasan terjadwal awal %{scheduled_payoff_date}. Proyeksi pelunasan dari saldo hari ini %{projected_payoff_date}.
+          aria_actual_history_starts: Riwayat saldo tercatat dimulai %{date}.
+          projected_payoff: Proyeksi pelunasan
+          months_saved:
+            one: '%{count} bulan lebih cepat dari jadwal'
+            other: '%{count} bulan lebih cepat dari jadwal'
+          on_schedule: Sesuai jadwal
+          interest_saved: Bunga yang dihemat
+          not_converged: Pada pembayaran saat ini saldo ini tidak lunas pada jatuh tempo awal; %{balloon} masih harus dibayar.
+          projection_basis: Membandingkan saldo tercatat hari ini dengan saldo jadwal pada hari yang sama. Pembayaran yang tercatat sebelum tanggal jadwalnya terbaca sebagai lebih cepat sampai tanggal itu; yang tercatat sesudahnya terbaca sebagai terlambat.
+          legend: Seri grafik
+          since_start: sejak pinjaman dimulai
+        no_data_available: Tidak ada data yang tersedia
+        title:
+          balance: Saldo
+          cash_value: Nilai tunai
+          debt_balance: saldo utang
+          estimated_property_value: Estimasi nilai properti
+          estimated_vehicle_value: Estimasi nilai kendaraan
+          holdings_value: Nilai kepemilikan
+          loan_remaining_balance: Sisa saldo
+          remaining_principal_balance: Sisa saldo pokok
+          total_account_value: Total nilai akun
+          total_gains: Total keuntungan
+        views:
+          cash: Tunai
+          gains: Keuntungan / ROI
+          holdings: Kepemilikan
+          total_value: Total nilai
+        vs_available_history: vs. riwayat yang tersedia
+      activity_date:
+        balance_tooltip: Saldo akhir hari, setelah semua transaksi dan penyesuaian
+        no_balance_data: Tidak ada data saldo yang tersedia untuk tanggal ini
+  ds:
+    alert:
+      variants:
+        info: Info
+        success: Berhasil
+        warning: Peringatan
+        error: Error
+        destructive: Error
+    pill:
+      aria_label: '%{label}'
+      default_label: Pratinjau
+    dialog:
+      close: Tutup
+    popover:
+      avatar_default_label: Buka menu
+    tooltip:
+      trigger_label: Info lebih lanjut
+    link:
+      opens_in_new_tab: (buka di tab baru)
+    icon_picker:
+      no_matching_icons: Tidak ada ikon yang cocok
+      search_placeholder: Cari ikon...
+  provider_sync_summary:
+    title: Ringkasan sinkronisasi
+    last_sync: 'Sinkronisasi terakhir: %{time_ago} lalu'
+    accounts:
+      title: Akun
+      total: 'Total: %{count}'
+      linked: 'Tertaut: %{count}'
+      unlinked: 'Tautan diputus: %{count}'
+      institutions: 'Institusi: %{count}'
+    transactions:
+      title: Transaksi
+      seen: 'Dilihat: %{count}'
+      imported: 'Diimpor: %{count}'
+      updated: 'Diperbarui: %{count}'
+      skipped: 'Dilewati: %{count}'
+      fetching: Mengambil dari brokerage...
+      protected:
+        one: '%{count} entri dilindungi (tidak ditimpa)'
+        other: '%{count} entri dilindungi (tidak ditimpa)'
+      view_protected: Lihat entri yang diproteksi
+    skip_reasons:
+      excluded: Dikecualikan
+      user_modified: Pengguna diubah
+      import_locked: Impor CSV
+      protected: Dilindungi
+    holdings:
+      title: Kepemilikan
+      found: 'Ditemukan: %{count}'
+      processed: 'Diproses: %{count}'
+    trades:
+      title: Trade
+      imported: 'Diimpor: %{count}'
+      skipped: 'Dilewati: %{count}'
+      fetching: Mengambil aktivitas dari brokerage...
+    health:
+      title: Kesehatan
+      view_error_details: Lihat detail error
+      rate_limited: Dibatasi %{time_ago}
+      recently: baru-baru ini
+      errors: 'Error: %{count}'
+      pending_reconciled:
+        one: '%{count} transaksi tertunda duplikat direkonsiliasi'
+        other: '%{count} transaksi tertunda duplikat direkonsiliasi'
+      view_reconciled: Lihat transaksi yang direkonsiliasi
+      duplicate_suggestions:
+        one: '%{count} kemungkinan duplikat perlu ditinjau'
+        other: '%{count} kemungkinan duplikat perlu ditinjau'
+      view_duplicate_suggestions: Lihat duplikat yang disarankan
+      stale_pending:
+        one: '%{count} transaksi tertunda basi (tidak termasuk anggaran)'
+        other: '%{count} transaksi tertunda basi (tidak termasuk anggaran)'
+      view_stale_pending: Lihat akun yang terdampak
+      stale_pending_count:
+        one: '%{count} transaksi'
+        other: '%{count} transaksi'
+      stale_unmatched:
+        one: '%{count} transaksi tertunda perlu ditinjau manual'
+        other: '%{count} transaksi tertunda perlu ditinjau manual'
+      view_stale_unmatched: Lihat transaksi yang perlu ditinjau
+      stale_unmatched_count:
+        one: '%{count} transaksi'
+        other: '%{count} transaksi'
+      data_warnings: 'Peringatan data: %{count}'
+      notices: 'Pemberitahuan: %{count}'
+      view_data_quality: Lihat detail kualitas data

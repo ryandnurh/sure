@@ -1,0 +1,25 @@
+---
+id:
+  impersonation_sessions:
+    approve:
+      success: Permintaan disetujui
+    complete:
+      success: Sesi selesai
+    create:
+      success: Permintaan dikirim ke pengguna. Menunggu persetujuan.
+    join:
+      success: Sesi digabungkan
+    leave:
+      success: Sesi ditinggalkan
+    reject:
+      success: Permintaan ditolak
+    super_admin_bar:
+      super_admin: Super Admin
+      jobs: Job
+      impersonating: Menyamar sebagai
+      leave: Keluar
+      terminate: Hentikan
+      join_a_session: Gabung ke sesi
+      join: Gabung
+      uuid_placeholder: UUID
+      request_impersonation: Minta Impersonasi

@@ -1,0 +1,192 @@
+---
+id:
+  investments:
+    edit:
+      edit: Edit %{account}
+    form:
+      none: Tidak ada
+      subtype_prompt: Pilih jenis investasi
+    new:
+      title: Masukkan saldo akun
+    show:
+      chart_title: Total nilai
+    subtypes:
+      brokerage:
+        short: Broker
+        long: Broker
+      cash_management:
+        short: CMA
+        long: Akun Manajemen Kas
+      401k:
+        short: 401(k)
+        long: 401(k)
+      roth_401k:
+        short: Roth 401(k)
+        long: Roth 401(k)
+      403b:
+        short: 403(b)
+        long: 403(b)
+      457b:
+        short: 457(b)
+        long: 457(b)
+      tsp:
+        short: TSP
+        long: Thrift Savings Plan
+      ira:
+        short: IRA
+        long: Traditional IRA
+      roth_ira:
+        short: Roth IRA
+        long: Roth IRA
+      sep_ira:
+        short: SEP IRA
+        long: SEP IRA
+      simple_ira:
+        short: SIMPLE IRA
+        long: SIMPLE IRA
+      529_plan:
+        short: 529 Plan
+        long: 529 Education Savings Plan
+      hsa:
+        short: HSA
+        long: Akun Tabungan Kesehatan
+      ugma:
+        short: UGMA
+        long: Akun Kustodian UGMA
+      utma:
+        short: UTMA
+        long: Akun Kustodian UTMA
+      isa:
+        short: ISA
+        long: Individual Savings Account
+      lisa:
+        short: LISA
+        long: Lifetime ISA
+      sipp:
+        short: SIPP
+        long: Pensiun Personal Investasi Mandiri
+      workplace_pension_uk:
+        short: Pensiun
+        long: Pensiun Kantor
+      rrsp:
+        short: RRSP
+        long: Rencana Tabungan Pensiun Terdaftar
+      tfsa:
+        short: TFSA
+        long: Akun Tabungan Bebas Pajak
+      resp:
+        short: RESP
+        long: Rencana Tabungan Pendidikan Terdaftar
+      lira:
+        short: LIRA
+        long: Locked-In Retirement Account
+      rrif:
+        short: RRIF
+        long: Dana Pendapatan Pensiun Terdaftar
+      super:
+        short: Super
+        long: Superannuation
+      smsf:
+        short: SMSF
+        long: Dana Super Kelola Mandiri
+      pea:
+        short: PEA
+        long: Plan d'Épargne en Actions
+      pillar_3a:
+        short: Pilar 3a
+        long: Pensiun Swasta (Pilar 3a)
+      riester:
+        short: Riester
+        long: Riester-Rente
+      nps:
+        short: NPS
+        long: National Pension System
+      apy:
+        short: APY
+        long: Atal Pension Yojana
+      indian_stocks:
+        short: Saham India
+        long: Saham India (Demat)
+      indian_equity:
+        short: Ekuitas India
+        long: Ekuitas India
+      indian_etf:
+        short: ETF India
+        long: ETF India
+      life_insurance:
+        short: Asuransi Jiwa
+        long: Asuransi Jiwa
+      ppf:
+        short: PPF
+        long: Dana Provident Publik
+      ssy:
+        short: SSY
+        long: Sukanya Samriddhi Yojana
+      nsc:
+        short: NSC
+        long: National Savings Certificate
+      scss:
+        short: SCSS
+        long: Skema Tabungan Lansia
+      fd:
+        short: FD
+        long: Deposito Berjangka
+      rd:
+        short: RD
+        long: Setoran Berkala
+      pomis:
+        short: POMIS
+        long: Skema Pendapatan Bulanan Kantor Pos
+      kvp:
+        short: KVP
+        long: Kisan Vikas Patra
+      gold_etf:
+        short: ETF Emas
+        long: ETF Emas
+      gold_mf:
+        short: MF Emas
+        long: Reksa Dana Emas
+      sgb:
+        short: SGB
+        long: Sovereign Gold Bond
+      g_sec:
+        short: G-Sec
+        long: Surat Berharga Negara (G-Secs)
+      sdl:
+        short: SDL
+        long: State Development Loans (SDLs)
+      corporate_bond:
+        short: Obligasi Korporasi
+        long: Obligasi Korporasi
+      infrastructure_bond:
+        short: Obligasi Infra
+        long: Obligasi Infrastruktur
+      tax_free_bond:
+        short: Obligasi bebas pajak
+        long: Obligasi bebas pajak
+      pension:
+        short: Pensiun
+        long: Pensiun
+      retirement:
+        short: Pensiun
+        long: Akun Pensiun
+      mutual_fund:
+        short: Reksa Dana
+        long: Reksa Dana
+      gold:
+        short: Emas
+        long: Emas (fisik atau digital)
+      angel:
+        short: Angel
+        long: Investasi Angel
+      trust:
+        short: Trust
+        long: Trust
+      other:
+        short: Lainnya
+        long: Investasi Lainnya
+    value_tooltip:
+      cash: Tunai
+      holdings: Kepemilikan
+      total: Saldo portofolio
+      total_value_tooltip: Total saldo portofolio adalah jumlah dari kas broker (tersedia untuk trading) dan nilai pasar saat ini dari kepemilikan Anda.

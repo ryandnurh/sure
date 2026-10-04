@@ -1,0 +1,10 @@
+---
+id:
+  passwords:
+    edit:
+      password: Kata Sandi Baru
+      password_challenge: Kata Sandi Saat Ini
+      submit: Atur Ulang Kata Sandi
+      title: Perbarui Kata Sandi
+    update:
+      success: Kata sandi Anda telah di-reset.

@@ -1,0 +1,36 @@
+---
+id:
+  plans:
+    show:
+      title: Rencana
+      subtitle: Tentukan ke mana uangmu pergi — apa yang kamu belanjakan, dan apa yang kamu tabung.
+    budget_card:
+      title: Bulan ini
+      edit_budget: Edit anggaran
+      of_total: dari %{total}
+      days_left:
+        one: 1 hari tersisa
+        other: '%{count} hari tersisa'
+      percent_used: '%{percent}% terpakai'
+      top_categories: Kategori teratas
+      view_budget: Lihat anggaran penuh
+      empty_body: Tetapkan target belanja bulanan dan batas per kategori untuk melihat progres bulan ini.
+      set_up: Siapkan anggaran bulan ini
+    goals_card:
+      title: Tujuan Anda
+      new_goal: Tujuan baru
+      active_count:
+        one: 1 aktif
+        other: '%{count} aktif'
+      of_targets: dari %{total} di seluruh tujuan
+      behind_count:
+        one: 1 tertinggal dari target
+        other: '%{count} tertinggal dari target'
+      pending_count:
+        one: 1 janji tertunda
+        other: '%{count} janji tertunda'
+      all_on_pace: Semua sesuai target
+      active_goals: Target aktif
+      pending_marker: tertunda
+      runway: '%{months} bln runway · %{pace}/bln'
+      all_goals: Semua target

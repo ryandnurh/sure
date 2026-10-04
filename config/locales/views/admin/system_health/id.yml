@@ -1,0 +1,258 @@
+---
+id:
+  admin:
+    system_health:
+      push_notifications:
+        send_test: Kirim notifikasi push tes
+        queueing: Mengantre…
+        title: Notifikasi push
+        requested_at: Tes terakhir diminta pada %{time}
+        result_help: Penerimaan APNs tidak menjamin terkirim ke perangkatmu. Refresh untuk melihat hasil worker. Hasil disimpan selama 24 jam.
+        results_label: Hasil pengujian
+        device: Perangkat %{number}
+        pending: Tertunda
+        refresh: Segarkan hasil
+        columns:
+          device: Perangkat
+          environment: Lingkungan APNs
+          status: Hasil
+          checked_at: Pembaruan terakhir
+        environments:
+          sandbox: Sandbox
+          production: Produksi
+        messages:
+          enqueue_failed: Tes tidak bisa diantrekan. Periksa Sidekiq dan refresh hasil di bawah.
+          ready: Kirim notifikasi tes ke perangkat iOS yang aktif dan terdaftar di akun Anda.
+          queued: Notifikasi uji diantrekan. Muat ulang hasil di bawah untuk memeriksa statusnya.
+          hosted_only: Notifikasi push hanya tersedia di mode hosted.
+          ineligible: Hanya super-admin aktif yang dapat mengirim notifikasi uji coba.
+          no_devices: Aktifkan notifikasi push di aplikasi Sure iOS untuk akun ini guna mengirim tes.
+          disabled: Pengiriman push dinonaktifkan oleh operator.
+          not_configured: Kredensial APNs belum dikonfigurasi.
+          cooldown: Tunggu 30 detik sebelum mengirim tes lagi.
+          storage_unavailable: Request tes tidak bisa disimpan. Periksa konfigurasi cache bersama.
+        statuses:
+          queued: Diantrekan
+          accepted: Diterima oleh APNs
+          skipped: 'Dilewati: tidak lagi memenuhi syarat'
+          rejected: Ditolak oleh APNs; periksa log debug push
+          unregistered: Pendaftaran perangkat sudah tidak valid
+          retrying: Mencoba lagi kegagalan sementara
+          failed: Gagal; periksa log debug push
+          enqueue_failed: Tidak bisa mengantrekan; cek Sidekiq
+          expired: Kedaluwarsa tanpa hasil akhir
+      push_notification:
+        title: Notifikasi uji Sure
+        body: Ini adalah notifikasi push percobaan untuk akun Sure kamu.
+      verify_worker_ai:
+        queued: Pemeriksaan worker diantrekan. Akan muncul di bawah setelah proses worker mengambilnya, biasanya dalam beberapa detik.
+      show:
+        title: Kesehatan sistem
+        tabs:
+          background_jobs: Background job
+          ai: Status AI
+        alert:
+          title: Background job tidak berjalan
+        status_section_title: Status Sidekiq
+        status_section_description: Status terkini worker latar yang menjalankan sinkronisasi, saldo, dan perhitungan kekayaan bersih.
+        counters_section_title: Penghitung job
+        counters_section_description: Agregatkan penghitung Sidekiq di semua antrean.
+        queues_section_title: Antrean
+        queues_section_description: Kedalaman per antrean dan usia job tertua. Latensi adalah jumlah detik job tertua telah menunggu.
+        labels:
+          status: Status
+          processes: Proses worker
+          last_heartbeat: Heartbeat terakhir
+          max_queue_latency: Usia job tertua
+          enqueued: Diantrekan
+          retries: Percobaan ulang
+          failed: Gagal
+          processed_total: Total diproses
+          queue: Antrean
+          size: Ukuran
+          latency: Latensi
+        values:
+          healthy: Sehat
+          unhealthy: Terganggu
+          time_ago: '%{time_ago} lalu'
+          never: Tidak pernah
+          seconds: '%{seconds}d'
+          no_queues: Tidak ada antrean yang terdaftar. Worker mungkin tidak sedang berjalan.
+        ai:
+          run_checks: Jalankan pemeriksaan lagi
+          last_checked: Pemeriksaan live selesai %{time_ago} lalu. Hasilnya di-cache sebentar.
+          not_checked_help: Buka URL status AI secara langsung atau jalankan pemeriksaan untuk memastikan layanan berjalan.
+          loading: Menjalankan pemeriksaan langsung…
+          alerts:
+            custom_openai:
+              title: Pemeriksaan vector store hosted gagal di endpoint kustom ini
+              message: Endpoint yang dikonfigurasi tidak lolos pemeriksaan kelangsungan /v1/vector_stores. Sebagian besar endpoint lokal dan yang kompatibel OpenAI tidak mengimplementasikan API tersebut. Chat dan pemrosesan PDF mungkin masih berfungsi; gunakan pgvector dengan endpoint embedding terpisah untuk pengaturan lokal biasa. Kegagalan tercatat di Pengaturan → Debug log dan Rails.logger.
+            function_calling_unsupported:
+              title: Model tidak mendukung function calling
+              message: Endpoint melayani request chat biasa tetapi menolak request yang sama saat membawa parameter tools. Asisten AI membaca akun, transaksi, dan kepemilikan melalui function call, jadi chat terus gagal — sering dengan 404 yang tidak membantu — sampai modelnya mendukung tools. Pilih model yang providernya mendokumentasikan dukungan function calling. Kegagalan tercatat di Pengaturan → Debug log dan Rails.logger.
+            function_calling_not_used:
+              title: Model menjawab tanpa memanggil tool yang diminta
+              message: Endpoint menerima parameter tools, tetapi model menjawab dengan teks alih-alih memanggil health-check tool. Asisten AI tidak bisa membaca data keuangan tanpa tool call, jadi chat mungkin menjawab kosong atau dengan angka karangan. Pilih model yang providernya mendokumentasikan dukungan function calling.
+            llm_probe_failed:
+              title: Pemeriksaan live LLM gagal
+              message: Sure tidak dapat memverifikasi endpoint dan model yang dikonfigurasi. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            llm_model_not_available:
+              title: Model AI yang dikonfigurasi tidak tersedia
+              message: Endpoint menjawab, tetapi tidak mendaftar atau melayani model yang dikonfigurasi. Pilih model aktif untuk provider yang dipilih, lalu jalankan pemeriksaan lagi. Untuk Gemini melalui lapisan penerjemah yang kompatibel OpenAI, gunakan model yang didukung saat ini seperti gemini-2.5-flash.
+            pdf_text_extraction_failed:
+              title: Pemeriksaan ekstraksi teks PDF sintetis gagal
+              message: Sure tidak dapat menyelesaikan jalur text-first yang mengekstrak teks PDF tersemat secara lokal lalu mengirimkannya ke model yang dikonfigurasi. Tidak ada data pelanggan yang dikirim. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            pdf_vision_processing_failed:
+              title: Pemeriksaan vision/native PDF sintetis gagal
+              message: Sure tidak dapat menyelesaikan jalur PDF gambar atau dokumen asli melalui model yang dikonfigurasi. Tidak ada data pelanggan yang dikirim. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            vector_probe_failed:
+              title: Pemeriksaan live pencarian dokumen gagal
+              message: Sure tidak dapat memverifikasi vector store yang dipilih dan setiap layanan embedding yang diperlukan. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            pgvector_extension_not_enabled:
+              title: Ekstensi vektor PostgreSQL tidak diaktifkan
+              message: Adapter pgvector dipilih, tetapi PostgreSQL belum mengaktifkan ekstensi vektor untuk database ini. Gunakan image PostgreSQL yang menyertakan pgvector, lalu aktifkan ekstensi sebagai pemilik database atau superuser dan jalankan ulang migrasi dengan VECTOR_STORE_PROVIDER=pgvector.
+            pgvector_table_not_found:
+              title: Tabel vector_store_chunks hilang
+              message: Ekstensi pgvector diaktifkan, tetapi tabel chunks tidak ditemukan. Periksa status migrasi, lalu jalankan ulang migrasi vector store dengan VECTOR_STORE_PROVIDER=pgvector agar Sure bisa membuat vector_store_chunks.
+            pgvector_probe_failed:
+              title: Pemeriksaan penyimpanan pgvector gagal
+              message: Sure tidak dapat mengkueri tabel chunk pgvector. Periksa izin PostgreSQL, ekstensi vector, dan migrasi vector_store_chunks. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            embedding_dimensions_mismatch:
+              title: Dimensi embedding tidak cocok
+              message: Endpoint embedding mengembalikan vektor yang panjangnya tidak cocok dengan EMBEDDING_DIMENSIONS. Atur EMBEDDING_MODEL dan EMBEDDING_DIMENSIONS ke ukuran vektor yang terdokumentasi untuk model tersebut, restart Sure agar environment tersimpan, lalu ubah atau buat ulang kolom/tabel embedding pgvector dan tanam ulang dokumen jika data lama menggunakan ukuran berbeda.
+            embedding_probe_timeout:
+              title: Pemeriksaan live embedding timeout
+              message: Endpoint embedding tidak menjawab sebelum AI_HEALTH_PROBE_TIMEOUT. Naikkan timeout pemeriksaan kesehatan tersebut jika provider lambat, lalu restart Sure agar environment tersimpan di setiap proses. Jika panggilan chat AI normal juga timeout, naikkan OPENAI_REQUEST_TIMEOUT secara terpisah.
+            embedding_probe_failed:
+              title: Pemeriksaan live embedding gagal
+              message: Sure tidak dapat membuat embedding uji singkat melalui endpoint dan model yang dikonfigurasi. Periksa EMBEDDING_URI_BASE, EMBEDDING_MODEL, EMBEDDING_ACCESS_TOKEN, dan log penyedia embedding. Kegagalan tercatat di Pengaturan → Log debug dan Rails.logger.
+            qdrant:
+              title: Dukungan Qdrant belum diimplementasikan
+              message: Adapter Qdrant sudah disiapkan kerangkanya, tetapi operasi upload dan pencarian dokumen saat ini gagal. Pilih OpenAI atau pgvector untuk pencarian dokumen.
+            missing_vector_store:
+              title: Tidak ada vector store yang dikonfigurasi
+              message: Dokumen yang diunggah tidak bisa diindeks atau dicari sampai adaptor vector-store dan persyaratannya dikonfigurasi.
+            unavailable_vector_store:
+              title: Vector store yang dipilih tidak tersedia
+              message: Cek persyaratan adapter di bawah. Untuk pgvector, database harus menyediakan ekstensi vector atau tabel vector_store_chunks yang sudah ada.
+          llm:
+            title: Pemrosesan LLM dan PDF
+            description: Pemeriksaan live memverifikasi model yang dikonfigurasi, memintanya melakukan satu function call sederhana seperti yang dilakukan asisten, lalu secara terpisah menguji ekstraksi teks dan pemrosesan vision/native dengan PDF sintetis satu halaman yang tidak berisi data pelanggan. Nilai kredensial tidak pernah ditampilkan.
+          vector_store:
+            title: Penyimpanan vektor dan pencarian dokumen
+            description: Pemeriksaan live meminta API vector store hosted, atau menguji tabel pgvector dan membuat satu embedding pendek tanpa menyimpannya.
+          labels:
+            selected_provider: Provider terpilih
+            effective_provider: Penyedia yang berlaku
+            model: Model
+            endpoint: Endpoint
+            function_calling: Pemanggilan fungsi (tools)
+            pdf_text_extraction: Jalur ekstraksi teks PDF
+            pdf_vision_processing: Jalur vision/asli PDF
+            llm_request_timeout: Timeout request LLM
+            probe_request_timeout: Batas waktu probe health-check
+            openai_credentials: Kredensial OpenAI
+            openai_compatible_credentials: Kredensial API yang kompatibel dengan OpenAI
+            anthropic_credentials: Kredensial Anthropic
+            adapter: Adapter
+            adapter_available: Adapter tersedia
+            pgvector_extension: Ekstensi vector PostgreSQL
+            pgvector_table: Tabel potongan vektor
+            embedding_model: Model embedding
+            embedding_endpoint: Endpoint embedding
+            embedding_dimensions: Dimensi embedding
+            function_calling_failure_reason: Alasan kegagalan pemanggilan fungsi
+            pdf_text_extraction_failure_reason: Alasan kegagalan ekstraksi teks
+            pdf_vision_processing_failure_reason: Alasan kegagalan vision/native
+            storage_probe: pemeriksaan penyimpanan pgvector
+            embedding_probe: Pemeriksaan endpoint embedding
+            failure_reason: Alasan kegagalan
+          providers:
+            openai: OpenAI
+            openai_compatible: Kompatibel dengan OpenAI
+            anthropic: Anthropic
+            ollama: Ollama
+            openrouter: OpenRouter
+            together: Bersama
+            kilo: Kilo
+            cloudflare: Cloudflare
+            custom_openai_compatible: Endpoint kustom
+          adapters:
+            openai: Penyimpanan vektor yang dihosting OpenAI
+            pgvector: pgvector
+            qdrant: Qdrant
+          values:
+            configured: Terkonfigurasi
+            not_configured: Belum dikonfigurasi
+            fallback: (cadangan)
+            not_set: Belum diatur
+            'yes': Ya
+            'no': Tidak
+            enabled: Diaktifkan
+            available_not_enabled: Tersedia, belum diaktifkan
+            not_available: Tidak tersedia
+            available: Tersedia
+            not_found: Tidak ditemukan
+          function_calling_statuses:
+            supported: Pemanggilan tool live berhasil
+            unsupported: Tidak didukung oleh provider/model yang aktif
+            not_used: Tool diterima, tetapi model tidak memanggil satu pun
+            failing: Pemeriksaan live gagal
+            not_checked: Belum diperiksa
+            unavailable: Tidak tersedia sampai penyedia LLM dikonfigurasi
+          pdf_statuses:
+            supported: Pemeriksaan PDF sintetis berhasil
+            failing: Pemeriksaan PDF sintetis gagal
+            unsupported: Dinonaktifkan atau tidak didukung oleh penyedia/model yang berlaku
+            not_checked: Belum diperiksa
+            unavailable: Tidak tersedia sampai penyedia LLM dikonfigurasi
+          probe_statuses:
+            passing: Pemeriksaan live lolos
+            failing: Pemeriksaan live gagal
+            not_checked: Belum diperiksa
+            not_configured: Belum dikonfigurasi
+          vector_statuses:
+            passing: Pemeriksaan live lolos
+            failing: Pemeriksaan live gagal
+            not_checked: Belum diperiksa
+            not_configured: Belum dikonfigurasi
+            scaffolded: Scaffolded
+            missing: Belum dikonfigurasi
+          failure_codes:
+            model_not_available: Model yang dikonfigurasi tidak dikembalikan oleh provider
+            no_tool_call: Model menjawab tanpa memanggil health-check tool
+            tools_refused: Layanan melayani request yang sama tanpa tools dan menolaknya dengan tools
+            invalid_response: Layanan mengembalikan respons tak terduga
+            dimensions_mismatch: Dimensi vektor embedding tidak cocok dengan dimensi yang dikonfigurasi
+            extension_not_enabled: Ekstensi vektor PostgreSQL tidak diaktifkan
+            table_not_found: Tabel vector_store_chunks tidak ditemukan
+            render_missing_binary: Renderer pdftoppm (poppler-utils) tidak tersedia di container ini
+            timeout: Layanan tidak merespons sebelum timeout probe
+            request_failed: Permintaan layanan gagal
+            unsupported_provider: Provider tidak mendukung pemeriksaan ini
+          worker:
+            title: Verifikasi worker
+            description: Pemeriksaan di atas berjalan dari proses web ini. Sebagian besar pekerjaan AI — respons asisten, pemrosesan PDF, embedding, kategorisasi otomatis, dan deteksi merchant — sebenarnya berjalan di proses worker Sidekiq, yang bisa berbeda dalam akses jaringan, DNS, aturan proxy, atau bahkan kredensial yang dimuat. Antrekan pemeriksaan untuk memverifikasi konfigurasi dan konektivitas worker itu sendiri.
+            verify_button: Verifikasi konfigurasi worker
+            coverage_notice: Setiap pemeriksaan memverifikasi tepat satu proses worker -- mana pun yang mengambilnya dari antrean. Dengan lebih dari satu replika worker, hasil yang lolos tidak memastikan semua worker sehat; antrekan pemeriksaan lagi untuk mengambil sampel lainnya.
+            empty:
+              title: Belum ada worker yang check in
+              description: Klik "Verify worker configuration" untuk mengantrekan pemeriksaan asinkron. Hasilnya muncul di sini begitu proses worker mengambilnya.
+            labels:
+              process: Proses worker
+              checked_at: Dicentang
+              configuration: Konfigurasi
+            configuration_statuses:
+              match: Cocok dengan web
+              mismatch: Berbeda dari web
+            statuses:
+              passing: Lolos
+              failing: Gagal
+              stale: Basi
+            settings_origin:
+              title: Pengaturan mana yang butuh restart?
+              database_backed: Pengaturan provider, model, dan API key yang diubah di Pengaturan → Self-Hosting disimpan di database. rails-settings-cached membatalkan cache bersama saat ditulis, jadi web dan worker langsung memakai nilai baru untuk request atau job berikutnya -- tanpa perlu restart.
+              env_backed: Konfigurasi embedding, dan nilai apa pun yang hanya diatur lewat environment variable, ditetapkan saat setiap container dimulai. Rails tidak bisa mengubah environment container lain, jadi mengubahnya perlu me-restart atau membuat ulang layanan web dan worker -- dan tool deployment apa pun yang hanya me-restart salah satunya (rollout parsial, Secret yang diperbarui tanpa restart pod) tidak akan menangkap perubahan ini.
+          local_setup:
+            title: Pengaturan lokal yang disarankan
+            description: Jalankan LLM lewat endpoint lokal yang kompatibel dengan OpenAI, simpan vektor dokumen di pgvector, dan arahkan pengaturan embedding ke endpoint embedding yang kompatibel dengan OpenAI. Image PostgreSQL harus menyertakan ekstensi vector, dan dimensi embedding harus cocok dengan model yang dipilih.

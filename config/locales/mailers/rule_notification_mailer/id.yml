@@ -1,0 +1,16 @@
+---
+id:
+  rule_notification_mailer:
+    digest:
+      subject:
+        one: 1 transaksi baru cocok dengan aturanmu di %{product_name}
+        other: '%{count} transaksi baru cocok dengan aturanmu di %{product_name}'
+      heading:
+        one: 1 transaksi baru cocok dengan aturanmu
+        other: '%{count} transaksi baru cocok dengan aturanmu'
+      intro: 'Transaksi ini cocok dengan aturan "%{rule}":'
+      date: Tanggal
+      name: Nama
+      account: Akun
+      amount: Jumlah
+      cta: Lihat transaksi

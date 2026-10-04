@@ -1,0 +1,37 @@
+---
+id:
+  vehicles:
+    edit:
+      edit: Edit %{account}
+    form:
+      make: Merek
+      make_placeholder: Toyota
+      mileage: Jarak tempuh
+      mileage_placeholder: '15000'
+      mileage_unit: Unit
+      model: Model
+      model_placeholder: Camry
+      year: Tahun
+      year_placeholder: '2023'
+      mileage_unit_kilometers: Kilometer
+      mileage_unit_miles: Mil
+    new:
+      title: Masukkan detail kendaraan
+    overview:
+      current_price: Harga Saat Ini
+      make_model: Merek & Model
+      mileage: Jarak tempuh
+      purchase_price: Harga Beli
+      trend: Tren
+      unknown: Tidak diketahui
+      year: Tahun
+    tabs:
+      overview:
+        current_price: Harga Saat Ini
+        make_model: Merek & Model
+        mileage: Jarak tempuh
+        purchase_price: Harga Beli
+        trend: Tren
+        unknown: Tidak diketahui
+        year: Tahun
+        edit_account_details: Edit detail akun

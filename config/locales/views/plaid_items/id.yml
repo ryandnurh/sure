@@ -1,0 +1,39 @@
+---
+id:
+  plaid_items:
+    create:
+      success: Akun berhasil ditautkan.  Tunggu akun tersinkron.
+    destroy:
+      success: Akun dijadwalkan untuk dihapus.
+    errors:
+      link_token_generic: Kami tidak bisa membuka Plaid saat ini. Coba lagi, dan jika masalah berlanjut periksa log server untuk detailnya.
+      link_token_with_message: 'Plaid tidak bisa membuka koneksi: %{message}'
+    plaid_item:
+      add_accounts: Tambah akun
+      add_new: Tambah koneksi baru
+      confirm_accept: Hapus institusi
+      confirm_body: Ini akan menghapus permanen semua akun dalam grup ini beserta semua data terkait.
+      confirm_title: Hapus institusi?
+      connection_lost: Koneksi terputus
+      connection_lost_description: Koneksi ini tidak valid lagi. Anda perlu menghapus koneksi ini dan menambahkannya lagi untuk melanjutkan sinkronisasi data.
+      delete: Hapus
+      deletion_in_progress: (penghapusan berlangsung...)
+      error: Terjadi error saat menyinkronkan data
+      no_accounts_description: Kami tidak bisa memuat akun apa pun dari institusi keuangan ini.
+      no_accounts_title: Tidak ada akun yang ditemukan
+      provider_name: Plaid
+      requires_update: Hubungkan ulang
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_never: Butuh sinkronisasi data
+      syncing: Menyinkronkan...
+      update: Perbarui
+    select_existing_account:
+      no_available_accounts: Tidak ada akun Plaid yang tersedia untuk dihubungkan. Hubungkan akun Plaid baru terlebih dahulu.
+      title: Tautkan %{account_name} ke Plaid
+      description: Pilih akun Plaid untuk ditautkan ke akun Anda yang sudah ada
+      cancel: Batal
+      link_account: Tautkan akun
+    link_existing_account:
+      invalid_account: Akun Plaid yang dipilih tidak valid
+      already_linked: Akun Plaid ini sudah ditautkan
+      success: Akun berhasil ditautkan ke Plaid

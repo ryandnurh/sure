@@ -1,5 +1,19 @@
 ---
 id:
+  defaults:
+    brand_name: "%{brand_name}"
+    product_name: "%{product_name}"
+    common:
+      close: "Tutup"
+  global:
+    expand: "Perluas"
+  mcp:
+    errors:
+      invalid_session_id: "ID sesi MCP tidak valid"
+      unsupported_protocol_version: "Versi protokol MCP tidak didukung: %{version}"
+  oauth:
+    registration:
+      invalid_redirect_uris: "redirect_uris harus menggunakan https, http loopback, atau skema URI aplikasi native"
   activerecord:
     errors:
       messages:
@@ -43,6 +57,9 @@ id:
       default: "%d %B %Y"
       long: "%A, %d %B %Y"
       short: "%d.%m.%Y"
+      month_year: "%B %Y"
+      short_month_year: "%b %Y"
+      short_with_year: "%d %b %Y"
     month_names:
     -
     - Januari
@@ -99,6 +116,9 @@ id:
       x_seconds:
         one: satu detik
         other: "%{count} detik"
+      x_years:
+        one: setahun
+        other: "%{count} tahun"
     prompts:
       day: Hari
       hour: Jam
@@ -118,6 +138,7 @@ id:
       exclusion: sudah digunakan
       greater_than: harus lebih besar dari %{count}
       greater_than_or_equal_to: harus sama atau lebih besar dari %{count}
+      in: harus dalam %{count}
       inclusion: tidak termasuk
       invalid: tidak valid
       less_than: harus lebih kecil dari %{count}
@@ -146,7 +167,9 @@ id:
         other: "%{count} kesalahan mengakibatkan %{model} ini tidak bisa disimpan"
   helpers:
     select:
+      default_label: Pilih...
       prompt: Silakan pilih
+      search_placeholder: Cari
     submit:
       create: Buat %{model}
       submit: Simpan %{model}
@@ -164,6 +187,7 @@ id:
     format:
       delimiter: "."
       precision: 3
+      round_mode: default
       separator: ","
       significant: false
       strip_insignificant_zeros: false
@@ -172,10 +196,14 @@ id:
         format: "%n %u"
         units:
           billion: Miliar
-          million: Juta
+          million:
+            one: Juta
+            other: Juta
           quadrillion: Quadriliun
           thousand: Ribu
-          trillion: Triliun
+          trillion:
+            one: Triliun
+            other: Triliun
           unit: ''
       format:
         delimiter: ''
@@ -188,9 +216,11 @@ id:
           byte:
             one: Byte
             other: Byte
+          eb: EB
           gb: GB
           kb: KB
           mb: MB
+          pb: PB
           tb: TB
     percentage:
       format:

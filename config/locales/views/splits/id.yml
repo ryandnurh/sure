@@ -1,0 +1,47 @@
+---
+id:
+  splits:
+    new:
+      title: Pecah Transaksi
+      description: Pecah transaksi ini menjadi beberapa entri dengan kategori dan jumlah yang berbeda.
+      submit: Pecah Transaksi
+      cancel: Batal
+      add_row: Tambah split
+      remove_row: Hapus
+      remaining: Sisa
+      amounts_must_match: Jumlah pecahan harus sama dengan jumlah transaksi asli.
+      name_label: Nama
+      name_placeholder: Nama pecahan
+      amount_label: Jumlah
+      category_label: Kategori
+      uncategorized: (belum terkategori)
+      original_name: 'Nama:'
+      original_date: 'Tanggal:'
+      original_amount: Jumlah
+      split_number: 'Pecah #%{number}'
+    create:
+      success: Transaksi berhasil dipecah
+      not_splittable: Transaksi ini tidak bisa dipecah.
+    destroy:
+      success: Transaksi berhasil dikembalikan
+    show:
+      title: Entri Pecahan
+      description: Transaksi ini sudah dipecah menjadi entri-entri berikut.
+      button_title: Pecah Transaksi
+      button_description: Pecah transaksi ini menjadi beberapa entri dengan kategori dan jumlah yang berbeda.
+      button: Pecah
+      unsplit_title: Batalkan Pemisahan Transaksi
+      unsplit_button: Batalkan pemisahan
+      unsplit_confirm: Ini akan menghapus semua entri pecahan dan mengembalikan transaksi asli.
+    edit:
+      title: Edit Pembagian
+      description: Ubah entri pecahan untuk transaksi ini.
+      submit: Perbarui Pemisahan
+      not_split: Transaksi ini tidak dipecah.
+    update:
+      success: Pecahan berhasil diperbarui
+    child:
+      title: Bagian dari Pemisahan
+      description: Entri ini bagian dari transaksi split.
+      edit_split: Edit Pembagian
+      unsplit: Batalkan pemisahan

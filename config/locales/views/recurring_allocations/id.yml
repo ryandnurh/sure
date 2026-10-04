@@ -1,0 +1,15 @@
+---
+id:
+  recurring_allocations:
+    over_allocation: Itu akan mengalokasikan lebih dari jumlah transaksi
+    missing_rate: Tidak ada kurs yang tersedia; masukkan jumlahnya secara langsung
+    already_allocated: Transaksi tersebut sudah diterapkan pada tagihan ini
+    invalid: Pembayaran tidak bisa dicatat
+    create:
+      success: Pembayaran diterapkan
+    destroy:
+      success: Pembayaran dilepas
+    confirm:
+      success: Pembayaran diterapkan ke tagihan
+    reject:
+      success: Diabaikan. Transaksi itu tidak akan disarankan lagi untuk tagihan ini.

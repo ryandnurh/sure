@@ -1,0 +1,31 @@
+---
+id:
+  settings:
+    securities:
+      show:
+        disable_mfa: Nonaktifkan 2FA
+        disable_mfa_confirm: Yakin ingin menonaktifkan autentikasi dua faktor? Ini akan membuat akunmu kurang aman.
+        enable_mfa: Aktifkan 2FA
+        mfa_enabled_status_html: Autentikasi dua faktor <span class="font-medium text-green-600">aktif</span>
+        mfa_enabled_description: Akun Anda dilindungi dengan lapisan keamanan tambahan.
+        mfa_disabled_status_html: Autentikasi dua faktor <span class="font-medium text-red-600">nonaktif</span>
+        mfa_disabled_description: Aktifkan 2FA untuk menambah lapisan keamanan ekstra ke akunmu.
+        mfa_description: Tambahkan lapisan keamanan ekstra ke akunmu dengan meminta kode dari aplikasi authenticator saat masuk
+        mfa_title: Autentikasi Dua Faktor
+        webauthn_add: Tambah passkey atau kunci keamanan
+        webauthn_added: Ditambahkan %{date}
+        webauthn_description: Gunakan passkey, Touch ID, Windows Hello, atau kunci keamanan hardware sebagai faktor kedua saat masuk.
+        webauthn_empty: Belum ada passkey atau kunci keamanan yang terdaftar.
+        webauthn_last_used: Terakhir dipakai %{time_ago} lalu
+        webauthn_name_label: Nama kunci
+        webauthn_name_placeholder: MacBook Touch ID, YubiKey, dsb.
+        webauthn_remove: Hapus
+        webauthn_remove_confirm: Yakin ingin menghapus passkey atau kunci keamanan ini?
+        webauthn_remove_confirm_body: Anda perlu mendaftarkan ulang passkey atau kunci keamanan ini sebelum bisa dipakai untuk verifikasi masuk.
+        webauthn_title: Passkey dan kunci keamanan
+        webauthn_unsupported: Browser ini tidak mendukung passkey atau kunci keamanan.
+  webauthn_credentials:
+    default_name: Kunci keamanan
+    failure: Tidak bisa menyimpan passkey atau kunci keamanan itu. Silakan coba lagi.
+    mfa_required: Aktifkan autentikasi dua faktor sebelum menambahkan passkey atau kunci keamanan.
+    success: Passkey atau kunci keamanan dihapus.

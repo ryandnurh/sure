@@ -1,0 +1,77 @@
+---
+id:
+  settings:
+    api_keys_controller:
+      success: API key Anda telah berhasil dibuat
+      revoked_successfully: Kunci API berhasil dicabut
+      revoke_failed: Gagal mencabut API key
+    api_keys:
+      create:
+        success: API key Anda telah berhasil dibuat
+      destroy:
+        revoked_successfully: Kunci API berhasil dicabut
+        revoke_failed: Gagal mencabut API key
+      shared:
+        active: Aktif
+        created_ago: Dibuat %{time} lalu
+        last_used_ago: Terakhir dipakai %{time} lalu
+        never_used: Belum pernah digunakan
+        scope_read_only: Hanya Baca
+        scope_read_write: Baca/Tulis
+      index:
+        title: Kunci API
+        subtitle: Kelola API key untuk akses programatik ke datamu.
+        new_key: Kunci API Baru
+        empty_heading: Belum ada API key
+        empty_description: Buat API key untuk mengakses datamu secara programatis.
+        revoke_key: Cabut
+        revoke_confirmation: Yakin ingin mencabut "%{name}"? Ini akan langsung menonaktifkan aplikasi apa pun yang memakai key ini.
+      key_reveal:
+        copied: Tersalin!
+      show:
+        title: Manajemen Kunci API
+        newly_created:
+          page_title: Kunci API Berhasil Dibuat
+          heading: Kunci API Berhasil Dibuat!
+          key_ready: API key baru Anda "%{name}" telah dibuat dan siap digunakan.
+          your_api_key: API Key Anda
+          copy_store_securely: Salin dan simpan key ini dengan aman. Kamu membutuhkannya untuk mengautentikasi permintaan API-mu.
+          copy_api_key: Salin API Key
+          how_to_use: Cara menggunakan API key-mu
+          continue: Lanjut ke Pengaturan API Key
+        current_api_key:
+          title: API Key Anda
+          permissions: Perizinan
+          copy_api_key: Salin API Key
+          copy_store_securely: Salin dan simpan key ini dengan aman. Kamu membutuhkannya untuk mengautentikasi permintaan API-mu.
+          usage_instructions_title: Cara menggunakan API key-mu
+          usage_instructions: 'Sertakan API key-mu di header X-Api-Key saat melakukan request ke API %{product_name}:'
+          back_to_keys: Kembali ke API Key
+          revoke_key: Cabut Kunci
+          revoke_confirmation: Yakin ingin mencabut API key ini? Tindakan ini tidak bisa dibatalkan dan akan langsung menonaktifkan semua aplikasi yang memakai key ini.
+      new:
+        title: Buat API Key
+        create_new_api_key: Buat API Key Baru
+        subtitle: Buat API key baru untuk mengakses data Sure-mu secara programatis.
+        description: Konfigurasikan API key barumu dengan nama deskriptif dan izin yang sesuai.
+        name_label: Nama Kunci API
+        name_placeholder: mis., My Budget App, Portfolio Tracker
+        name_help_text: Pilih nama deskriptif agar kamu mudah mengenali key ini nanti.
+        name_help: Pilih nama deskriptif agar kamu mudah mengenali tujuan key ini.
+        permissions_label: Perizinan
+        permissions_help: 'Pilih izin yang harus dimiliki API key ini:'
+        scope_read_only: Hanya Baca
+        scope_read_only_description: Lihat akun, transaksi, dan saldomu
+        scope_read_write: Baca/Tulis
+        scope_read_write_description: Lihat datamu dan buat transaksi baru
+        scope_details:
+          read_accounts: Lihat informasi akun, saldo, dan data level akun
+          read_transactions: Lihat data transaksi, kategori, dan detail transaksi
+          read_balances: Lihat data histori saldo dan tren nilai akun
+          write_transactions: Buat dan perbarui catatan transaksi (segera hadir)
+        security_warning_title: Peringatan Keamanan
+        security_warning_body: API key Anda hanya akan ditampilkan sekali setelah dibuat. Pastikan untuk menyalin dan menyimpannya dengan aman. Siapa pun yang memiliki akses ke key ini dapat mengakses data Anda sesuai izin yang Anda pilih.
+        security_warning: API key Anda hanya akan ditampilkan sekali setelah dibuat. Simpan dengan aman dan jangan pernah bagikan secara publik. Jika hilang, Anda perlu membuat yang baru.
+        create_key: Buat API Key
+        cancel: Batal
+        save_api_key: Simpan API Key

@@ -1,0 +1,9 @@
+---
+id:
+  chat:
+    errors:
+      rate_limited: Provider AI sedang dibatasi (rate limited). Coba lagi dalam beberapa menit.
+      temporarily_unavailable: Provider AI sedang tidak tersedia untuk sementara. Coba lagi dalam beberapa menit.
+      misconfigured: Provider AI tidak dikonfigurasi dengan benar. Hubungi administrator Anda.
+      no_response: Asisten tidak merespons. Worker latar mungkin mati atau AI belum sepenuhnya dikonfigurasi. Coba lagi.
+      default: Gagal membuat respons. Silakan coba lagi.

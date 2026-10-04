@@ -1,0 +1,346 @@
+---
+id:
+  goals:
+    color_picker:
+      trigger_label: Pilih warna dan ikon
+      color_heading: Warna
+      icon_heading: Ikon
+      poor_contrast: Kontras kurang, pilih warna lebih gelap atau
+      auto_adjust: penyesuaian otomatis.
+    index:
+      title: Target
+      subtitle: Menabung untuk yang penting.
+      new_goal: Tujuan baru
+      empty_filtered: Tidak ada tujuan yang cocok.
+      pending_pledges_callout: Anda memiliki komitmen tertunda. Sure akan mengonfirmasinya pada sinkronisasi berikutnya.
+      kpi:
+        contributed_label: Berkontribusi · 30 hari terakhir
+        velocity_delta_up: ↑ %{percent}%% vs. 30 hari sebelumnya
+        velocity_delta_down: ↓ %{percent}%% vs. 30 hari sebelumnya
+        velocity_delta_flat: vs. 30 hari sebelumnya
+        velocity_delta_zero_base: 30 hari pertama aktivitas
+        needs_this_month_label: Dibutuhkan bulan ini
+        needs_this_month_sub:
+          one: 1 target tertinggal
+          other: '%{count} target tertinggal'
+        needs_this_month_zero_sub: Tidak ada tujuan yang tertinggal
+        on_track_label: Target sesuai rencana
+        on_track_value: '%{on_track} dari %{total}'
+        on_track_sub_parts:
+          reached:
+            one: 1 tercapai
+            other: '%{count} tercapai'
+          behind:
+            one: 1 tertinggal
+            other: '%{count} tertinggal'
+          no_date:
+            one: 1 tanpa tenggat
+            other: '%{count} tanpa tenggat'
+          paused:
+            one: 1 dijeda
+            other: '%{count} dijeda'
+        on_track_sub_all_good: Semua target aktif sesuai jalur
+        on_track_all_caught_up: Semua beres
+      goals_section:
+        heading: Target
+        subtitle: Menabung untuk yang penting.
+      ongoing_section:
+        heading: Target
+      archived_section:
+        heading: Diarsipkan
+      search:
+        placeholder: Cari target…
+        aria_label: Cari target
+        empty: Tidak ada tujuan yang cocok.
+        empty_with_query: Tidak ada tujuan yang cocok dengan "%{query}".
+        empty_with_filter: Tidak ada tujuan yang cocok dengan filter ini.
+        empty_with_both: Tidak ada tujuan yang cocok dengan "%{query}" pada filter ini.
+        clear_search: Hapus pencarian
+        show_all: Tampilkan semua
+      chips_aria: Filter target berdasarkan status
+      chips:
+        all: Semua
+        on_track: Sesuai target
+        behind: Tertinggal
+        no_target_date: Buka
+        paused: Dijeda
+        completed: Selesai
+    new:
+      heading: Tujuan baru
+      subtitle: Menabung untuk sesuatu yang spesifik.
+    edit:
+      heading: Edit target
+      save: Simpan perubahan
+    create:
+      success: Target dibuat.
+    update:
+      success: Target diperbarui.
+    destroy:
+      success: Target dihapus.
+    pause:
+      success: Target dijeda.
+      invalid_transition: Target tidak bisa dijeda dari statusnya saat ini.
+    resume:
+      success: Target dilanjutkan.
+      invalid_transition: Target tidak bisa dilanjutkan dari statusnya saat ini.
+    complete:
+      success: Target ditandai selesai.
+      invalid_transition: Target tidak bisa diselesaikan dari statusnya saat ini.
+    archive:
+      success: Target diarsipkan.
+      invalid_transition: Target tidak bisa diarsipkan dari statusnya saat ini.
+    unarchive:
+      success: Target dipulihkan.
+      invalid_transition: Target tidak bisa dipulihkan dari statusnya saat ini.
+    reopen:
+      success: Target dibuka kembali.
+      invalid_transition: Target tidak bisa dibuka kembali dari statusnya saat ini.
+    consume:
+      title: Catat pengeluaran
+      subtitle: '%{goal}'
+      amount_label: Berapa banyak yang kamu pakai?
+      amount_hint: '%{saved} saat ini mendukung target ini.'
+      account_label: Dari akun mana?
+      earmark_note: Jumlah yang Anda catat berhenti dicadangkan untuk tujuan (goal) ini, sehingga tujuan lain pada akun tersebut mendapatkan bagiannya kembali.
+      cancel: Batal
+      submit: Catat
+      success: '%{amount} tercatat telah digunakan.'
+      errors:
+        non_positive: Masukkan jumlah lebih dari nol.
+        maintained: Cadangan diambil dan diisi ulang, bukan dibelanjakan — kekurangannya sudah terlihat di target.
+        exceeds_target: Jumlahnya melebihi yang pernah ditetapkan tujuan (goal) ini untuk ditabung.
+        account_required: Target ini didanai oleh beberapa akun — sebutkan akun mana yang uangnya dipakai.
+        account_not_linked: Akun tersebut tidak mendanai tujuan ini.
+        not_active: Target ini sudah tidak aktif, jadi tidak ada yang bisa dicatat terhadapnya.
+        exceeds_earmark: Jumlahnya melebihi yang dicadangkan tujuan (goal) ini pada akun tersebut.
+        transaction_already_claimed: Pengeluaran (outflow) tersebut sudah diatribusikan.
+        transaction_not_found: Pengeluaran (outflow) tersebut tidak lagi tersedia untuk diatribusikan.
+        no_linked_account: Target ini tidak punya akun pendanaan lagi.
+    unattributed_outflows:
+      heading: Uang keluar dari akun-akun ini
+      body: Kalau ada yang dipakai untuk %{goal}, bilang saja dan itu berhenti dihitung terhadap target.
+      attribute: Itu dia
+    show:
+      edit: Edit
+      consume: Saya memakai sebagian uang ini
+      pause: Jeda
+      resume: Lanjutkan
+      complete: Tandai selesai
+      archive: Arsipkan
+      unarchive: Pulihkan
+      reopen: Buka lagi target
+      delete: Hapus
+      reserve_shortfall:
+        heading: Cadangan di bawah target saldonya
+        body: Anda menyimpan %{saved} dari %{target}. Tambahkan %{missing} untuk mengembalikannya ke saldo target.
+      record_pledge_cta: Catat pledge
+      pledge_just_transferred: Catat transfer yang kamu lakukan
+      pledge_just_saved: Catat uang yang kamu sisihkan
+      funding_accounts_heading: Akun pendanaan
+      funding_accounts:
+        earmarked_of: '%{earmarked} dialokasikan dari %{balance}'
+        empty:
+          heading: Belum ada akun pendanaan yang terhubung
+          body: Edit target untuk menautkan akun penyimpanan tempatmu menabung.
+      notes: Catatan
+      funding_last_30d: 30 hari terakhir
+      funding_last_90d: 90 hari terakhir
+      status_callout:
+        depleted: '%{amount} di bawah saldo target — tambah dana untuk mengembalikan cadangan'
+        behind: tabung %{amount}/bln lebih banyak untuk mengejar ketinggalan
+        behind_covered: komitmen tertunda menutup selisih
+        on_track: mencapai tujuan sekitar %{date}
+        no_target_date: atur tanggal target untuk memproyeksikan garis finis
+      pending_pledge:
+        title:
+          zero: 'Tertunda: %{amount} ke %{account} · berakhir hari ini'
+          one: 'Tertunda: %{amount} ke %{account} · 1 hari lagi'
+          other: 'Tertunda: %{amount} ke %{account} · %{count} hari lagi'
+        body_transfer: Terkonfirmasi otomatis saat Sure menemukan setoran yang cocok pada sinkronisasi berikutnya.
+        body_manual: Terkonfirmasi pada edit saldo manual berikutnya.
+        pledged_at: Di-pledge %{time_ago} yang lalu
+        extend: Perpanjang 7 hari
+        cancel: Batal
+        confirm_cancel_title: Batalkan komitmen ini?
+        confirm_cancel_body: Pledge sebesar %{amount} akan dihapus. Anda bisa mencatat yang baru kapan saja.
+        confirm_cancel_cta: Batalkan komitmen
+      header:
+        target: Target %{amount}
+        target_by: Target %{amount} pada %{date}
+        target_by_past: Target %{amount} · jatuh tempo %{date}
+      ring:
+        including_used: Termasuk %{amount} yang sudah terpakai
+        saved: Tersimpan
+        of: dari %{target}
+        to_go: '%{amount} lagi'
+        of_target: dari target
+        market_value: Nilai pasar %{amount}
+        aria_label: Target %{percent}% tercapai. %{amount} dari %{target} terkumpul.
+        aria_label_with_used: Target %{percent}% tercapai. %{amount} dari %{target}, termasuk %{used} yang sudah terpakai.
+      projection:
+        heading: Proyeksi
+        legend_saved: Tersimpan
+        legend_projection: Proyeksi
+        legend_required: Wajib
+        reserve: Cadangan menjaga saldo target, jadi tidak ada garis finis yang diproyeksikan.
+        reached: Anda telah mencapai target. Tidak perlu proyeksi.
+        no_target_date: Belum ada tanggal target yang ditetapkan. Tetapkan satu untuk memproyeksikan garis akhir.
+        no_pace: Belum ada setoran. Tambahkan uang ke akun yang terhubung untuk memulai proyeksi.
+        behind: Kurang dari target dengan kecepatan saat ini.
+        on_track_html: Dengan kecepatanmu saat ini, kamu akan mencapai target ini sekitar <strong class="text-primary whitespace-nowrap">%{date}</strong>.
+        aria_label: Grafik proyeksi untuk %{name}
+        today_marker: Hari ini
+        tooltip_projected: 'Proyeksi: %{amount}'
+        tooltip_saved: 'Tersimpan: %{amount}'
+        tooltip_target_relation: '%{percent}% dari target %{target}'
+      catch_up:
+        title: Tabung %{amount}/bln lagi biar kekejar
+        body: Kecepatan saat ini %{avg}/bln · dibutuhkan %{required}/bln untuk mencapai targetmu.
+        adjust_target_cta: Sesuaikan target saja
+      confirm_complete_title: Tandai target ini selesai?
+      confirm_complete_body: Uang yang dicadangkan untuknya dilepas untuk tujuan lain pada akun yang sama. Ia keluar dari daftar Ongoing, dan Anda masih bisa mengarsipkan atau memulihkannya nanti.
+      confirm_complete_body_short: Anda berada di %{progress}%, %{saved} dari %{target}. Menandainya selesai akan mencatat ini sebagai pencapaian Anda, bukan target awal. Lanjut, atau tutup ini dan sesuaikan targetnya?
+      confirm_complete_cta: Tandai selesai
+      confirm_archive_title: Arsipkan target ini?
+      confirm_archive_body: Target yang diarsipkan hilang dari daftar utama. Kamu bisa mengembalikannya nanti. Mengarsipkan tidak mencatat pencapaianmu — tandai target sebagai selesai dulu jika ingin pencapaiannya tersimpan.
+      confirm_archive_cta: Arsipkan
+      confirm_delete_title: Hapus target ini?
+      confirm_delete_body: '%{name} beserta riwayat janjinya dihapus permanen. Akun tertaut, saldo, dan transaksimu tidak terpengaruh. Kalau mau disimpan sebagai arsip, arsipkan saja.'
+      confirm_delete_cta: Hapus target
+      paused_banner:
+        title: Target ini dijeda
+        body: Lanjutkan agar progres Anda tetap terpantau.
+        resume_cta: Lanjutkan target
+      archived_banner:
+        title: Target ini diarsipkan
+        body: Pulihkan untuk lanjut berkontribusi, atau biarkan sebagai catatan.
+        restore_cta: Pulihkan target
+      celebration:
+        heading_reserve: Cadangan utuh
+        body_reserve: Cadangan Anda sudah pada saldo target, %{saved} dari %{target}. Tidak ada yang perlu dilakukan — tetap dialokasikan.
+        heading: Target tercapai. Kerja bagus.
+        body_reached: Anda telah mencapai target di %{saved} dari %{target}. Ini belum ditutup — uangnya masih dialokasikan untuk itu.
+        close_cta: Tutup target ini
+        close_hint: Menutup akan melepas dana yang dialokasikan untuk target-target lainmu di akun yang sama. Lakukan ini setelah dananya benar-benar terpakai.
+        frozen: Tercapai pada %{date} · %{amount}
+        body: Target ditutup pada %{saved} dari %{target}. Simpan sebagai catatan, atau arsipkan sekarang.
+        archive_cta: Arsipkan target
+      inactive:
+        heading_paused: Target ini dijeda
+        heading_archived: Target ini diarsipkan
+        body: '%{saved} dari %{target} terkumpul sejauh ini.'
+      no_target_date:
+        heading: Tambahkan tanggal target
+        body: Tetapkan tenggat untuk memproyeksikan garis finis dan pantau kecepatan yang dibutuhkan.
+        cta: Tetapkan tanggal target
+      empty:
+        heading: Belum ada setoran
+        body: Lakukan transfer ke akun tertautmu. Sure akan menangkapnya pada sinkronisasi berikutnya. Atau perbarui saldo akun manualmu.
+    errors:
+      not_found: Target ini tidak ditemukan. Mungkin sudah dihapus.
+    states:
+      active: Aktif
+      paused: Dijeda
+      completed: Selesai
+      archived: Diarsipkan
+    status:
+      funded: Cadangan utuh
+      depleted: Perlu diisi ulang
+      on_track: Sesuai target
+      behind: Tertinggal
+      reached: Tercapai
+      completed: Selesai
+      no_target_date: Buka
+      paused: Dijeda
+      archived: Diarsipkan
+    empty_state:
+      heading: Belum ada tujuan
+      body: Tetapkan target, tautkan akun tempat Anda menabung, dan lihat progres Anda bertambah.
+      subtitle: Tetapkan target dan mulai menabung untuknya.
+      new_goal: Buat target pertamamu
+      no_depository_accounts: Anda membutuhkan setidaknya satu akun simpanan (checking, tabungan, HSA, CD, money-market) sebelum membuat tujuan.
+      add_account: Tambahkan akun
+    goal_card:
+      including_used: Termasuk %{amount} yang sudah terpakai
+      no_accounts: Belum ada akun yang terhubung
+      n_accounts: '%{first} +%{count}'
+      left: tersisa
+      aria_progress: '%{percent}% dari %{target}'
+      accounts:
+        one: 1 akun
+        other: '%{count} akun'
+      no_target_date: Buka
+      completed: Selesai
+      past_due: Menunggak
+      days_left:
+        one: 1 hari tersisa
+        other: '%{count} hari tersisa'
+      pace_with_target: '%{avg}/bln · target %{target}/bln'
+      pace_no_target: '%{avg}/bln rata-rata'
+      footer_paused: Dijeda
+      footer_archived: Diarsipkan
+      footer_reserve_intact: Cadangan utuh
+      footer_reserve_short: '%{amount} untuk tambah dana'
+      footer_reached: Target tercapai
+      footer_catch_up: Tabung %{amount}/bln biar kekejar
+      footer_no_deadline: Buka
+      pending_pledge: Pledg tertunda
+      pending_count:
+        one: 1 tertunda
+        other: '%{count} tertunda'
+      footer_no_pledges: Belum ada komitmen yang cocok
+      footer_last_today: Pledge terakhir cocok hari ini
+      footer_last_days:
+        one: Pledge terakhir cocok 1 hari lalu
+        other: Pledge terakhir cocok %{count} hari lalu
+    form:
+      target_modes:
+        fixed: Jumlah tetap
+        months_of_expenses: Pengeluaran beberapa bulan
+      kinds:
+        one_off:
+          hint: Menabung untuk sesuatu, lalu tutup saat Anda membelanjakannya.
+          label: Tujuan sekali saja
+        maintained:
+          hint: Saldo yang dipertahankan, seperti dana darurat. Tidak pernah ditutup.
+          label: Cadangan yang dijaga
+      create: Buat target
+      save: Simpan perubahan
+      suggested_with_date: Tabung {monthly}/bln di {accounts} biar tercapai tepat waktu.
+      suggested_no_date: Tetapkan tanggal target untuk memproyeksikan garis finis.
+      errors:
+        name_required: |
+          Beri nama targetmu.
+        amount_required: Tetapkan target di atas nol.
+        accounts_required: Pilih setidaknya satu akun pendanaan.
+      earmark:
+        headroom: '{left} tersisa untuk dialokasikan pada akun ini.'
+        prorata: Tujuan Anda di akun ini berjumlah {total} untuk saldo {balance} — perkembangannya proporsional.
+        whole_balance: Akun ini akan mendanai sisa setelah pencadangan lainnya.
+        whole_balance_alone: Target ini akan menggunakan seluruh saldo akun ini.
+      fields:
+        target_mode: Cara saldo target ditentukan
+        target_months: Bulan pengeluaran
+        target_months_hint: Dihitung ulang tiap tanggal 1 dari median pengeluaran bulanan Anda.
+        name: Nama
+        name_placeholder: Dana darurat, Uang muka rumah…
+        target_amount: Jumlah target
+        target_balance: Saldo target
+        target_balance_pending: Dihitung saat kamu menyimpan
+        target_balance_hint: Dari median pengeluaran bulananmu selama bulan-bulan di atas. Disegarkan setiap bulan.
+        target_date: Tanggal target
+        color: Warna
+        notes: Catatan (opsional)
+        notes_placeholder: Pengingat untuk dirimu di masa depan…
+        funding_accounts: Akun pendanaan
+        funding_accounts_hint: Saldo target ini adalah saldo (atau bagian yang disisihkan) dari akun-akun ini.
+        whole_balance: 'Kosong: seluruh saldo'
+        earmark_for: Alokasikan jumlah untuk %{account}
+        earmark_hint: Kosongkan jumlah untuk mendedikasikan seluruh saldo akun tersebut.
+      subtypes:
+        checking: Mengecek
+        savings: Tabungan
+        hsa: HSA
+        cd: CD
+        money_market: pasar uang
+        other: Lainnya

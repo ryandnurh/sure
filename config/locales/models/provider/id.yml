@@ -1,0 +1,17 @@
+---
+id:
+  providers:
+    property_valuation:
+      not_configured: Penyedia data properti ini belum dikonfigurasi.
+      missing_fields: Berikan nama dan alamat lengkap AS (jalan, kota, negara bagian, dan kode pos).
+      preview_expired: Pratinjau properti ini sudah kedaluwarsa — cari lagi alamatnya.
+    rentcast:
+      errors:
+        no_valuation: RentCast tidak mengembalikan estimasi nilai untuk alamat ini.
+        not_found: RentCast tidak menemukan properti yang cocok dengan alamat ini.
+    realie:
+      errors:
+        no_property: Realie tidak mengembalikan properti untuk alamat ini.
+        no_valuation: Realie tidak mengembalikan valuasi untuk properti ini.
+        not_found: Realie tidak menemukan properti yang cocok dengan alamat ini.
+        location_mismatch: Realie menemukan properti di kota atau kode pos yang berbeda. Periksa lagi alamatnya.

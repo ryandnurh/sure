@@ -1,0 +1,81 @@
+---
+id:
+  family_merchants:
+    create:
+      error: 'Error membuat merchant: %{error}'
+      success: Merchant baru berhasil dibuat
+    destroy:
+      success: Merchant berhasil dihapus
+      unlinked_success: Merchant dihapus dari transaksimu
+    edit:
+      title: Edit merchant
+    form:
+      name_placeholder: Nama merchant
+      website_placeholder: Situs web (mis., starbucks.com)
+      website_hint: Masukkan situs web merchant untuk menampilkan logonya secara otomatis
+    index:
+      empty: Belum ada merchant
+      new: Merchant baru
+      import: Impor merchant
+      merge: Gabungkan merchant
+      title: Merchant
+      family_title: '%{moniker} merchant'
+      family_empty: Belum ada merchant %{moniker}
+      provider_title: Merchant provider
+      provider_empty: Belum ada merchant penyedia yang ditautkan ke %{moniker} ini
+      provider_read_only: Merchant provider disinkronkan dari institusi yang terhubung. Tidak bisa diedit di sini.
+      provider_info: Merchant-merchant ini terdeteksi otomatis oleh koneksi bank atau AI Anda. Anda bisa mengeditnya untuk membuat salinan sendiri, atau menghapusnya untuk melepas tautan dari transaksi Anda.
+      enhance_info:
+        one: '%{count} merchant penyedia belum punya info situs web. Tingkatkan dengan AI untuk mendeteksi situs web, menampilkan logo, dan menggabungkan merchant duplikat.'
+        other: '%{count} merchant penyedia belum punya info situs web. Tingkatkan dengan AI untuk mendeteksi situs web, menampilkan logo, dan menggabungkan merchant duplikat.'
+      enhance_button: Tingkatkan dengan AI
+      search_family_merchants: Cari merchant family...
+      search_provider_merchants: Cari merchant provider...
+      no_family_merchants_found: Tidak ada merchant keluarga yang cocok ditemukan
+      no_provider_merchants_found: Tidak ada merchant penyedia yang cocok ditemukan
+      per_page: per halaman
+      unlinked_title: Baru saja dilepas
+      unlinked_info: Merchant-merchant ini baru saja dihapus dari transaksi Anda. Mereka akan hilang dari daftar ini setelah 30 hari kecuali ditautkan kembali ke transaksi.
+      table:
+        merchant: Merchant
+        actions: Aksi
+        source: Sumber
+    family_merchant:
+      edit: Edit
+      delete: Hapus
+    merchant:
+      confirm_accept: Hapus merchant
+      confirm_body: Yakin ingin menghapus merchant ini? Menghapus merchant ini akan melepas semua transaksi terkait dan bisa memengaruhi laporanmu.
+      confirm_title: Hapus merchant?
+      delete: Hapus merchant
+      edit: Edit merchant
+    merge:
+      title: Gabungkan merchant
+      description: Pilih merchant target dan merchant yang akan digabungkan ke dalamnya. Semua transaksi dari merchant yang digabung akan dipindahkan ke target.
+      target_label: Gabungkan ke (target)
+      select_target: Pilih merchant target...
+      sources_label: Merchant yang akan digabung
+      sources_search_placeholder: Cari merchant...
+      no_merchants_found: Tidak ada merchant yang cocok ditemukan
+      sources_hint: Merchant yang dipilih akan digabungkan ke target. Merchant family akan dihapus, merchant provider akan dilepas tautannya.
+      submit: Gabungkan yang dipilih
+    new:
+      title: Merchant baru
+    perform_merge:
+      success:
+        one: Berhasil menggabungkan %{count} merchant
+        other: Berhasil menggabungkan %{count} merchant
+      no_merchants_selected: Tidak ada merchant yang dipilih untuk digabungkan
+      target_not_found: Merchant target tidak ditemukan
+      invalid_merchants: Merchant yang dipilih tidak valid
+    provider_merchant:
+      edit: Edit
+      remove: Hapus
+      remove_confirm_title: Hapus merchant?
+      remove_confirm_body: Yakin ingin menghapus %{name}? Ini akan melepas semua transaksi terkait dari merchant ini tapi tidak menghapus merchant-nya.
+    enhance:
+      success: Peningkatan merchant provider dimulai. Merchant akan ditingkatkan dan duplikat digabungkan sebentar lagi.
+      already_running: Peningkatan sudah berjalan. Tunggu hingga selesai.
+    update:
+      success: Merchant berhasil diperbarui
+      converted_success: Merchant berhasil dikonversi dan diperbarui

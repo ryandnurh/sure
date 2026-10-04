@@ -1,0 +1,127 @@
+---
+id:
+  providers:
+    akahu:
+      name: Akahu
+      description: Hubungkan rekening bank Selandia Baru via Akahu
+  family:
+    akahu:
+      create_akahu_item:
+        default_name: Koneksi Akahu
+  akahu_account:
+    fallback: Akun Akahu
+  akahu_entry:
+    notes:
+      reference: Referensi
+      particulars: Keterangan
+      code: Kode
+      other_account: Akun lain
+  akahu_item:
+    errors:
+      account_processing_failed: Tidak bisa menyinkronkan akun Akahu
+      account_sync_schedule_failed: Tidak bisa menjadwalkan sinkronisasi akun Akahu
+      pending_transactions_failed: Tidak bisa mengambil transaksi tertunda Akahu
+      transactions_failed: Tidak bisa mengambil transaksi Akahu
+      sync_failed: Tidak bisa menyinkronkan koneksi Akahu
+    sync_status:
+      no_accounts: Tidak ada akun yang ditemukan
+      all_synced:
+        one: 1 akun tersinkron
+        other: '%{count} akun tersinkron'
+      partial: '%{linked} tersinkron, %{unlinked} perlu disiapkan'
+    institution_summary:
+      none: Belum ada institusi yang terhubung
+      one: 1 institusi
+      count:
+        one: 1 institusi
+        other: '%{count} institusi'
+  akahu_items:
+    provider_panel:
+      default_connection_name: Koneksi Akahu
+      add_connection: Tambah koneksi Akahu
+      update_connection: Perbarui koneksi
+      connection_name_label: Nama koneksi
+      connection_name_placeholder: Akahu Utama
+      app_token_label: Token Aplikasi
+      app_token_placeholder: Tempel token aplikasi Akahu Anda
+      keep_app_token_placeholder: Kosongkan untuk mempertahankan app token yang ada
+      user_token_label: Token Pengguna
+      user_token_placeholder: Tempel token pengguna Akahu Anda
+      keep_user_token_placeholder: Kosongkan untuk mempertahankan user token yang ada
+      setup_accounts: Siapkan akun
+      syncing: Menyinkronkan...
+      sync: Sinkron
+      disconnect: Putuskan
+      disconnect_confirm: Yakin ingin memutuskan %{name}?
+    create:
+      success: Koneksi Akahu tersimpan.
+    update:
+      success: Koneksi Akahu diperbarui.
+    destroy:
+      success: Koneksi Akahu dijadwalkan untuk dihapus.
+      unlink_failed: Tidak bisa memutuskan koneksi Akahu
+    select_accounts:
+      title: Tautkan akun-akun Akahu
+      description: Pilih akun Akahu yang akan ditambahkan.
+      no_accounts_found: Tidak ada akun Akahu yang belum ditautkan ditemukan.
+      no_credentials_configured: Konfigurasikan Akahu di pengaturan provider dulu.
+      cancel: Batal
+      link_accounts: Tautkan akun-akun
+    link_accounts:
+      success:
+        one: 1 akun Akahu tertaut.
+        other: '%{count} akun Akahu tertaut.'
+      no_accounts_selected: Pilih minimal satu akun.
+      no_credentials_configured: Konfigurasikan Akahu di pengaturan provider dulu.
+      unsupported_account_type: Akahu tidak mendukung tipe akun itu.
+      link_failed: Tidak ada akun yang dihubungkan.
+    select_existing_account:
+      title: Tautkan akun Akahu ke %{account_name}
+      description: Pilih akun Akahu yang belum tertaut untuk dihubungkan ke akun ini.
+      no_accounts_found: Tidak ada akun Akahu yang belum ditautkan ditemukan.
+      no_credentials_configured: Konfigurasikan Akahu di pengaturan provider dulu.
+      account_already_linked: Akun ini sudah ditautkan ke provider.
+      cancel: Batal
+      link_account: Tautkan akun
+    link_existing_account:
+      success: Akun Akahu tertaut ke %{account_name}.
+      account_already_linked: Akun ini sudah ditautkan ke provider.
+      akahu_account_already_linked: Akun Akahu ini sudah ditautkan.
+    setup_accounts:
+      title: Siapkan Akun Akahu
+      subtitle: Pilih tampilan tiap akun Akahu di Sure.
+      no_credentials: Konfigurasikan kredensial Akahu dulu.
+      api_error: Tidak bisa mengambil akun Akahu.
+      fetch_failed: Tidak bisa mengambil akun
+      no_accounts_to_setup: Tidak ada akun untuk diatur
+      all_accounts_linked: Semua akun Akahu sudah tertaut.
+      choose_account_type: Pilih tipe akun
+      choose_account_type_description: Lewati akun yang tidak ingin Anda lacak.
+      account_type_label: Tipe akun
+      account_types:
+        skip: Lewati
+        depository: Tunai
+        credit_card: Kartu Kredit
+        investment: Investasi
+        loan: Pinjaman
+      create_accounts: Buat akun
+      cancel: Batal
+    complete_account_setup:
+      success:
+        one: Membuat 1 akun Akahu.
+        other: Membuat %{count} akun Akahu.
+      all_skipped: Tidak ada akun Akahu yang dibuat.
+      no_accounts: Tidak ada akun Akahu yang dipilih.
+      creation_failed: Tidak bisa membuat akun Akahu.
+    akahu_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      syncing: Menyinkronkan
+      error: Error
+      status_with_summary: Tersinkron %{timestamp} yang lalu · %{summary}
+      status_never: Belum pernah disinkronkan
+      delete: Hapus
+      setup_needed: Akun perlu disiapkan
+      setup_description: '%{linked} dari %{total} akun tertaut.'
+      setup_action: Siapkan akun
+      no_accounts_title: Belum ada akun yang diimpor
+      no_accounts_description: Ambil akun Akahu dan pilih mana yang ditautkan.

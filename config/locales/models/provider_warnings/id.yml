@@ -1,0 +1,11 @@
+---
+id:
+  provider_warnings:
+    limited_investment_data: Data investasi dari penyedia ini terbatas. Label aktivitas (Beli, Jual, Dividen) tidak tersedia, yang bisa memengaruhi akurasi anggaran. Pertimbangkan membuat aturan untuk mengecualikan atau mengategorikan transaksi investasi.
+    lunchflow_accounts_failed:
+      one: 'Impor Lunchflow: %{count} akun gagal diperbarui'
+      other: 'Impor Lunchflow: %{count} akun gagal diperbarui'
+    lunchflow_transactions_failed:
+      one: 'Impor Lunchflow: pengambilan transaksi gagal untuk %{count} akun'
+      other: 'Impor Lunchflow: pengambilan transaksi gagal untuk %{count} akun'
+    lunchflow_import_error: 'Impor Lunchflow: %{error}'

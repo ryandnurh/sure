@@ -1,0 +1,119 @@
+---
+id:
+  admin:
+    users:
+      index:
+        title: Manajemen Pengguna
+        description: Kelola peran pengguna, keanggotaan keluarga/grup, dan penghapusan akun untuk instance-mu. Super admin bisa mengakses pengaturan penyedia SSO dan manajemen pengguna.
+        section_title: Keluarga / Grup
+        you: (Kamu)
+        trial_ends_at: Masa trial berakhir
+        not_available: n/a
+        no_users: Tidak ada pengguna yang ditemukan.
+        unnamed_family: Family/Grup Tanpa Nama
+        no_subscription: Tidak ada langganan
+        family_summary: '%{members} anggota · %{accounts} akun · %{transactions} transaksi'
+        filters:
+          role: Peran
+          role_all: Semua peran
+          trial_status: Status trial
+          trial_all: Semua
+          trial_expiring_soon: Kedaluwarsa dalam 7 hari
+          trial_trialing: Masa percobaan
+          submit: Filter
+        summary:
+          trials_expiring_7_days: Trial yang kedaluwarsa 7 hari ke depan
+        table:
+          user: Pengguna
+          trial_ends_at: Masa trial berakhir
+          family_accounts: Akun keluarga
+          family_transactions: Transaksi keluarga
+          last_login: Login terakhir
+          session_count: Jumlah sesi
+          never: Tidak pernah
+          role: Peran
+          family: Keluarga / Grup
+          keep_current_family: Pertahankan keluarga/grup saat ini
+          create_new_family_option: + Buat keluarga/grup baru
+          new_family_name: Nama keluarga/grup baru
+          new_family_name_placeholder: Masukkan nama untuk membuat keluarga/grup baru
+          new_family_moniker: Jenis keluarga/grup baru
+          set_password: Tetapkan kata sandi baru
+          password_placeholder: Kosongkan untuk mempertahankan yang sekarang
+          actions: Aksi
+        family_monikers:
+          family: Keluarga
+          group: Grup
+        actions:
+          manage_user: Kelola pengguna
+          update: Perbarui pengguna
+          delete_user: Hapus pengguna
+          self_edit_warning: Mengubah peranmu sendiri akan mengubah hak administratifmu.
+          self_update_confirm: Yakin ingin mengubah peran akun atau keluargamu sendiri?
+          last_super_admin_role_locked: Perubahan peran diblokir karena Anda super admin terakhir di sistem.
+        delete_confirm: Yakin ingin menghapus pengguna ini? Tindakan ini tidak bisa dibatalkan.
+        delete_confirm_last_user: Yakin ingin menghapus pengguna ini? Ini pengguna terakhir di keluarga/grupnya, jadi menghapusnya juga akan menghapus seluruh keluarga/grup beserta semua data terkait. Tindakan ini tidak bisa dibatalkan.
+        remove: Hapus Pengguna
+        role_descriptions_title: Deskripsi Peran
+        removed_sso_identities:
+          title: Identitas SSO dihapus
+          description: Identitas ini tidak bisa membuat atau menghubungkan ulang akun. Izinkan identitas lagi hanya jika penghapusan tidak disengaja.
+          allow_again: Izinkan lagi
+          confirm: Izinkan %{email} masuk atau membuat akun lewat SSO lagi?
+        roles:
+          guest: Tamu
+          member: Anggota
+          admin: Admin
+          super_admin: Super Admin
+        auth_types:
+          sso: SSO
+          local: Lokal
+          local_and_sso: Lokal + SSO
+          sso_provider_tooltip: 'Provider SSO: %{providers}'
+        role_descriptions:
+          guest: Pengalaman yang mengutamakan asisten dengan izin yang sengaja dibatasi untuk alur perkenalan.
+          member: Akses pengguna dasar. Bisa mengelola akun, transaksi, dan pengaturannya sendiri.
+          admin: Administrator keluarga. Bisa mengakses pengaturan lanjutan seperti API key, impor, dan prompt AI.
+          super_admin: Administrator instance. Bisa mengelola penyedia SSO, peran pengguna, dan menyamar sebagai pengguna untuk dukungan.
+        invitations:
+          pending_label: Diundang (menunggu)
+          expires: Kedaluwarsa %{date}
+          delete: Hapus
+          delete_all: Hapus Semua
+        unused_families:
+          title: Family / grup yang tidak terpakai
+          family_id: 'ID Keluarga: %{id}'
+          delete: Hapus keluarga yang tidak dipakai
+          delete_confirm: Yakin ingin menghapus keluarga/grup yang tidak dipakai ini? Tindakan ini tidak bisa dibatalkan.
+          empty: Tidak ada keluarga/grup yang tidak terpakai ditemukan.
+      update:
+        success_role: Peran pengguna berhasil diperbarui.
+        success_password: Kata sandi pengguna berhasil diperbarui.
+        success_role_and_password: Peran dan kata sandi pengguna berhasil diperbarui.
+        success_family: Keanggotaan family/grup pengguna berhasil diperbarui.
+        failure: Gagal memperbarui detail pengguna (peran atau keanggotaan keluarga/grup).
+        family_required: Pilih family/grup yang sudah ada atau masukkan nama untuk yang baru.
+        password_and_family_conflict: Kata sandi dan keanggotaan keluarga/grup tidak dapat diperbarui secara bersamaan.
+        password_too_short: Kata sandi minimal 8 karakter.
+        password_missing_case: Kata sandi harus mengandung huruf besar dan huruf kecil.
+        password_missing_number: Kata sandi harus mengandung setidaknya satu angka.
+        password_missing_special: Kata sandi harus mengandung setidaknya satu karakter khusus.
+        last_super_admin_error: Tidak bisa menurunkan super admin terakhir di sistem.
+      destroy:
+        success: Akses pengguna dicabut dan penghapusan permanen dijadwalkan.
+        failure: Gagal menghapus pengguna.
+        cannot_remove_self: Anda tidak bisa menghapus akun Anda sendiri dari sini.
+        cannot_remove_last_super_admin: Anda tidak bisa menghapus super admin aktif terakhir.
+        confirmation_mismatch: Alamat email tidak cocok. Pengguna tidak dihapus.
+      deletion:
+        title: Hapus pengguna secara permanen
+        warning: Ini langsung mencabut akses dan menjadwalkan penghapusan permanen pengguna beserta datanya. Tindakan ini tidak bisa dibatalkan.
+        instruction: Ketik %{email} untuk konfirmasi.
+        email_label: Email pengguna
+        cancel: Batal
+        submit: Hapus pengguna secara permanen
+    families:
+      destroy:
+        family_has_active_subscription: Keluarga/grup punya langganan aktif dan tidak bisa dihapus sampai langganannya dibatalkan.
+        family_has_users: Keluarga/grup masih punya pengguna dan tidak bisa dihapus.
+        success: Keluarga/grup berhasil dihapus.

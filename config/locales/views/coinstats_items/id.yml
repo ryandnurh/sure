@@ -1,0 +1,75 @@
+---
+id:
+  coinstats_items:
+    create:
+      success: Koneksi provider CoinStats berhasil dikonfigurasi.
+      default_name: Koneksi CoinStats
+      errors:
+        validation_failed: 'Validasi gagal: %{message}.'
+    update:
+      success: Koneksi provider CoinStats berhasil diperbarui.
+      errors:
+        validation_failed: 'Validasi gagal: %{message}.'
+    destroy:
+      success: Koneksi provider CoinStats dijadwalkan untuk dihapus.
+    link_wallet:
+      success: '%{count} dompet kripto berhasil ditautkan.'
+      missing_params: 'Parameter wajib hilang: address dan blockchain.'
+      failed: Penautan dompet kripto gagal.
+      error: 'Penautan dompet kripto gagal: %{message}.'
+    link_exchange:
+      success: Bursa %{name} tertaut.
+      missing_params: Bursa dan kredensial wajib diisi.
+      invalid_exchange: Bursa yang dipilih tidak lagi didukung.
+      failed: Gagal menautkan bursa.
+      error: 'Gagal menautkan bursa: %{message}.'
+    new:
+      title: Tautkan Kripto dengan CoinStats
+      blockchain_fetch_error: Gagal memuat Blockchain. Silakan coba lagi nanti.
+      link_wallet_title: Tautkan Alamat Dompet
+      link_wallet_description: Lacak dompet self-custody atau satu alamat on-chain lewat CoinStats.
+      address_label: Alamat
+      address_placeholder: Wajib
+      blockchain_label: Blockchain
+      blockchain_placeholder: Wajib
+      blockchain_select_blank: Pilih Blockchain
+      link_wallet_submit: Tautkan Dompet Kripto
+      link_exchange_title: Tautkan API Exchange
+      link_exchange_description: Gunakan API key exchange hanya-baca agar CoinStats bisa menyinkronkan saldo dan transaksi dari Bitvavo, Binance, dan exchange lain yang didukung.
+      link_exchange_note: Kalau exchangemu mewajibkan aktivasi API key atau konfirmasi email, selesaikan dulu langkah itu sebelum menautkan di sini.
+      exchange_select_blank: Pilih bursa
+      exchange_label: Bursa
+      link_exchange_submit: Tautkan Exchange
+      not_configured_title: Koneksi provider CoinStats belum dikonfigurasi
+      not_configured_message: Untuk menautkan dompet kripto atau exchange, kamu harus mengonfigurasi dulu koneksi provider CoinStats.
+      not_configured_step1_html: Buka <strong>Pengaturan → Penyedia</strong>
+      not_configured_step2_html: Cari penyedia <strong>CoinStats</strong>
+      not_configured_step3_html: Ikuti <strong>Instruksi setup</strong> yang diberikan untuk menyelesaikan konfigurasi penyedia
+      go_to_settings: Buka Pengaturan Penyedia
+      setup_instructions: 'Instruksi Pengaturan:'
+      step1_html: Kunjungi <a href="https://openapi.coinstats.app/" class="link" target="_blank" rel="noopener noreferrer">CoinStats Public API Dashboard</a> untuk mendapatkan API key.
+      step2: Masukkan API key-mu di bawah lalu klik Configure.
+      step3_html: Setelah koneksi berhasil, kunjungi tab <a href="%{accounts_url}" class="link" data-turbo-frame="_top">Akun</a> untuk menyiapkan akun kriptomu.
+      api_key_label: Kunci API
+      api_key_placeholder: Wajib
+      configure: Konfigurasi
+      update_configuration: Konfigurasi ulang
+      default_name: Koneksi CoinStats
+    coinstats_item:
+      deletion_in_progress: Data dompet kripto sedang dihapus…
+      provider_name: CoinStats
+      syncing: Menyinkronkan…
+      sync_status:
+        no_accounts: Tidak ada dompet kripto yang ditemukan
+        all_synced:
+          one: '%{count} dompet kripto tersinkron'
+          other: '%{count} dompet kripto tersinkron'
+        partial_sync: '%{linked_count} dompet kripto tersinkron, %{unlinked_count} perlu disiapkan'
+      reconnect: Hubungkan ulang
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_never: Belum pernah disinkronkan
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu • %{summary}
+      update_api_key: Perbarui API Key
+      delete: Hapus
+      no_wallets_title: Belum ada dompet kripto yang terhubung
+      no_wallets_message: Tidak ada dompet kripto yang saat ini terhubung ke CoinStats.

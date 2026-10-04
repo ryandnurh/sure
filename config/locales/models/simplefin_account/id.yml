@@ -1,0 +1,7 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        simplefin_account:
+          no_balance: Akun SimpleFin harus memiliki saldo saat ini atau saldo tersedia

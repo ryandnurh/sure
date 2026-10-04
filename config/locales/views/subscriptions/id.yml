@@ -1,0 +1,24 @@
+---
+id:
+  subscriptions:
+    self_hosted_alert: '%{product_name} tidak tersedia dalam mode self-hosted.'
+    upgrade:
+      already_contributing: Anda sudah berkontribusi. Terima kasih!
+      page_title: Upgrade
+      account_settings: Pengaturan Akun
+      sign_out: Keluar
+      contribute_and_support_sure: Berkontribusi dan dukung Sure
+      cta: Terus dukung pengembangan codebase ini!
+      header:
+        support: Dukungan
+        sure: Sure
+        today: hari ini
+      redirect_to_stripe: Di langkah berikutnya, kamu akan diarahkan ke Stripe yang menangani kartu kredit untuk kami.
+      trialing: Data Anda akan dihapus dalam %{days} hari
+      trial_over: Masa trial Anda telah berakhir
+    create:
+      welcome: Selamat datang di Sure!
+      trial_already_used: Anda sudah memulai atau menyelesaikan masa trial. Silakan upgrade untuk melanjutkan.
+    success:
+      welcome_with_contribution: Selamat datang di Sure!  Kontribusimu sangat dihargai.
+      contribution_failed: Terjadi kesalahan saat memproses kontribusi Anda. Silakan coba lagi.
