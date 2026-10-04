@@ -6,6 +6,9 @@ id:
         delete: Hapus kategori
         edit: Edit kategori
       show:
+        assign_error: Kategori berhasil dibuat, tetapi tidak bisa ditetapkan. Pilih Buat lagi untuk mencoba lagi.
+        back: Kembali
+        choose_parent: 'Buat "%{name}" di bawah:'
         clear: Hapus kategori
         no_categories: Tidak ada kategori yang ditemukan
         recent: Terbaru
