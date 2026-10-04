@@ -1,0 +1,178 @@
+---
+id:
+  providers:
+    trade_republic:
+      name: Trade Republic
+      connection_description: Hubungkan akun investasi Trade Republic via login web yang aman
+      institution_name: Trade Republic
+  trade_republic_items:
+    portfolio_categories:
+      brokerage: Broker
+      private_markets: Pasar Privat
+      interest_products: Produk Bunga
+      crypto_wallet: Dompet Kripto
+    duplicate_connection: Akun Trade Republic ini sudah terhubung. Koneksi baru dihapus.
+    defaults:
+      name: Trade Republic
+    trade_republic_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      syncing: Menyinkronkan
+      requires_update: Autentikasi ulang diperlukan
+      error: Error
+      synced: Tersinkron %{time} yang lalu. %{summary}.
+      never_synced: Belum pernah disinkronkan.
+      setup_accounts: Siapkan akun
+      delete: Hapus
+      accounts_need_setup: Akun perlu disiapkan
+      accounts_need_setup_description: Akun Trade Republic Anda perlu ditautkan ke akun Sure.
+      no_accounts_discovered: Belum ada akun Trade Republic yang ditemukan.
+      no_accounts_discovered_description: Selesaikan login dan jalankan sinkronisasi untuk menemukan akunmu.
+      data_quality:
+        title: Kualitas data dan detail sinkronisasi
+        repair: Perbaiki data impor
+        positions:
+          one: '%{count} posisi'
+          other: '%{count} posisi'
+        unpriced:
+          one: '%{count} tanpa harga terkini'
+          other: '%{count} tanpa harga terkini'
+        events:
+          one: '%{count} aktivitas'
+          other: '%{count} aktivitas'
+        unknown:
+          one: '%{count} aktivitas tak dikenal'
+          other: '%{count} aktivitas tak dikenal'
+        pending_trade_details:
+          one: '%{count} aktivitas investasi menunggu detail'
+          other: '%{count} aktivitas investasi menunggu detail'
+        expenses:
+          one: '%{count} pengeluaran dalam 30 hari terakhir (%{amount})'
+          other: '%{count} pengeluaran dalam 30 hari terakhir (%{amount})'
+        reconciliation: '%{matched}/%{total} saldo akun direkonsiliasi'
+        sync_history: Sinkronisasi terbaru
+        sync_status:
+          completed: Selesai
+          failed: Gagal
+          pending: Tertunda
+          syncing: Menyinkronkan
+          stale: Basi
+    setup_accounts:
+      page_title: Siapkan Akun Trade Republic
+      dialog_title: Siapkan Akun Trade Republic Anda
+      subtitle: Tautkan akun investasi Trade Republic-mu.
+      info_box:
+        title: Impor Trade Republic
+        items:
+          item_1: Posisi saat ini beserta harga dan jumlahnya
+          item_2: Perdagangan yang dieksekusi (beli dan jual)
+          item_3: Setoran, penarikan, dan pembayaran bunga
+      status:
+        fetching_accounts: Mengambil akun dari Trade Republic...
+        no_accounts_found_title: Tidak ada akun yang ditemukan.
+        no_accounts_found_description: Sure tidak menemukan akun Trade Republic. Pastikan sesimu masih valid.
+      available_accounts:
+        title: Akun tersedia
+        account_type_investment: Portofolio investasi
+        account_type_cash: Akun tunai
+        account_type_crypto: akun kripto
+        account_summary: '%{account_type} • Saldo: %{balance}'
+        account_id: 'ID Akun: %{account_id}'
+      link_existing:
+        description: Atau tautkan akun Trade Republic yang ditemukan ke akun investasi manual yang sudah ada.
+        manual_account_option: '%{name} (%{balance})'
+        select_prompt: Pilih akun...
+      linked_accounts:
+        title: Sudah tertaut
+        linked_to_html: 'Tertaut ke: %{account}'
+      buttons:
+        refresh: Segarkan
+        cancel: Batal
+        back_to_settings: Kembali ke Pengaturan
+        create_selected_accounts: Buat akun yang dipilih
+        link: Tautan
+        done: Selesai
+    sync:
+      errors:
+        phone_number_missing: Nomor telepon Trade Republic tidak ada.
+        reauthentication_required: Sesi Trade Republic hilang atau kedaluwarsa. Sambung ulang dari Pengaturan > Provider.
+      status:
+        checking_credentials: Mengecek kredensial Trade Republic...
+        importing_account: Mengimpor akun Trade Republic...
+        checking_configuration: Mengecek konfigurasi akun...
+        accounts_need_setup:
+          one: 1 akun Trade Republic perlu disiapkan...
+          other: '%{count} akun Trade Republic perlu disiapkan...'
+        processing_activity: Memproses posisi dan aktivitas...
+        calculating_balances: Menghitung saldo...
+    repair:
+      scheduled: Perbaikan data Trade Republic dijadwalkan.
+    sync_status:
+      no_accounts: Belum ada akun Trade Republic yang ditemukan
+      all_linked:
+        one: 1 akun tertaut
+        other: '%{count} akun tertaut'
+      partial: '%{linked} tertaut, %{unlinked} perlu disiapkan'
+    select_existing_account:
+      title: Tautkan akun Trade Republic
+      no_accounts_available: Belum ada akun Trade Republic yang belum ditautkan tersedia.
+      run_sync_hint: Selesaikan login dan jalankan sinkronisasi dari Pengaturan > Provider.
+      wait_for_sync: Tunggu sinkronisasi penemuan akun selesai.
+      balance: Saldo
+      link: Tautan
+      cancel: Batal
+    create:
+      success: Trade Republic tersimpan. Konfirmasi login di aplikasi Trade Republic untuk menyelesaikan penyambungan.
+    update:
+      success: Berhasil memperbarui konfigurasi Trade Republic.
+      pin_required: Masukkan PIN atau kata sandi Trade Republic-mu untuk autentikasi ulang.
+    destroy:
+      success: Koneksi Trade Republic dijadwalkan untuk dihapus.
+      unlink_failed: Trade Republic tidak bisa diputuskan sepenuhnya. Koneksi tetap dipertahankan agar bisa dicoba ulang dengan aman.
+    select_accounts:
+      not_configured: Trade Republic belum dikonfigurasi.
+    initiate_login:
+      not_configured: Trade Republic belum dikonfigurasi.
+      pin_required: Masukkan PIN atau kata sandi Trade Republic-mu untuk memulai login baru.
+      verification_required: Login dimulai. Konfirmasi via %{method}, lalu tekan Konfirmasi login.
+    initiate_qr_login:
+      not_configured: Trade Republic belum dikonfigurasi.
+    poll_login:
+      no_pending_login: Tidak ada proses login yang sedang menunggu. Mulai login baru terlebih dahulu.
+      login_expired: Permintaan login kedaluwarsa. Mulai lagi.
+    poll_qr_login:
+      no_pending_login: Tidak ada login QR yang menunggu.
+      success: Trade Republic berhasil terhubung.
+    complete_login:
+      no_pending_login: Tidak ada proses login yang sedang menunggu. Mulai login baru terlebih dahulu.
+      approval_pending: Belum dikonfirmasi. Setujui login di aplikasi Trade Republic, lalu coba lagi.
+      still_pending: Belum dikonfirmasi. Setujui login di aplikasi Trade Republic, lalu coba lagi.
+      success: Trade Republic berhasil terhubung.
+      login_expired: Permintaan login kedaluwarsa. Mulai lagi.
+    link_existing_account:
+      not_found: Konfigurasi Akun atau Trade Republic tidak ditemukan.
+      only_manual_investment: Hanya akun investasi manual yang dapat ditautkan ke Trade Republic.
+      already_linked: Akun Trade Republic ini sudah ditautkan.
+      success: Berhasil terhubung ke akun Trade Republic.
+      processing_failed: Akun sudah ditautkan, tetapi pemrosesan data awalnya gagal. Sinkronisasi sudah dijadwalkan; periksa debug log jika masih belum selesai.
+      failed: Gagal menautkan akun Trade Republic.
+    complete_account_setup:
+      success:
+        one: Berhasil membuat %{count} akun Trade Republic.
+        other: Berhasil membuat %{count} akun Trade Republic.
+      none_selected: Tidak ada akun yang dipilih.
+      none_created: Tidak ada akun yang dibuat.
+      partial_failure:
+        one: Satu akun Trade Republic yang dipilih tidak dapat diselesaikan. Periksa log debug dan coba lagi.
+        other: '%{count} akun Trade Republic yang dipilih tidak bisa diselesaikan. Cek log debug lalu coba lagi.'
+    activities:
+      labels:
+        contribution: Kontribusi
+        withdrawal: Penarikan
+        interest: Bunga
+        dividend: Dividen
+        card_payment: Pembayaran kartu
+        cash_withdrawal: Penarikan tunai
+        card_fee: Biaya kartu
+        card_refund: Refund kartu
+        tax_refund: Pengembalian pajak
+        round_up: Bulatkan ke atas

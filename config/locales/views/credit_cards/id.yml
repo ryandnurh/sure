@@ -1,0 +1,24 @@
+---
+id:
+  credit_cards:
+    edit:
+      edit: Edit %{account}
+    form:
+      annual_fee: Biaya tahunan
+      annual_fee_placeholder: '99'
+      apr: APR
+      apr_placeholder: '15.99'
+      available_credit: Kredit tersedia
+      available_credit_placeholder: '10000'
+      expiration_date: Tanggal kedaluwarsa
+      minimum_payment: Pembayaran minimum
+      minimum_payment_placeholder: '100'
+      simplefin_balance_sign_auto: Otomatis
+      simplefin_balance_sign_credit: Kredit (bank berutang padamu)
+      simplefin_balance_sign_debt: Utang (kamu berutang ke bank)
+      simplefin_balance_sign_description: Gunakan override hanya saat SimpleFIN melaporkan tanda yang ambigu. Otomatis tetap memakai histori transaksi dan saldo penyedia.
+      simplefin_balance_sign_label: Arti saldo SimpleFIN
+      treat_balance_as_available_credit_description: Aktifkan jika bankmu melaporkan saldo kartu ini sebagai sisa kredit tersedia, bukan jumlah terutang. Utangnya lalu diturunkan dari limit kredit yang dilaporkan bankmu, atau dari kolom Kredit tersedia jika bankmu tidak menyediakannya.
+      treat_balance_as_available_credit_label: Saldo adalah kredit tersedia
+    new:
+      title: Masukkan detail kartu kredit

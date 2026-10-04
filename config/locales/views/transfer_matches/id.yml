@@ -1,0 +1,24 @@
+---
+id:
+  transfer_matches:
+    create:
+      success: Transfer dibuat
+    new:
+      header:
+        title: Cocokkan transfer atau pembayaran
+        subtitle: Cocokkan transaksi terkait di akun lain atau buat baru kalau belum ada.
+      from_account: Dari akun
+      from_account_named: 'Dari akun: %{name}'
+      to_account: Ke akun
+      to_account_named: 'Ke akun: %{name}'
+      outflow_transaction: Transaksi arus keluar
+      inflow_transaction: Transaksi arus masuk
+      create_transfer_match: Buat pencocokan transfer
+    matching_fields:
+      select_method: Pilih metode untuk mencocokkan transaksi Anda.
+      match_existing_recommended: Cocokkan transaksi yang sudah ada (disarankan)
+      create_new_transaction: Buat transaksi baru
+      matching_method: Metode pencocokan
+      matching_transaction: Transaksi yang dicocokkan
+      target_account: Akun target
+      no_matching_transactions: Kami tidak menemukan transaksi yang cocok dari akun-akunmu yang lain. Pilih akun dan kami akan buatkan transaksi masuk baru untukmu.

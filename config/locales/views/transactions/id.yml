@@ -1,0 +1,386 @@
+---
+id:
+  transactions:
+    bulk_updates:
+      new:
+        cancel: Batal
+        category_label: Kategori
+        category_prompt: Pilih kategori
+        date_label: Tanggal
+        header_title: Edit transaksi
+        merchant_label: Merchant
+        merchant_prompt: Pilih merchant
+        name_label: Nama
+        name_placeholder: Masukkan nama yang akan diterapkan ke transaksi yang dipilih
+        none: (tidak ada)
+        notes_label: Catatan
+        notes_placeholder: Masukkan catatan yang akan diterapkan ke transaksi yang dipilih
+        overview: Ikhtisar
+        save: Simpan
+        tags_label: Tag
+        transactions_section: Transaksi
+    unknown_name: Transaksi tidak diketahui
+    selection_bar:
+      duplicate: Duplikat
+      edit: Edit
+      selected: dipilih
+    form:
+      details: Detail
+      account: Akun
+      account_prompt: Pilih Akun
+      amount: Jumlah
+      category: Kategori
+      category_label: Kategori
+      category_prompt: Pilih Kategori
+      category_search_placeholder: Cari kategori
+      create_category: Buat "%{name}"
+      create_category_error: Tidak bisa membuat kategori
+      date: Tanggal
+      description: Deskripsi
+      description_placeholder: Jelaskan transaksi
+      expense: Pengeluaran
+      income: Pemasukan
+      merchant_label: Merchant
+      none: (tidak ada)
+      note_label: Catatan
+      note_placeholder: Masukkan catatan
+      create_tag: Buat
+      create_merchant: Buat
+      create_merchant_error: Tidak bisa membuat merchant
+      merchant_search_placeholder: Cari atau buat merchant
+      submit: Tambah transaksi
+      tag_search_placeholder: Cari atau buat tag
+      tags_label: Tag
+      transfer: Transfer
+    create:
+      created: Transaksi dibuat
+    update:
+      updated: Transaksi diperbarui
+    new:
+      new_transaction: Transaksi baru
+    show:
+      keep_both: Tidak, simpan keduanya
+      loan_payment: Pembayaran Pinjaman
+      mark_recurring: Tandai sebagai Berkala
+      create_bill: Buat tagihan
+      mark_recurring_subtitle: Lacak ini sebagai transaksi berkala. Variansi jumlah otomatis dihitung dari 6 bulan terakhir transaksi serupa.
+      mark_recurring_title: Transaksi Berkala
+      applied_to_title: Tagihan terbayar ini
+      applied_to_detail: '%{amount} untuk tagihan jatuh tempo %{date}'
+      applied_to_unreviewed: Perlu ditinjau
+      merge_duplicate: Ya, gabungkan
+      potential_duplicate_description: Transaksi tertunda ini mungkin sama dengan transaksi yang sudah tercatat di bawah. Kalau iya, gabungkan agar tidak dihitung ganda.
+      potential_duplicate_title: Duplikat terdeteksi
+      transfer: Transfer
+      account_label: Akun
+      amount: Jumlah
+      category_label: Kategori
+      date_label: Tanggal
+      delete: Hapus
+      delete_subtitle: Ini menghapus transaksi secara permanen, memengaruhi saldo historismu, dan tidak bisa dibatalkan.
+      delete_title: Hapus transaksi
+      details: Detail
+      attachments: Lampiran
+      exclude: Kecualikan
+      exclude_description: Transaksi yang dikecualikan akan dihapus dari perhitungan anggaran dan laporan.
+      activity_type: Tipe Aktivitas
+      activity_type_description: Jenis aktivitas investasi (Beli, Jual, Dividen, dll.). Terdeteksi otomatis atau diatur manual.
+      one_time_title: '%{type} sekali saja'
+      one_time_description: Transaksi sekali saja akan dikecualikan dari perhitungan dan laporan anggaran tertentu agar Anda bisa melihat hal yang benar-benar penting.
+      convert_to_trade_title: Konversi ke Trade Sekuritas
+      convert_to_trade_description: Konversi transaksi ini menjadi trade Beli atau Jual dengan detail sekuritas untuk pelacakan portofolio.
+      convert_to_trade_button: Konversi ke Trade
+      transfer_matcher_description: Hubungkan transaksi ini ke pasangannya di akun lain.
+      pending_duplicate_merger_title: Duplikat dari Transaksi yang Diposting?
+      pending_duplicate_merger_description: Gabungkan transaksi tertunda ini secara manual dengan versi posted-nya.
+      pending_duplicate_merger_button: Buka merger
+      merchant_label: Merchant
+      name_label: Nama
+      nature: Jenis
+      none: (tidak ada)
+      note_label: Catatan
+      note_placeholder: Masukkan catatan
+      overview: Ikhtisar
+      settings: Pengaturan
+      tags_label: Tag
+      tab_transactions: Transaksi
+      tab_upcoming: Mendatang
+      uncategorized: (belum terkategori)
+      additional_details: Detail tambahan
+      payee: Penerima pembayaran
+      description: Deskripsi
+      memo: Memo
+      original_description: Deskripsi asli
+      payment_channel: Kanal pembayaran
+      transaction_code: Kode transaksi
+      provider_extras: Ekstra provider
+      plaid_payment_meta_label: Meta pembayaran · %{name}
+      plaid_counterparty_label: Pihak lawan %{index}
+      provider_extra_fields:
+        by_order_of: Berdasarkan urutan
+        confidence_level: Tingkat keyakinan
+        entity_id: ID Entitas
+        logo_url: URL Logo
+        name: Nama
+        payee: Penerima pembayaran
+        payer: Pembayar
+        phone_number: Nomor telepon
+        ppd_id: PPD ID
+        reason: Alasan
+        reference_number: Nomor referensi
+        type: Jenis
+        website: Situs web
+      transfer_or_debt_payment: Transfer atau Pembayaran Utang?
+      open_matcher: Buka matcher
+      convert: Konversi
+    activity_labels:
+      buy: Beli
+      sell: Jual
+      sweep_in: Sweep In
+      sweep_out: Sweep Out
+      dividend: Dividen
+      reinvestment: Reinvestasi
+      interest: Bunga
+      fee: Biaya
+      transfer: Transfer
+      contribution: Kontribusi
+      withdrawal: Penarikan
+      exchange: Bursa
+      other: Lainnya
+    mark_recurring: Tandai sebagai Berkala
+    mark_recurring_subtitle: Lacak ini sebagai transaksi berkala. Variansi jumlah otomatis dihitung dari 6 bulan terakhir transaksi serupa.
+    mark_recurring_title: Transaksi Berkala
+    potential_duplicate_title: Duplikat terdeteksi
+    potential_duplicate_description: Transaksi tertunda ini mungkin sama dengan transaksi yang sudah tercatat di bawah. Kalau iya, gabungkan agar tidak dihitung ganda.
+    keep_both: Tidak, simpan keduanya
+    split_parent_row:
+      split_label: Pecah
+    transfer_match:
+      auto_matched: Cocok otomatis
+      auto_matched_short: A/M
+      confirm_match: Konfirmasi kecocokan
+      payment_confirmed: Pembayaran terkonfirmasi
+      reject_match: Tolak kecocokan
+      transfer_confirmed: Transfer dikonfirmasi
+    transaction:
+      pending: Tertunda
+      pending_tooltip: Transaksi tertunda — bisa berubah saat tercatat
+      linked_with_provider: Tertaut dengan %{provider}
+      activity_type_tooltip: Jenis aktivitas investasi
+      possible_duplicate: Duplikat?
+      potential_duplicate_tooltip: Ini mungkin duplikat dari transaksi lain
+      review_recommended: Tinjau
+      review_recommended_tooltip: Selisih jumlah besar — disarankan diperiksa untuk memastikan ini bukan duplikat
+      split: Pecah
+      split_tooltip: Transaksi ini sudah dipecah menjadi beberapa entri
+      split_child_tooltip: Bagian dari transaksi terbagi
+    merge_duplicate:
+      success: Transaksi berhasil digabungkan
+      failure: Tidak bisa menggabungkan transaksi
+    dismiss_duplicate:
+      success: Dipertahankan sebagai transaksi terpisah
+      failure: Tidak bisa mengabaikan saran duplikat
+    pending_duplicate_merge:
+      possible_duplicate: Duplikat?
+      possible_duplicate_short: Duplikat?
+      review_recommended: Tinjau
+      review_recommended_short: Rev
+      confirm_title: Gabungkan dengan transaksi yang sudah diposting (%{posted_amount})
+      reject_title: Pertahankan sebagai transaksi terpisah
+    summary:
+      total_transactions: Total transaksi
+      income: Pemasukan
+      expenses: Pengeluaran
+      inflow: Arus masuk
+      outflow: Arus keluar
+    header:
+      edit_categories: Edit kategori
+      edit_imports: Edit impor
+      edit_merchants: Edit merchant
+      edit_tags: Edit tag
+      import: Impor
+    index:
+      title: Transaksi
+      transaction: transaksi
+      transactions: transaksi
+      import: Impor
+      new_rule: Aturan baru
+      edit_rules: Edit aturan
+      edit_categories: Edit kategori
+      edit_tags: Edit tag
+      edit_merchants: Edit merchant
+      edit_imports: Edit impor
+      new_transaction: Transaksi baru
+      categorize_button:
+        one: Kategorikan (1)
+        other: Kategorikan (%{count})
+    categorizes:
+      show:
+        exit: Keluar
+        skip: Lewati
+        remaining:
+          one: 1 transaksi belum terkategori tersisa
+          other: '%{count} transaksi belum terkategori tersisa'
+        transaction_count:
+          one: 1 transaksi
+          other: '%{count} transaksi'
+        transactions_hint: Hilangkan centang untuk mengecualikan transaksi, atau tetapkan kategori lain langsung di barisnya.
+        assign_category: Tetapkan kategori
+        assign_category_prompt: → assign
+        filter_placeholder: Cari kategori...
+        col_transaction: Transaksi
+        col_date: Tanggal
+        col_amount: Jumlah
+        col_category: Kategori
+        type_income: Pemasukan
+        type_expense: Pengeluaran
+        create_rule_label: Buat Aturan Kategorisasi
+        rule_description_prefix: Transaksi %{type} mendatang dengan nama mengandung
+        rule_description_suffix: sebaiknya juga mendapatkan kategori ini.
+        no_categories: Tidak ada kategori yang cocok
+        all_done: Semua transaksi terkategori
+      create:
+        categorized:
+          one: 1 transaksi terkategori
+          other: '%{count} transaksi terkategori'
+        rule_creation_failed: Transaksi dikategorikan, tapi aturannya gagal dibuat (mungkin sudah ada).
+      entry_row:
+        include_checkbox: Sertakan %{name}
+        assign_category_select: Tetapkan kategori untuk %{name}
+    list:
+      drag_drop_title: Letakkan CSV untuk mengimpor
+      drag_drop_subtitle: Unggah transaksi langsung
+      transaction: transaksi
+      transactions: transaksi
+    toggle_recurring_section: Alihkan transaksi berkala yang akan datang
+    search:
+      filters:
+        account: Akun
+        date: Tanggal
+        type: Jenis
+        status: Status
+        amount: Jumlah
+        category: Kategori
+        tag: Tag
+        merchant: Merchant
+        ai: AI
+    convert_to_trade:
+      title: Konversi ke Trade Sekuritas
+      description: Konversi transaksi ini menjadi trade dengan detail sekuritas
+      date_label: 'Tanggal:'
+      account_label: 'Akun:'
+      amount_label: 'Jumlah:'
+      security_label: Sekuritas
+      security_prompt: Pilih sekuritas...
+      security_custom: + Masukkan ticker kustom
+      security_not_listed_hint: Tidak menemukan sekuritasmu? Pilih "Enter custom ticker" di bagian bawah daftar.
+      ticker_placeholder: AAPL
+      ticker_hint: Masukkan simbol ticker saham/ETF (mis. AAPL, MSFT)
+      ticker_search_placeholder: Cari ticker...
+      ticker_search_hint: Cari berdasarkan simbol ticker atau nama perusahaan, atau ketik ticker kustom
+      price_mismatch_title: Harga mungkin tidak cocok
+      price_mismatch_message: Harga Anda (%{entered_price}/saham) jauh berbeda dari harga pasar %{ticker} saat ini (%{market_price}). Jika terlihat salah, mungkin Anda memilih sekuritas yang salah — coba gunakan "Enter custom ticker" untuk menentukan yang benar.
+      quantity_label: Jumlah (Lembar)
+      quantity_placeholder: mis. 20
+      quantity_hint: Jumlah saham yang diperdagangkan
+      price_label: Harga per Lembar
+      price_placeholder: mis. 52.15
+      price_hint: Harga per lembar (%{currency})
+      qty_or_price_hint: Masukkan minimal jumlah ATAU harga. Satunya lagi dihitung dari jumlah transaksi (%{amount}).
+      trade_type_label: Tipe Trade
+      trade_type_hint: Beli atau jual saham sekuritas
+      exchange_label: Bursa (Opsional)
+      exchange_placeholder: XNAS
+      exchange_hint: Kosongkan untuk deteksi otomatis
+      cancel: Batal
+      submit: Konversi ke Trade
+      success: Transaksi dikonversi menjadi trade
+      conversion_note: 'Dikonversi dari transaksi: %{original_name} (%{original_date})'
+      errors:
+        not_investment_account: Hanya transaksi di akun investasi yang dapat dikonversi menjadi trade
+        already_converted: Transaksi ini sudah dikonversi atau dikecualikan
+        enter_ticker: Masukkan simbol ticker
+        security_not_found: Sekuritas yang dipilih sudah tidak ada. Pilih yang lain.
+        select_security: Pilih atau masukkan sekuritas
+        enter_qty_or_price: Masukkan jumlah atau harga per lembar saham. Satunya lagi akan dihitung otomatis dari nominal transaksi.
+        invalid_qty_or_price: Kuantitas atau harga tidak valid. Masukkan nilai positif yang valid.
+        conversion_failed: 'Gagal mengonversi transaksi: %{error}'
+        unexpected_error: 'Error tak terduga saat konversi: %{error}'
+    searches:
+      filters:
+        account_filter:
+          filter_accounts: Filter akun
+        category_filter:
+          filter_category: Filter kategori
+        date_filter:
+          start_date: Tanggal mulai
+          end_date: tanggal akhir
+        merchant_filter:
+          filter_merchants: Filter merchant
+        tag_filter:
+          filter_tags: Filter tag
+        amount_filter:
+          equal_to: Sama dengan
+          greater_than: Lebih dari
+          less_than: Kurang dari
+          placeholder: '0'
+        badge:
+          expense: Pengeluaran
+          income: Pemasukan
+          on_or_after: pada atau setelah %{date}
+          on_or_before: pada atau sebelum %{date}
+          transfer: Transfer
+          confirmed: Terkonfirmasi
+          pending: Tertunda
+          ai_current: AI
+          ai_history: Riwayat AI
+        ai_filter:
+          current: AI
+          current_description: Kategori masih yang ditetapkan otomatis (AI atau Bayes).
+          history: Riwayat AI
+          history_description: Terkategorisasi otomatis, tapi kategorinya sudah diubah.
+        type_filter:
+          expense: Pengeluaran
+          income: Pemasukan
+          transfer: Transfer
+        status_filter:
+          confirmed: Terkonfirmasi
+          pending: Tertunda
+      menu:
+        account_filter: Akun
+        amount_filter: Jumlah
+        apply: Terapkan
+        cancel: Batal
+        category_filter: Kategori
+        clear_filters: Hapus filter
+        date_filter: Tanggal
+        merchant_filter: Merchant
+        status_filter: Status
+        tag_filter: Tag
+        type_filter: Jenis
+      search:
+        equal_to: sama dengan
+        greater_than: lebih besar dari
+        less_than: kurang dari
+      form:
+        toggle_selection_checkboxes: Alihkan semua kotak centang
+        search_placeholder: Cari transaksi ...
+        filter: Filter
+    attachments:
+      cannot_exceed: Tidak boleh melebihi %{count} lampiran per transaksi
+      uploaded_one: Lampiran berhasil diunggah
+      uploaded_many: '%{count} lampiran berhasil diunggah'
+      failed_upload: 'Gagal mengunggah lampiran: %{error}'
+      no_files_selected: Belum ada file yang dipilih untuk diunggah
+      attachment_deleted: Lampiran berhasil dihapus
+      failed_delete: 'Gagal menghapus lampiran: %{error}'
+      upload_failed: Gagal mengunggah lampiran. Coba lagi atau hubungi support.
+      delete_failed: Gagal menghapus lampiran. Coba lagi atau hubungi support.
+      upload: Unggah
+      no_attachments: Belum ada lampiran
+      select_up_to: Pilih hingga %{count} file (gambar atau PDF, maks %{size}MB per file) • %{used} dari %{count} terpakai
+      files:
+        one: File (1)
+        other: File (%{count})
+      browse_to_add: Jelajahi untuk menambah file
+      max_reached: Batas file maksimum tercapai (%{count}/%{max}). Hapus file yang ada untuk mengunggah yang lain.

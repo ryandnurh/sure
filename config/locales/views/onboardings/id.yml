@@ -1,0 +1,66 @@
+---
+id:
+  onboardings:
+    header:
+      sign_out: Keluar
+      setup: Penyiapan
+      preferences: Preferensi
+      goals: Target
+      start: Mulai
+    logout:
+      sign_out: Keluar
+    show:
+      title: Mari siapkan akunmu
+      subtitle: Pertama-tama, siapkan profilmu dulu.
+      first_name: nama depan
+      first_name_placeholder: nama depan
+      last_name: Nama belakang
+      last_name_placeholder: Nama belakang
+      group_name: Nama grup
+      group_name_placeholder: Nama grup
+      household_name: Nama rumah tangga
+      household_name_placeholder: Nama rumah tangga
+      moniker_prompt: Akan memakai %{product_name} dengan ...
+      moniker_family: Anggota keluarga (hanya kamu sendiri atau bersama pasangan, anak remaja, dll.)
+      moniker_group: Kelompok orang (perusahaan, klub, asosiasi, atau jenis lainnya)
+      country: Negara
+      submit: Lanjutkan
+    preferences:
+      title: Atur preferensimu
+      subtitle: Mari atur preferensimu.
+      example: Contoh akun
+      preview: Lihat pratinjau tampilan data sesuai preferensi.
+      color_theme: Tema warna
+      theme_system: Sistem
+      theme_light: Terang
+      theme_dark: Gelap
+      locale: Bahasa
+      currency: Mata Uang
+      date_format: format tanggal
+      submit: Selesai
+    goals:
+      title: Apa yang membawamu ke sini?
+      subtitle: Pilih satu atau beberapa target yang Anda miliki dalam menggunakan %{product_name} sebagai alat keuangan personal.
+      unified_accounts: Lihat semua akun saya di satu tempat
+      cashflow: Pahami arus kas dan pengeluaran
+      budgeting: Kelola rencana keuangan dan penganggaran
+      partner: Kelola keuangan dengan pasangan
+      investments: Lacak investasi
+      ai_insights: Biarkan AI membantuku memahami keuanganku
+      optimization: Analisis dan optimalkan akun
+      reduce_stress: Kurangi stres atau kecemasan finansial
+      submit: Berikutnya
+    trial:
+      title: Coba Sure selama 45 hari
+      data_deletion: Data akan dihapus saat itu
+      description_html: Mulai hari ini Anda bisa melihat-lihat produknya.<br/>Kalau suka, pasang sendiri (self-host) atau berkontribusi untuk terus menggunakannya di sini.
+      try_button: Coba Sure selama 45 hari
+      continue_trial: Lanjutkan trial
+      upgrade: Upgrade
+      how_it_works: Cara kerja di sini
+      today: Hari ini
+      today_description: Anda akan mendapat akses gratis ke Sure selama 45 hari di AWS kami.
+      in_40_days: Dalam 40 hari (%{date})
+      in_40_days_description: Kami akan mengingatkanmu untuk mengekspor datamu.
+      in_45_days: Dalam 45 hari (%{date})
+      in_45_days_description: Kami menghapus datamu — berkontribusilah untuk terus memakai Sure di sini!

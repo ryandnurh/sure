@@ -1,0 +1,111 @@
+---
+id:
+  onchain_wallet_items:
+    choose_chain:
+      activity_found: Aktivitas ditemukan
+      explanation: Format alamat ini digunakan lebih dari satu jaringan, dan saldo di masing-masing berbeda. Pilih yang ingin Anda lacak.
+      no_activity_found: Tidak ada yang ditemukan
+      subtitle: '%{address}'
+      title: Jaringan yang mana?
+    destroy:
+      success: Koneksi self-custody dijadwalkan untuk dihapus.
+    disconnect_asset:
+      success: Berhenti melacak %{symbol}. Akun dan riwayatnya disimpan.
+    disconnect_wallet:
+      success:
+        one: Berhenti melacak 1 aset di alamat itu.
+        other: Berhenti melacak %{count} aset di alamat itu.
+    enable_crypto_prices:
+      not_self_hosted: Penyedia data pasar dikonfigurasi oleh operator instance pada deployment ini.
+      success: Harga kripto sudah diaktifkan. Nilai dompet akan muncul setelah sinkronisasi berikutnya.
+    errors:
+      address_required: Masukkan alamat dompet.
+      already_linked: Alamat tersebut sudah dilacak di jaringan ini. Gunakan token Review untuk mengubah aset mana yang dilacak.
+      chain_unreachable: Explorer publik untuk jaringan ini tidak bisa dijangkau. Coba lagi sebentar lagi.
+      rate_limited: Explorer publik sedang membatasi request (rate limiting). Coba lagi dalam beberapa menit.
+      unexpected: Terjadi kesalahan saat membaca wallet ini. Detailnya telah dicatat untuk tim dukungan.
+      unrecognized_address: Itu tidak terlihat seperti alamat di jaringan mana pun yang didukung.
+      wallet_not_found: Wallet tersebut tidak dilacak oleh koneksi ini.
+    link_wallet:
+      errors:
+        none_tracked: 'Tidak ada yang dilacak: %{assets} tidak bisa ditambahkan. Coba lagi sebentar lagi.'
+        nothing_selected: Pilih setidaknya satu aset untuk dilacak.
+        some_failed: '%{assets} tidak bisa dilacak dan dilewati.'
+      success:
+        one: Melacak 1 aset dari dompet ini.
+        other: Melacak %{count} aset dari dompet ini.
+    manage:
+      assets_truncated: Alamat ini menampung lebih banyak token daripada yang terlihat dalam satu pembacaan, jadi hanya %{count} yang paling kredibel yang ditampilkan. Semua yang sudah dilacak tetap tersinkron.
+      disconnect_asset: Berhenti melacak
+      disconnect_asset_confirm: Berhenti melacak %{symbol}? Akun dan riwayatnya disimpan dan berhenti diperbarui.
+      disconnect_wallet: Putuskan dompet
+      disconnect_wallet_confirm: Berhenti melacak semua aset di alamat ini?
+      history_note: Memutuskan koneksi mempertahankan akun beserta riwayatnya; mereka hanya berhenti diperbarui.
+      history_truncated: Tidak semua transfer untuk alamat ini bisa dibaca — riwayatnya lebih banyak daripada yang bisa dicakup satu sinkronisasi, atau explorer menolaknya. Saldo lengkap; beberapa transfer tidak ada.
+      native: Asli
+      no_wallets: Belum ada wallet yang dilacak.
+      review_tokens: Tinjau token
+      subtitle: Setiap alamat yang dibaca koneksi ini, dan apa yang dilacaknya di masing-masing alamat.
+      title: Kelola dompet self-custody
+    new_wallet:
+      address_label: Alamat dompet
+      address_placeholder: bc1..., 0x..., atau alamat Solana
+      bitcoin_single_address_note: Bitcoin dilacak satu alamat dalam satu waktu. Extended key (xpub/ypub/zpub) tidak didukung, jadi wallet yang menyebar dana ke beberapa alamat turunan hanya akan menampilkan saldo alamat yang kamu masukkan.
+      chain_auto_detect: Deteksi otomatis
+      chain_label: Jaringan
+      continue: Lanjutkan
+      read_only_note: Hanya data rantai publik yang dibaca. Jangan pernah memasukkan seed phrase atau kunci privat.
+      subtitle: Lacak dompet yang kuncinya kamu pegang, dari alamat publiknya.
+      title: Tambahkan dompet self-custody
+    onchain_wallet_item:
+      assets_tracked:
+        one: 1 aset terlacak
+        other: '%{count} aset terlacak'
+      sync: Sinkronkan sekarang
+      syncing: Menyinkronkan...
+    wallet_card:
+      addresses_tracked:
+        one: 1 alamat terlacak
+        other: '%{count} alamat terlacak'
+      deletion_in_progress: Menghapus...
+      delete: Hapus koneksi
+      needs_attention: Butuh perhatian
+      no_wallets_message: Tautkan alamat dari pengaturan penyedia untuk melihatnya di sini.
+      no_wallets_title: Belum ada wallet yang ditautkan
+      status: Tersinkron %{timestamp} yang lalu
+      sync: Sinkronkan sekarang
+      status_never: Belum disinkronkan
+      syncing: Menyinkronkan...
+    price_provider_warning:
+      body: Tidak ada penyedia data pasar yang aktif yang dapat menentukan harga kripto, jadi dompet-dompet ini hanya melacak jumlah dan menampilkan nilai nol.
+      enable: Aktifkan harga kripto
+      exchange_rate_body: Kripto dihargai dalam USD, dan belum ada penyedia kurs yang dikonfigurasi untuk mengonversinya ke %{currency}, jadi dompet ini melacak jumlah tapi menampilkan nilai nol. Atur EXCHANGE_RATE_PROVIDER — Frankfurter tidak butuh API key.
+      exchange_rate_title: Belum ada penyedia kurs yang dikonfigurasi
+      link: Buka pengaturan data pasar
+      title: Harga kripto belum dikonfigurasi
+    provider_connection:
+      description: Lacak dompet yang kuncinya kamu pegang, dari alamat publiknya.
+      name: Wallet self-custody
+    review_tokens:
+      save: Simpan aset terpantau
+      subtitle: '%{chain} · %{address}'
+      title: Tinjau aset terpantau
+    token_review:
+      import_selected: Lacak aset terpilih
+      subtitle: '%{chain} · %{address}'
+      title: Pilih yang ingin dilacak
+    token_review_form:
+      assets_truncated: Alamat ini menampung lebih banyak token daripada yang terlihat dalam satu pembacaan, jadi hanya %{count} yang paling kredibel yang ditampilkan.
+      cancel: Batal
+      explanation: Aset yang harganya diketahui dicentang. Sisanya dibiarkan tidak dicentang — wallet sering menerima spam airdrop, dan melacaknya tidak ada nilainya.
+      native: Asli
+      no_price: Tidak ada harga yang tersedia; hanya dilacak berdasarkan jumlah
+      nothing_found: Alamat ini tidak menampung apa pun yang terlihat di jaringan ini.
+    update:
+      success: Koneksi self-custody diperbarui.
+    update_tokens:
+      errors:
+        no_changes: Tidak ada yang berubah; aset yang sama masih dicentang.
+        none_tracked: 'Tidak ada yang berubah: %{assets} tidak bisa ditambahkan. Coba lagi sebentar lagi.'
+        some_failed: '%{assets} tidak bisa dilacak dan dilewati.'
+      success: Aset yang dilacak diperbarui (%{created} ditambahkan, %{removed} dihapus).

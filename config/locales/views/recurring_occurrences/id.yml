@@ -1,0 +1,53 @@
+---
+id:
+  recurring_occurrences:
+    history_status:
+      paid: Terbayar
+      skipped: Dilewati
+      missed: Terlewat
+      scheduled: Buka
+    show:
+      due_on: Jatuh tempo %{date}
+      paid_of: '%{paid} dari %{expected} terbayar'
+      paid_headline: '%{amount} terbayar'
+      remaining: '%{amount} tersisa'
+      settled: Lunas sepenuhnya
+      overpaid: lebih dari yang diharapkan
+      skipped: Dilewati
+      missed: Ditandai terlewat
+      payments: Pembayaran
+      manual_payment: Pembayaran manual
+      unlink: Putuskan tautan
+      review_heading: Tinjau pembayaran
+      find_heading: Cari pembayaran
+      add_heading: Tambah pembayaran lain
+      other_matches: Kemungkinan kecocokan lain
+      no_ranked_candidates: Belum ada yang terlihat seperti pembayaran untuk tagihan ini.
+      search_all: Cari semua transaksi
+      search_placeholder: Cari transaksi
+      no_candidates: Tidak ada transaksi terdekat untuk ditautkan.
+      no_search_results: Tidak ada yang cocok dengan %{query}.
+      link_payment: Tautkan pembayaran
+      not_this_one: Bukan yang ini
+      cant_find: Tidak menemukan transaksinya?
+      manual_explainer: Catat pembayaran yang Anda tahu terjadi saat tidak ada transaksi yang cocok di sini.
+      manual_amount_label: Jumlah
+      manual_date_label: Tanggal
+      record_payment: Catat pembayaran
+      mark_paid: Tandai dibayar
+      mark_paid_hint: Menyelesaikan sisanya tanpa mencatat transaksi.
+      skip: Lewati
+      snooze_week: Tunda seminggu
+      reopen: Buka lagi
+      view_bill: Lihat tagihan penuh
+    mark_paid:
+      success: Tagihan ditandai lunas
+    skip:
+      success: Tagihan dilewati
+    reopen:
+      success: Tagihan dibuka kembali
+    snooze:
+      success: Ditunda hingga %{date}
+      invalid_date: Tanggal tersebut tidak bisa dibaca
+    override_amount:
+      success: Jumlah ekspektasi diperbarui

@@ -1,0 +1,203 @@
+---
+id:
+  snaptrade_items:
+    default_name: Koneksi SnapTrade
+    destroy:
+      success: Koneksi SnapTrade dijadwalkan untuk dihapus.
+    connect:
+      decryption_failed: Gagal membaca kredensial SnapTrade. Hapus dan buat ulang koneksi ini.
+      connection_failed: 'Gagal terhubung ke SnapTrade: %{message}'
+    callback:
+      success: Broker terhubung! Silakan pilih akun yang akan ditautkan.
+      no_item: Konfigurasi SnapTrade tidak ditemukan.
+    complete_account_setup:
+      success:
+        one: Berhasil menautkan %{count} akun.
+        other: Berhasil menautkan %{count} akun.
+      partial_success:
+        one: '%{count} akun tertaut. %{failed_count} gagal ditautkan.'
+        other: '%{count} akun tertaut. %{failed_count} gagal ditautkan.'
+      link_failed: 'Gagal menautkan akun: %{errors}'
+      no_accounts: Tidak ada akun yang dipilih untuk dihubungkan.
+    preload_accounts:
+      not_configured: SnapTrade belum dikonfigurasi.
+    select_accounts:
+      not_configured: SnapTrade belum dikonfigurasi.
+    oauth_authorize:
+      not_configured: Otorisasi browser SnapTrade membutuhkan SNAPTRADE_OAUTH_CLIENT_SECRET serta SNAPTRADE_OAUTH_CLIENT_ID. Atur lalu restart, atau otorisasi dengan kode perangkat sebagai gantinya.
+    oauth_callback:
+      success: Otorisasi SnapTrade selesai.
+      access_denied: Otorisasi SnapTrade dibatalkan.
+      state_mismatch: Otorisasi SnapTrade gagal melewati pemeriksaan keamanan. Silakan coba lagi.
+      failed: Gagal menyelesaikan otorisasi SnapTrade. Silakan coba lagi.
+    oauth_device_flow:
+      title: Hubungkan SnapTrade
+      subtitle: Otorisasi Sure untuk SnapTrade dengan kode perangkat.
+      instructions: Buka SnapTrade, konfirmasi kode perangkat ini, lalu kembali ke sini untuk menyelesaikan.
+      code_label: Kode perangkat
+      open_snaptrade: Buka SnapTrade
+      start_button: Mulai otorisasi
+      complete_button: Saya sudah mengotorisasi SnapTrade
+      cancel_button: Batal
+      missing_client_id: OAuth SnapTrade belum dikonfigurasi. Tambahkan SNAPTRADE_OAUTH_CLIENT_ID ke .env.local, mulai ulang aplikasi, lalu coba lagi.
+    start_oauth_device_flow:
+      failed: Gagal memulai otorisasi perangkat SnapTrade. Silakan coba lagi.
+    complete_oauth_device_flow:
+      success: Otorisasi SnapTrade selesai.
+      device_code_required: Tidak ada otorisasi perangkat SnapTrade yang sedang berjalan untuk koneksi ini. Mulai lagi untuk mendapatkan kode baru.
+      authorization_pending: SnapTrade belum menerima konfirmasi Anda. Setujui kode di SnapTrade, lalu coba lagi.
+      expired: Kode perangkat ini kedaluwarsa. Mulai otorisasi lagi.
+      access_denied: Otorisasi SnapTrade ditolak.
+      failed: Gagal menyelesaikan otorisasi perangkat SnapTrade. Silakan coba lagi.
+    select_existing_account:
+      not_found: Konfigurasi Akun atau SnapTrade tidak ditemukan.
+      title: Tautkan ke Akun SnapTrade
+      header: Tautkan Akun yang Sudah Ada
+      subtitle: Pilih akun SnapTrade untuk ditautkan
+      no_accounts: Tidak ada akun SnapTrade yang belum ditautkan tersedia.
+      connect_hint: Anda mungkin perlu menghubungkan broker terlebih dahulu.
+      settings_link: Buka Pengaturan Penyedia
+      linking_to: 'Menautkan ke akun:'
+      balance_label: 'Saldo:'
+      link_button: Tautan
+      cancel_button: Batal
+    link_existing_account:
+      success: Berhasil terhubung ke akun SnapTrade.
+      failed: 'Gagal menautkan akun: %{message}'
+      not_found: Akun tidak ditemukan.
+    connections:
+      unknown_brokerage: Broker tidak diketahui
+    delete_connection:
+      success: Koneksi berhasil dihapus. Satu slot terbebaskan.
+      failed: 'Gagal menghapus koneksi: %{message}'
+      missing_authorization_id: ID otorisasi hilang
+      api_deletion_failed: Tidak bisa menghapus koneksi dari SnapTrade - item ini tidak terotorisasi. Koneksi mungkin masih ada di akun SnapTrade-mu.
+    setup_accounts:
+      title: Siapkan Akun SnapTrade
+      header: Siapkan Akun SnapTrade Anda
+      subtitle: Pilih akun broker yang ingin ditautkan
+      syncing: Mengambil akun-akunmu...
+      loading: Mengambil akun dari SnapTrade...
+      loading_hint: Klik Refresh untuk mengecek akun.
+      refresh: Segarkan
+      info_title: Data Investasi SnapTrade
+      info_holdings: Kepemilikan dengan harga dan kuantitas terkini
+      info_cost_basis: Cost basis per posisi (jika tersedia)
+      info_activities: Riwayat trade dengan label aktivitas (Buy, Sell, Dividend, dll.)
+      info_history: Histori transaksi hingga 3 tahun
+      free_tier_note: Paket gratis SnapTrade mengizinkan 20 koneksi broker.
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_message: Tidak ada akun broker yang ditemukan. Ini bisa terjadi jika Anda membatalkan koneksi atau broker Anda tidak didukung.
+      try_again: Hubungkan Broker
+      back_to_settings: Kembali ke Pengaturan
+      available_accounts: Akun Tersedia
+      balance_label: 'Saldo:'
+      account_number: 'Akun:'
+      account_type_label: Tipe akun
+      account_types:
+        depository: Akun Giro atau Tabungan
+        credit_card: Kartu Kredit
+        investment: Akun Investasi
+        crypto: Akun Kripto
+        loan: Pinjaman atau Fasilitas Kredit
+        other_asset: Aset Lainnya
+      sync_start_date_label: 'Impor transaksi dari:'
+      sync_start_date_help: Kosongkan untuk seluruh riwayat yang tersedia
+      create_button: Buat Akun yang Dipilih
+      cancel_button: Batal
+      creating: Membuat Akun...
+      done_button: Selesai
+      or_link_existing: 'Atau tautkan ke akun yang sudah ada alih-alih membuat akun baru:'
+      select_account: Pilih akun...
+      link_button: Tautan
+      linked_accounts: Sudah Tertaut
+      linked_to: 'Tertaut ke:'
+    snaptrade_item:
+      accounts_need_setup:
+        one: '%{count} akun perlu disiapkan'
+        other: '%{count} akun perlu disiapkan'
+      deletion_in_progress: Penghapusan sedang berjalan...
+      syncing: Menyinkronkan...
+      requires_update: Koneksi perlu diperbarui
+      error: Error sinkronisasi
+      status: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      status_never: Belum pernah disinkronkan
+      reconnect: Hubungkan ulang
+      connect_brokerage: Hubungkan Broker
+      add_another_brokerage: Hubungkan broker lain
+      delete: Hapus
+      setup_needed: Akun perlu disiapkan
+      setup_description: Beberapa akun dari SnapTrade perlu ditautkan ke akun Sure.
+      setup_action: Siapkan Akun
+      setup_accounts_menu: Siapkan Akun
+      manage_connections: Kelola Koneksi
+      more_accounts_available:
+        one: '%{count} akun lagi tersedia untuk disiapkan'
+        other: '%{count} akun lagi tersedia untuk disiapkan'
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_description: Hubungkan broker untuk mengimpor akun investasimu.
+  providers:
+    snaptrade:
+      name: SnapTrade
+      connection_description: Hubungkan ke brokermu via SnapTrade (25+ broker didukung)
+      description: SnapTrade terhubung ke 25+ broker besar (Fidelity, Vanguard, Schwab, Robinhood, dll.) dan menyediakan riwayat trading lengkap dengan label aktivitas dan harga perolehan.
+      oauth_setup_step_1_html: Daftarkan aplikasi OAuth di <a href="https://dashboard.snaptrade.com" target="_blank" rel="noopener noreferrer" class="underline">dashboard.snaptrade.com</a>
+      oauth_setup_step_2_html: 'Hanya untuk alur browser: tambahkan URL callback aplikasi ini (<code>%{callback_url}</code>) sebagai redirect URI terdaftar'
+      oauth_setup_step_3: Set SNAPTRADE_OAUTH_CLIENT_ID di environment Anda dan restart. Itu saja sudah mengaktifkan alur device code; tambahkan SNAPTRADE_OAUTH_CLIENT_SECRET untuk alur browser juga
+      free_tier_warning: Paket gratis SnapTrade mencakup 20 koneksi broker.
+      oauth_title: OAuth SnapTrade
+      oauth_status_ready: Otorisasi Sure untuk membaca data akun SnapTrade-mu.
+      oauth_status_ready_device: Otorisasi Sure dengan kode perangkat untuk membaca data akun SnapTrade-mu.
+      oauth_status_authorized: Terotorisasi dengan SnapTrade.
+      oauth_connect_button: Hubungkan dengan SnapTrade
+      oauth_device_button: Gunakan kode perangkat
+      oauth_reauthorize_button: Otorisasi ulang
+      status_connected:
+        one: '%{count} akun dari SnapTrade'
+        other: '%{count} akun dari SnapTrade'
+      needs_setup:
+        one: '%{count} perlu disiapkan'
+        other: '%{count} perlu disiapkan'
+      status_ready: Siap menghubungkan broker
+      setup_accounts_button: Siapkan Akun
+      connect_button: Hubungkan Broker
+      connected_brokerages: 'Terhubung:'
+      manage_connections: Kelola Koneksi
+      loading_connections: Memuat koneksi...
+      connections_error: 'Gagal memuat koneksi: %{message}'
+      accounts_count:
+        one: '%{count} akun'
+        other: '%{count} akun'
+      orphaned_connection: Koneksi yatim (tidak tersinkron secara lokal)
+      needs_linking: perlu ditautkan
+      no_connections: Tidak ada koneksi broker yang ditemukan.
+      delete_connection: Hapus
+      delete_connection_title: Hapus Koneksi Brokerage?
+      delete_connection_body: Ini akan menghapus permanen koneksi %{brokerage} dari SnapTrade. Semua akun dari broker ini akan dilepas tautannya. Kamu perlu menyambung ulang untuk menyinkronkan akun-akun ini lagi.
+      delete_connection_confirm: Hapus Koneksi
+      manage_at_snaptrade: Kelola koneksi di SnapTrade
+  snaptrade_item:
+    sync_status:
+      no_accounts: Tidak ada akun yang ditemukan
+      synced:
+        one: '%{count} akun tersinkron'
+        other: '%{count} akun tersinkron'
+      synced_with_setup: '%{linked} tersinkron, %{unlinked} perlu disiapkan'
+    institution_summary:
+      none: Belum ada institusi yang terhubung
+      count:
+        one: '%{count} institusi'
+        other: '%{count} institusi'
+    brokerage_summary:
+      none: Belum ada broker yang terhubung
+      count:
+        one: '%{count} pialang'
+        other: '%{count} pialang'
+    syncer:
+      discovering: Menemukan akun...
+      importing: Mengimpor akun dari SnapTrade...
+      processing: Memproses kepemilikan dan aktivitas...
+      calculating: Menghitung saldo...
+      checking_config: Mengecek konfigurasi akun...
+      needs_setup: '%{count} akun perlu disiapkan...'
+      activities_fetching_async: Aktivitas sedang diambil di latar belakang. Bisa memakan waktu hingga satu menit untuk koneksi pialang baru.

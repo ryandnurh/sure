@@ -1,0 +1,22 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        transfer:
+          attributes:
+            base:
+              inflow_cannot_be_in_multiple_transfers: Transaksi arus masuk tidak bisa menjadi bagian dari beberapa transfer
+              must_be_from_different_accounts: Transfer harus ke akun yang berbeda
+              must_be_from_same_family: Transfer harus dari family yang sama
+              must_be_within_date_range: Tanggal transaksi transfer maksimal selisih 4 hari
+              must_have_opposite_amounts: Nominal transaksi transfer harus berlawanan
+              must_have_single_currency: Transfer harus memakai satu mata uang
+              outflow_cannot_be_in_multiple_transfers: Transaksi arus keluar tidak bisa menjadi bagian dari beberapa transfer
+          different_accounts: Harus dari akun yang berbeda
+          same_family: Harus dari keluarga yang sama
+          opposite_amounts: Harus memiliki nominal yang berlawanan
+          within_days: Harus dalam %{count} hari
+  transfer:
+    name: Transfer ke %{to_account}
+    payment_name: Pembayaran ke %{to_account}

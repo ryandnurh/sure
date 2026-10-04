@@ -1,0 +1,76 @@
+---
+id:
+  binance_items:
+    create:
+      default_name: Binance
+      success: Berhasil terhubung ke Binance! Akun kamu sedang disinkronkan.
+    update:
+      success: Berhasil memperbarui konfigurasi Binance.
+    destroy:
+      success: Koneksi Binance dijadwalkan untuk dihapus.
+    setup_accounts:
+      title: Impor Akun Binance
+      subtitle: Pilih portofolio yang ingin dipantau
+      instructions: Pilih portofolio Binance yang ingin diimpor. Hanya portofolio yang bersaldo yang ditampilkan.
+      no_accounts: Semua akun sudah diimpor.
+      accounts_count:
+        one: '%{count} akun tersedia'
+        other: '%{count} akun tersedia'
+      select_all: Pilih semua
+      import_selected: Impor yang Dipilih
+      cancel: Batal
+      creating: Mengimpor...
+    complete_account_setup:
+      invalid_sync_start_date: Tanggal mulai sinkronisasi harus berupa tanggal yang valid di masa lalu.
+      success:
+        one: '%{count} akun diimpor'
+        other: '%{count} akun diimpor'
+      none_selected: Tidak ada akun yang dipilih
+      no_accounts: Tidak ada akun untuk diimpor
+    binance_item:
+      provider_name: Binance
+      syncing: Menyinkronkan...
+      reconnect: Kredensial perlu diperbarui
+      deletion_in_progress: Menghapus...
+      sync_status:
+        no_accounts: Tidak ada akun yang ditemukan
+        all_synced:
+          one: '%{count} akun tersinkron'
+          other: '%{count} akun tersinkron'
+        partial_sync: '%{linked_count} tersinkron, %{unlinked_count} perlu disiapkan'
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      status_never: Belum pernah disinkronkan
+      update_credentials: Perbarui kredensial
+      delete: Hapus
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_message: Portofolio Binance Anda akan muncul di sini setelah sinkronisasi.
+      setup_needed: Akun siap diimpor
+      setup_description: Pilih portofolio Binance yang ingin dipantau.
+      setup_action: Impor Akun
+      import_accounts_menu: Impor Akun
+      stale_rate_warning: Saldo bersifat perkiraan — kurs pasti untuk %{date} tidak tersedia. Akan diperbarui pada sinkronisasi berikutnya.
+    select_existing_account:
+      title: Tautkan Akun Binance
+      no_accounts_found: Tidak ada akun Binance yang ditemukan.
+      wait_for_sync: Tunggu Binance selesai menyinkronkan
+      check_provider_health: Pastikan kredensial API Binance-mu valid
+      currently_linked_to: 'Saat ini tertaut ke: %{account_name}'
+      link: Tautan
+      cancel: Batal
+    link_existing_account:
+      success: Berhasil terhubung ke akun Binance
+      errors:
+        only_manual: Hanya akun manual yang dapat ditautkan ke Binance
+        invalid_binance_account: Akun Binance tidak valid
+  binance_item:
+    syncer:
+      checking_credentials: Mengecek kredensial...
+      credentials_invalid: Kredensial API tidak valid. Periksa API key dan secret-mu.
+      importing_accounts: Mengimpor akun dari Binance...
+      checking_configuration: Mengecek konfigurasi akun...
+      accounts_need_setup:
+        one: '%{count} akun perlu disiapkan'
+        other: '%{count} akun perlu disiapkan'
+      processing_accounts: Memproses data akun...
+      calculating_balances: Menghitung saldo...

@@ -1,0 +1,17 @@
+---
+id:
+  onchain:
+    chains:
+      arbitrum: Arbitrum
+      base: Dasar
+      bitcoin: Bitcoin
+      ethereum: Ethereum
+      gnosis: Gnosis
+      optimism: Optimism
+      polygon: Polygon
+      solana: Solana
+    institution_name: Wallet self-custody
+  onchain_wallet_item:
+    movement:
+      received: Menerima %{quantity} %{symbol}
+      sent: Mengirim %{quantity} %{symbol}

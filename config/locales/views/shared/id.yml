@@ -1,0 +1,56 @@
+---
+id:
+  concerns:
+    self_hostable:
+      redis_configured: Redis sudah dikonfigurasi dengan benar! Sekarang Anda bisa menyiapkan aplikasi Sure.
+  shared:
+    preview: Pratinjau
+    dot_separator: ·
+    sync_toast:
+      message: Data baru tersedia
+      refresh: Segarkan
+    confirm_modal:
+      accept: Konfirmasi
+      body_html: <p>Kamu tidak bisa membatalkan keputusan ini</p>
+      cancel: Batal
+      title: Kamu yakin?
+    money_field:
+      label: Jumlah
+    exchange_rate_tabs:
+      calculate_rate_tab: Hitung kurs FX
+      convert_tab: Konversi dengan kurs FX
+      destination_amount: Jumlah tujuan
+      exchange_rate: Kurs
+      exchange_rate_help: Pilih cara memasukkan nominal.
+    syncing_notice:
+      syncing: Menyinkronkan data akun...
+    require_admin: Hanya admin yang dapat melakukan tindakan ini
+    require_connector_owner: Anda hanya bisa mengelola koneksi yang Anda tambahkan
+    custom_confirm:
+      default_title: Kamu yakin?
+      default_body: Tindakan ini tidak bisa dibatalkan.
+      default_btn_text: Konfirmasi
+      resource_deletion_title: Hapus %{resource}?
+      resource_deletion_body: Yakin ingin menghapus %{resource}? Ini tidak bisa dibatalkan.
+      resource_deletion_btn_text: Hapus %{resource}
+    family_moniker:
+      group_plural: Grup
+      group_singular: Grup
+      plural: Keluarga
+      singular: Keluarga
+    trend_change:
+      no_change: tidak ada perubahan
+    cancel: Batal
+    transaction_tabs:
+      expense: Pengeluaran
+      income: Pemasukan
+      transfer: Transfer
+    sidekiq_health_banner:
+      title: Sebagian data mungkin sudah kedaluwarsa
+      body: Background job tidak sedang diproses, jadi saldo, kekayaan bersih, dan sinkronisasi akun mungkin basi atau hilang.
+      cta: Lihat kesehatan sistem
+      reasons:
+        redis_unreachable: Aplikasi tidak bisa menjangkau Redis. Periksa REDIS_URL Anda dan pastikan Redis berjalan.
+        no_worker_processes: Tidak ada proses worker Sidekiq yang terhubung. Jalankan container worker atau unit systemd.
+        stale_heartbeat: Worker Sidekiq belum melaporkan heartbeat baru-baru ini. Mungkin macet atau crash.
+        queue_backed_up: Job antrean tertua sudah menunggu melebihi anggaran latensi. Worker masih hidup tetapi kewalahan.

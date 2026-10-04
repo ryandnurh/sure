@@ -1,0 +1,91 @@
+---
+id:
+  loans:
+    edit:
+      edit: Edit %{account}
+    form:
+      interest_rate: Suku bunga
+      interest_rate_placeholder: '5.25'
+      initial_balance: Saldo pinjaman awal
+      rate_type: Jenis suku bunga
+      term_months: Tenor (bulan)
+      term_months_placeholder: '360'
+      none: Tidak ada
+      subtype_prompt: Pilih jenis pinjaman
+      subtype_none: Tidak ada
+      rate_type_adjustable: Bisa disesuaikan
+      rate_type_fixed: Tetap
+      rate_type_variable: Variabel
+      rate_changes: Perubahan suku bunga
+      rate_changes_hint: Setiap baris mengatur kurs yang berlaku sejak tanggal efektifnya hingga baris berikutnya. Memasukkan ulang tanggal menggantikan baris itu, bukan menambah baris baru.
+      rate_changes_empty: Belum ada perubahan suku bunga yang tercatat. Pinjaman berjalan dengan suku bunga di atas.
+      rate_change_effective_date: Tanggal efektif
+      rate_change_rate: Suku bunga
+      rate_change_add: Tambah perubahan suku bunga
+      rate_change_remove: Hapus
+      start_date: Tanggal penerbitan
+      start_date_hint: Kapan pinjaman dicairkan. Kosongkan untuk memakai tanggal pembukaan akun.
+      down_payment: Uang muka
+      insurance_rate: Suku bunga asuransi
+      insurance_rate_placeholder: '0.36'
+      insurance_rate_hint: Suku bunga tahunan, ditagihkan bulanan bersama cicilan. Suku bunga tetap dihitung dari saldo awal; yang menurun dihitung dari sisa utang.
+      insurance_rate_type: Jenis asuransi
+      insurance_rate_type_decreasing_life: Menurun
+      insurance_rate_type_level_term: Suku tingkat
+    new:
+      title: Masukkan detail pinjaman
+    overview:
+      interest_rate: Suku Bunga
+      monthly_payment: Pembayaran Bulanan
+      not_applicable: N/A
+      original_payoff_date: Tanggal Pelunasan Awal
+      original_principal: Jumlah Pinjaman Awal
+      remaining_principal: Sisa Jumlah Pinjaman
+      term: Tenor
+      type: Jenis
+      unknown: Tidak diketahui
+    tabs:
+      repayment_progress:
+        instalment: Pembayaran %{number} · %{date}
+        insurance: Asuransi
+        interest: Bunga
+        of_original: sebesar %{amount}
+        principal: Pokok
+        repaid: Terbayar
+        total: Total
+      schedule:
+        date: Tanggal
+        description: Diproyeksikan dari saldo awal, suku bunga, dan tenor, mulai %{start_date}. Pembayaran ekstra tidak tercermin.
+        variable_rate_notice: Bunga pinjaman ini berubah seiring waktu. Jadwalnya diamortisasi ulang setiap ada perubahan yang dicatat, dengan tanggal pelunasan awal yang tetap dan cicilan yang menyesuaikan; perubahan yang belum dicatat akan menggeser angka-angka ini.
+        opening_payment: Pembayaran awal
+        forecasted_payoff_date: Perkiraan Tanggal Pelunasan
+        forecasted_payoff_not_converged: Belum lunas pada pembayaran saat ini
+        interest: Bunga
+        monthly_payment: Pembayaran Bulanan
+        not_applicable: N/A
+        number: '#'
+        payment: Pembayaran
+        principal: Pokok
+        remaining_balance: Sisa Saldo
+        total_cost: Total Biaya
+        total_interest: Total Bunga
+      overview:
+        insurance_rate_only: '%{rate} per tahun'
+        interest_rate: Suku Bunga
+        leverage: Leverage
+        leverage_band_conservative: Konservatif
+        leverage_band_high: Tinggi
+        leverage_band_moderate: Sedang
+        leverage_multiple: '%{ratio}x'
+        monthly_payment: Pembayaran Bulanan
+        not_applicable: N/A
+        original_payoff_date: Tanggal Pelunasan Awal
+        original_principal: Jumlah Pinjaman Awal
+        remaining_principal: Sisa Jumlah Pinjaman
+        total_cost: Total Biaya
+        total_cost_with_insurance: Total Biaya termasuk Asuransi
+        total_insurance: Asuransi
+        term: Tenor
+        type: Jenis
+        unknown: Tidak diketahui
+        edit_loan_details: Edit detail pinjaman

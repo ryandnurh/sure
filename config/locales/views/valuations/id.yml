@@ -1,0 +1,68 @@
+---
+id:
+  valuations:
+    confirmation_contents:
+      this_will: Ini akan %{action_verb} nilai akun pada
+      to_colon: 'kepada:'
+      total_account_value: Total nilai akun
+      holdings_value: Nilai kepemilikan
+      brokerage_cash: Kas broker
+      account_balance: saldo akun
+      credit_card_balance: saldo kartu kredit
+      loan_balance: saldo pinjaman
+      property_value: nilai properti
+      vehicle_value: nilai kendaraan
+      crypto_balance: saldo kripto
+      asset_value: nilai aset
+      liability_balance: saldo liabilitas
+      balance: saldo
+      'on': pada
+      to: ke
+      recalculate_notice: Semua transaksi dan saldo ke depan akan dihitung ulang berdasarkan %{change_or_update} ini.
+      change: perubahan
+      update: perbarui
+      action_set: atur
+      action_update: perbarui
+    create:
+      account_updated: Akun diperbarui
+    update:
+      account_updated: Akun diperbarui
+      entry_updated: Entri diperbarui
+    errors:
+      amount_required: Jumlah wajib diisi
+    form:
+      amount: Jumlah
+      submit: Tambah pembaruan saldo
+    header:
+      balance: Saldo
+    index:
+      change: perubahan
+      date: tanggal
+      new_entry: Entri baru
+      no_valuations: Belum ada valuasi untuk akun ini
+      valuations: Nilai
+      value: nilai
+    new:
+      title: Saldo baru
+    show:
+      amount: Jumlah
+      amount_label: Nilai akun pada tanggal
+      date_label: Tanggal
+      delete: Hapus
+      delete_subtitle: Tindakan ini tidak bisa dibatalkan
+      delete_title: Hapus Entri
+      details: Detail
+      name_label: Nama
+      name_placeholder: Masukkan nama untuk entri ini
+      note_label: Catatan
+      note_placeholder: Tambahkan detail tambahan tentang entri ini
+      overview: Ikhtisar
+      settings: Pengaturan
+      opening_balance: Saldo awal
+      update_value: Perbarui nilai
+    confirm_create:
+      confirm: Konfirmasi
+      title: Konfirmasi saldo baru
+    confirm_update:
+      title: Perbarui saldo
+      update: Perbarui

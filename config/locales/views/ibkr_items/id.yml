@@ -1,0 +1,92 @@
+---
+id:
+  providers:
+    ibkr:
+      name: Interactive Brokers
+      connection_description: Hubungkan laporan Interactive Brokers Flex Web Service
+      institution_name: Interactive Brokers
+  ibkr_items:
+    defaults:
+      name: Interactive Brokers
+    ibkr_item:
+      deletion_in_progress: Penghapusan sedang berjalan
+      flex_web_service: Layanan Web Flex
+      syncing: Menyinkronkan
+      requires_update: Kredensial perlu perhatian
+      error: Error
+      synced: Tersinkron %{time} yang lalu. %{summary}.
+      never_synced: Belum pernah disinkronkan.
+      setup_accounts: Siapkan akun
+      delete: Hapus
+      accounts_need_setup: Akun perlu disiapkan
+      accounts_need_setup_description: Beberapa akun dari IBKR perlu ditautkan ke akun Sure.
+      no_accounts_discovered: Belum ada akun IBKR yang ditemukan.
+      no_accounts_discovered_description: Jalankan sinkronisasi setelah mengonfigurasi Flex query untuk menemukan akun.
+    setup_accounts:
+      page_title: Siapkan Akun Interactive Brokers
+      dialog_title: Siapkan Akun Interactive Brokers Anda
+      subtitle: Pilih akun broker IBKR yang ingin ditautkan.
+      info_box:
+        title: Impor IBKR Flex Query
+        items:
+          item_1: Kepemilikan dengan harga dan kuantitas terkini
+          item_2: Cost basis per posisi
+          item_3: Trade, dividen, komisi, serta setoran atau penarikan tunai
+        warning: Aktivitas historis dibatasi pada jendela laporan Flex Query
+      status:
+        fetching_accounts: Mengambil akun dari Interactive Brokers...
+        no_accounts_found_title: Tidak ada akun yang ditemukan.
+        no_accounts_found_description: Sure tidak menemukan akun IBKR apa pun dalam laporan Flex terbaru.
+      available_accounts:
+        title: Akun-akun tersedia
+        account_type_investment: Investasi
+        account_summary: '%{account_type} • Saldo: %{balance}'
+        account_id: 'ID Akun: %{account_id}'
+      link_existing:
+        description: Atau tautkan akun IBKR yang ditemukan ke akun investasi manual yang sudah ada.
+        manual_account_option: '%{name} (%{balance})'
+        select_prompt: Pilih akun...
+      linked_accounts:
+        title: Sudah tertaut
+        linked_to_html: 'Tertaut ke: %{account}'
+      buttons:
+        refresh: Segarkan
+        cancel: Batal
+        back_to_settings: Kembali ke Pengaturan
+        create_selected_accounts: Buat akun yang dipilih
+        link: Tautan
+        done: Selesai
+    sync_status:
+      no_accounts: Belum ada akun IBKR yang ditemukan
+      all_linked:
+        one: 1 akun tertaut
+        other: '%{count} akun tertaut'
+      partial: '%{linked} tertaut, %{unlinked} perlu disiapkan'
+    select_existing_account:
+      title: Tautkan akun Interactive Brokers
+      no_accounts_available: Belum ada akun Interactive Brokers yang belum ditautkan tersedia.
+      run_sync_hint: Jalankan sinkronisasi dari Pengaturan > Provider setelah memperbarui Flex query.
+      wait_for_sync: Tunggu sinkronisasi penemuan akun selesai.
+      balance: Saldo
+      link: Tautan
+      cancel: Batal
+    create:
+      success: Interactive Brokers berhasil dikonfigurasi.
+    update:
+      success: Berhasil memperbarui konfigurasi Interactive Brokers.
+    destroy:
+      success: Koneksi Interactive Brokers dijadwalkan untuk dihapus.
+    select_accounts:
+      not_configured: Interactive Brokers belum dikonfigurasi.
+    link_existing_account:
+      not_found: Konfigurasi Akun atau Interactive Brokers tidak ditemukan.
+      only_manual_investment: Hanya akun investasi manual yang dapat ditautkan ke Interactive Brokers.
+      already_linked: Akun Interactive Brokers ini sudah ditautkan.
+      success: Berhasil terhubung ke akun Interactive Brokers.
+      failed: Gagal menautkan akun Interactive Brokers.
+    complete_account_setup:
+      success:
+        one: Berhasil membuat %{count} akun Interactive Brokers.
+        other: Berhasil membuat %{count} akun Interactive Brokers.
+      none_selected: Tidak ada akun yang dipilih.
+      none_created: Tidak ada akun yang dibuat.

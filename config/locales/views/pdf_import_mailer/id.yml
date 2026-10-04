@@ -1,0 +1,17 @@
+---
+id:
+  pdf_import_mailer:
+    next_steps:
+      greeting: Hai %{name},
+      intro: Analisis dokumen PDF yang kamu unggah ke %{product} sudah selesai.
+      document_type_label: Jenis Dokumen
+      summary_label: Ringkasan AI
+      transactions_note: Dokumen ini tampaknya berisi transaksi. Anda bisa mengekstrak dan meninjaunya sekarang.
+      document_stored_note: Dokumen ini disimpan untuk referensi Anda. Ia bisa digunakan sebagai konteks dalam percakapan AI berikutnya.
+      next_steps_label: Selanjutnya?
+      next_steps_intro: 'Anda punya beberapa pilihan:'
+      option_extract_transactions: Ekstrak transaksi dari mutasi ini
+      option_keep_reference: Simpan dokumen ini sebagai referensi untuk percakapan AI berikutnya
+      option_delete: Hapus impor ini jika sudah tidak dibutuhkan
+      view_import_button: Lihat Detail Impor
+      footer_note: Ini adalah pesan otomatis. Jangan membalas email ini secara langsung.

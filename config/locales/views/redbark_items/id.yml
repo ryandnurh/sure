@@ -1,0 +1,183 @@
+---
+id:
+  redbark_items:
+    default_name: Koneksi Redbark
+    sync_status:
+      no_accounts: Tidak ada akun yang ditemukan
+      synced:
+        one: '%{count} akun tersinkron'
+        other: '%{count} akun tersinkron'
+      synced_with_setup: '%{linked} tersinkron, %{unlinked} perlu disiapkan'
+    institution_summary:
+      none: Belum ada institusi yang terhubung
+      count:
+        one: '%{count} institusi'
+        other: '%{count} institusi'
+    errors:
+      provider_not_configured: Provider Redbark belum dikonfigurasi
+    sync:
+      status:
+        importing: Mengimpor akun dari Redbark...
+        processing: Memproses transaksi...
+        calculating: Menghitung saldo...
+        importing_data: Mengimpor data akun...
+        checking_setup: Mengecek konfigurasi akun...
+        needs_setup: '%{count} akun perlu disiapkan...'
+      success: Sinkronisasi dimulai
+    panel:
+      step_1: Buat API key di app.redbark.com pada menu Settings
+      step_2: Masukkan API key-mu di bawah lalu klik tombol Save
+      step_3: Setelah koneksi berhasil, buka tab Akun untuk menyiapkan akun baru
+      optional: (Opsional)
+      optional_with_default: (opsional, default %{default_value})
+      save_button: Simpan Konfigurasi
+      update_button: Perbarui Konfigurasi
+      fields:
+        api_key:
+          label: Kunci API
+          placeholder_new: rbk_live_...
+          placeholder_update: Masukkan API key baru untuk memperbarui
+    create:
+      success: Koneksi Redbark berhasil dibuat
+    update:
+      success: Koneksi Redbark diperbarui
+    destroy:
+      success: Koneksi Redbark dihapus
+      unlink_failed:
+        one: Tidak bisa melepas %{count} akun. Silakan coba lagi.
+        other: Tidak bisa melepas %{count} akun. Silakan coba lagi.
+    index:
+      title: Koneksi Redbark
+    loading:
+      loading_message: Memuat akun-akun Redbark...
+      loading_title: Memuat
+    redbark_item:
+      accounts_need_setup: Akun perlu disiapkan
+      delete: Hapus koneksi
+      deletion_in_progress: penghapusan sedang berjalan...
+      error: Error
+      more_accounts_available:
+        one: '%{count} akun lagi tersedia'
+        other: '%{count} akun lagi tersedia'
+      no_accounts_description: Koneksi ini belum memiliki akun tertaut.
+      no_accounts_title: Tidak ada akun
+      provider_name: Redbark
+      requires_update: Koneksi perlu diperbarui
+      setup_action: Siapkan Akun Baru
+      setup_description: '%{linked} dari %{total} akun tertaut. Pilih tipe akun untuk akun Redbark barumu yang diimpor.'
+      setup_needed: Akun baru siap disiapkan
+      status: Tersinkron %{timestamp} yang lalu
+      status_never: Belum pernah disinkronkan
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      syncing: Menyinkronkan...
+      total: Total
+      unlinked: Tautan diputus
+      update_credentials: Perbarui kredensial
+    select_accounts:
+      accounts_selected: akun dipilih
+      api_error: 'Kesalahan API: %{message}'
+      cancel: Batal
+      configure_name_in_provider: Tidak bisa mengimpor - silakan konfigurasi nama akun di Redbark
+      description: Pilih akun yang ingin ditautkan ke akun %{product_name} Anda.
+      link_accounts: Tautkan akun yang dipilih
+      no_accounts_found: Tidak ada akun yang ditemukan. Periksa konfigurasi API key Anda.
+      no_api_key: API key Redbark belum dikonfigurasi. Konfigurasikan di Pengaturan.
+      no_credentials_configured: Konfigurasikan dulu kredensial Redbark Anda di Pengaturan Penyedia.
+      no_name_placeholder: (Tanpa nama)
+      title: Pilih Akun Redbark
+    select_existing_account:
+      account_already_linked: Akun ini sudah ditautkan ke provider
+      all_accounts_already_linked: Semua akun Redbark sudah tertaut
+      api_error: 'Kesalahan API: %{message}'
+      balance_label: 'Saldo:'
+      cancel: Batal
+      cancel_button: Batal
+      configure_name_in_provider: Tidak bisa mengimpor - silakan konfigurasi nama akun di Redbark
+      connect_hint: Hubungkan akun Redbark untuk mengaktifkan sinkronisasi otomatis.
+      description: Pilih akun Redbark untuk ditautkan ke akun ini. Transaksi akan disinkronkan dan dideduplikasi otomatis.
+      header: Tautkan dengan Redbark
+      link_account: Tautkan akun
+      link_button: Tautkan akun ini
+      linking_to: 'Menautkan ke:'
+      no_account_specified: Tidak ada akun yang ditentukan
+      no_accounts: Tidak ada akun Redbark yang belum ditautkan ditemukan.
+      no_accounts_found: Tidak ada akun Redbark yang ditemukan. Periksa konfigurasi API key Anda.
+      no_api_key: API key Redbark belum dikonfigurasi. Konfigurasikan di Pengaturan.
+      no_credentials_configured: Konfigurasikan dulu kredensial Redbark Anda di Pengaturan Penyedia.
+      no_name_placeholder: (Tanpa nama)
+      settings_link: Buka Pengaturan Penyedia
+      subtitle: Pilih akun Redbark
+      title: Tautkan %{account_name} dengan Redbark
+    link_existing_account:
+      account_already_linked: Akun ini sudah ditautkan ke provider
+      api_error: 'Kesalahan API: %{message}'
+      invalid_account_name: Tidak bisa menautkan akun dengan nama kosong
+      provider_account_already_linked: Akun Redbark ini sudah ditautkan ke akun lain
+      provider_account_not_found: Akun Redbark tidak ditemukan
+      missing_parameters: Parameter wajib hilang
+      no_api_key: API key Redbark tidak ditemukan. Konfigurasikan di Pengaturan Provider.
+      success: Berhasil menautkan %{account_name} dengan Redbark
+    setup_accounts:
+      account_type_label: 'Tipe Akun:'
+      accounts_count:
+        one: '%{count} akun tersedia'
+        other: '%{count} akun tersedia'
+      all_accounts_linked: Semua akun Redbark-mu sudah disiapkan.
+      api_error: 'Kesalahan API: %{message}'
+      creating: Membuat akun...
+      fetch_failed: Gagal Mengambil Akun
+      import_selected: Impor akun yang dipilih
+      instructions: Pilih akun yang ingin diimpor dari Redbark. Anda bisa memilih beberapa akun.
+      no_accounts: Tidak ada akun yang belum ditautkan ditemukan dari koneksi Redbark ini.
+      no_accounts_to_setup: Tidak ada akun untuk diatur
+      no_api_key: API key Redbark belum dikonfigurasi. Periksa pengaturan koneksi Anda.
+      select_all: Pilih semua
+      account_types:
+        skip: Lewati akun ini
+        depository: Akun Giro atau Tabungan
+        credit_card: Kartu Kredit
+        loan: Pinjaman atau KPR
+        other_asset: Aset Lainnya
+      subtype_labels:
+        depository: 'Subtipe Akun:'
+        credit_card: ''
+        loan: 'Jenis Pinjaman:'
+        other_asset: ''
+      subtype_messages:
+        credit_card: Kartu kredit akan otomatis disiapkan sebagai akun kartu kredit.
+        other_asset: Tidak diperlukan opsi tambahan untuk Aset Lain.
+      subtypes:
+        depository:
+          checking: Mengecek
+          savings: Tabungan
+          hsa: Akun Tabungan Kesehatan
+          cd: Sertifikat Deposito
+          money_market: Pasar Uang
+        loan:
+          mortgage: Hipotek
+          student: Pinjaman Mahasiswa
+          auto: Kredit Kendaraan
+          other: Pinjaman Lainnya
+      balance: Saldo
+      cancel: Batal
+      done: Selesai
+      choose_account_type: 'Pilih tipe akun yang tepat untuk tiap akun Redbark:'
+      create_accounts: Buat Akun-akun
+      creating_accounts: Membuat Akun...
+      historical_data_range: 'Rentang Data Historis:'
+      subtitle: Pilih tipe akun yang tepat untuk akun-akun imporanmu
+      sync_start_date_help: Pilih seberapa jauh ke belakang riwayat transaksi yang ingin disinkronkan.
+      sync_start_date_label: 'Mulai sinkronisasi transaksi dari:'
+      title: Siapkan Akun Redbark Anda
+    setup_required:
+      title: Hubungkan Redbark dulu
+      not_configured_title: Redbark belum terhubung
+      not_configured_description: Tambahkan kunci API Redbark-mu di pengaturan Penyedia, lalu kembali ke sini untuk menautkan akun.
+      go_to_provider_settings: Buka pengaturan penyedia
+    complete_account_setup:
+      all_skipped: Semua akun dilewati. Tidak ada akun yang dibuat.
+      creation_failed: 'Gagal membuat akun: %{error}'
+      creation_failed_generic: Gagal membuat akun.
+      setup_failed: '%{count} akun tidak bisa dibuat. Tidak ada yang berubah - perbaiki masalahnya lalu coba lagi.'
+      no_accounts: Tidak ada akun untuk diatur.
+      success: Berhasil membuat %{count} akun.

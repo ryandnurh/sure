@@ -1,0 +1,12 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        sso_provider:
+          attributes:
+            settings:
+              saml_url_required: Diperlukan URL Metadata IdP atau URL SSO IdP untuk penyedia SAML
+              saml_cert_required: Diperlukan Sertifikat IdP atau Sidik Jari Sertifikat jika tidak memakai URL metadata
+              metadata_url_invalid: URL Metadata IdP harus berupa URL yang valid
+              sso_url_invalid: URL SSO IdP harus berupa URL yang valid

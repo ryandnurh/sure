@@ -1,0 +1,211 @@
+---
+id:
+  account:
+    entries:
+      destroy:
+        success: Entri berhasil dihapus.
+  accounts:
+    not_authorized: Anda tidak punya izin untuk mengelola akun ini
+    account:
+      complete_setup: Selesaikan setup
+      edit: Edit
+      link_lunchflow: Tautkan dengan Lunch Flow
+      link_provider: Tautkan dengan penyedia
+      unlink_provider: Putuskan tautan dari penyedia
+      change_simplefin_account: Ganti akun SimpleFIN
+      troubleshoot: Pemecahan Masalah
+      enable: Aktifkan akun
+      disable: Nonaktifkan akun
+      exclude_from_reports: Kecualikan dari semua laporan
+      include_in_reports: Sertakan di laporan
+      excluded_from_reports_indicator: Dikecualikan dari laporan
+      set_default: Jadikan default
+      remove_default: Hapus bawaan
+      default_label: Default
+      delete: Hapus akun
+      sharing: Berbagi
+    chart:
+      data_not_available: Data tidak tersedia untuk periode yang dipilih
+    create:
+      success: Akun %{type} dibuat
+    set_default:
+      depository_only: Hanya akun tunai dan kartu kredit yang dapat ditetapkan sebagai default.
+    destroy:
+      success: Akun %{type} dijadwalkan untuk dihapus
+      cannot_delete_linked: Tidak bisa menghapus akun tertaut. Lepaskan tautannya dulu.
+      failed: Penghapusan resource gagal. Coba lagi nanti.
+    empty:
+      empty_message: Tambahkan akun lewat koneksi, impor, atau input manual.
+      new_account: Akun baru
+      no_accounts: Belum ada akun
+    form:
+      balance: 'Saldo pada tanggal:'
+      opening_balance_date_label: Tanggal saldo awal
+      name_label: Nama akun
+      name_placeholder: Contoh nama akun
+      additional_details: Detail tambahan
+      institution_name_label: Nama institusi
+      institution_name_placeholder: mis., Chase Bank
+      institution_domain_label: Domain institusi
+      institution_domain_placeholder: mis., chase.com
+      notes_label: Catatan
+      notes_placeholder: Simpan informasi tambahan seperti nomor rekening, sort code, IBAN, routing number, dll.
+      exclude_from_reports: Kecualikan dari semua laporan
+      enable_category_matcher_label: Aktifkan pencocok kategori
+      enable_category_matcher_hint: Saat diaktifkan, kategori saran penyedia diterapkan ke transaksi impor. Nonaktifkan agar transaksi baru tetap tanpa kategori.
+    index:
+      accounts: Akun
+      financekit_accounts:
+        title: Apple Wallet
+        description: Kelola koneksi Apple Wallet dan sinkronisasi di aplikasi iOS Sure.
+      cancel_sync: Batalkan sinkronisasi
+      manual_accounts:
+        other_accounts: Akun lainnya
+      new_account: Akun baru
+      sync: Sinkronkan semua
+    sync_all:
+      syncing: Menyinkronkan akun...
+    new:
+      import_accounts: Impor akun
+      container:
+        select: Pilih
+        navigate: Navigasi
+        close: Tutup
+        next: Berikutnya
+        previous: Sebelumnya
+      method_selector:
+        connected_entry: Tautkan akun
+        connected_entry_eu: Tautkan akun EU
+        link_with_provider: Tautkan dengan %{provider}
+        lunchflow_entry: Tautkan akun Lunch Flow
+        manual_entry: Masukkan saldo akun
+        title: Bagaimana kamu ingin menambahkannya?
+      title: Apa yang ingin ditambahkan?
+    show:
+      limited_fx_history_warning: Riwayat kurs hanya tersedia mulai %{date} dan seterusnya. Transaksi sebelum tanggal ini memakai konversi mata uang perkiraan — ini bisa terjadi saat penyedia FX hanya menawarkan jendela historis terbatas.
+      tabs:
+        activity: Aktivitas
+        holdings: Kepemilikan
+        overview: Ikhtisar
+        schedule: Jadwal
+        statements: Mutasi
+      activity:
+        amount: Jumlah
+        balance: Saldo
+        category: Kategori
+        confirmed: Terkonfirmasi
+        date: Tanggal
+        entries: entri
+        entry: entri
+        filter: Filter
+        new: Baru
+        new_activity: Aktivitas baru
+        new_balance: Saldo baru
+        new_trade: Trade baru
+        new_transaction: Transaksi baru
+        new_transfer: Transfer baru
+        no_entries: Tidak ada entri yang ditemukan
+        pending: Tertunda
+        search:
+          placeholder: Cari entri berdasarkan nama
+        search_placeholder: Cari entri berdasarkan nama
+        status: Status
+        title: Aktivitas
+        uncategorized_only: Hanya tanpa kategori
+      chart:
+        balance: Saldo
+        owed: Jumlah terutang
+      header:
+        complete_setup: Selesaikan setup
+      menu:
+        confirm_accept: Hapus "%{name}"
+        confirm_body_html: <p>Dengan menghapus akun ini, kamu akan menghapus riwayat nilainya, yang memengaruhi berbagai aspek akunmu secara keseluruhan. Tindakan ini berdampak langsung pada perhitungan kekayaan bersih dan grafik akun.</p><br /> <p>Setelah dihapus, kamu tidak akan bisa memulihkan informasi akun karena kamu harus menambahkannya sebagai akun baru.</p>
+        confirm_title: Hapus akun?
+        delete_account: Hapus akun
+        edit: Edit
+        import: Impor transaksi
+        import_trades: Impor trading
+        import_transactions: Impor transaksi
+        manage: Kelola akun
+        sharing: Berbagi
+        statements: Mutasi
+        exclude_from_reports: Kecualikan dari semua laporan
+        include_in_reports: Sertakan di laporan
+    update:
+      success: Akun %{type} diperbarui
+    sidebar:
+      missing_data: Data historis hilang
+      missing_data_description: '%{product} memakai penyedia pihak ketiga untuk mengambil kurs historis, harga sekuritas, dan lainnya. Data ini diperlukan untuk menghitung saldo historis akun secara akurat.'
+      configure_providers: Konfigurasikan provider-mu di sini.
+      tabs:
+        all: Semua
+        assets: Aset
+        debts: Utang
+      new_asset: Aset baru
+      new_debt: Utang baru
+      new_account: Akun baru
+      new_account_group: '%{account_group} baru'
+      expand_all: Bentangkan semua
+      collapse_all: Ciutkan semua
+    types:
+      depository: Tunai
+      investment: Investasi
+      crypto: Kripto
+      property: Properti
+      vehicle: Kendaraan
+      other_asset: Aset Lainnya
+      credit_card: Kartu Kredit
+      loan: Pinjaman
+      other_liability: Liabilitas Lainnya
+    types_plural:
+      depository: Tunai
+      investment: Investasi
+      crypto: Kripto
+      property: Properti
+      vehicle: Kendaraan
+      other_asset: Aset Lainnya
+      credit_card: Kartu Kredit
+      loan: Pinjaman
+      other_liability: Liabilitas Lainnya
+    tax_treatments:
+      taxable: Kena pajak
+      tax_deferred: Pajak ditangguhkan
+      tax_exempt: Bebas pajak
+      tax_advantaged: Berinsentif pajak
+    tax_treatment_descriptions:
+      taxable: Keuntungan dikenai pajak saat direalisasi
+      tax_deferred: Kontribusi bisa dikurangkan, dipajaki saat penarikan
+      tax_exempt: Kontribusi setelah pajak, keuntungan tidak dipajaki
+      tax_advantaged: Manfaat pajak khusus dengan syarat
+    subtype_regions:
+      us: Amerika Serikat
+      uk: Britania Raya
+      ca: Kanada
+      au: Australia
+      eu: Eropa
+      in: India
+      generic: Umum
+    confirm_unlink:
+      title: Putuskan tautan akun dari penyedia?
+      description_html: Anda akan memutus tautan <strong>%{account_name}</strong> dari <strong>%{provider_name}</strong>. Ini akan mengubahnya menjadi akun manual.
+      warning_title: Artinya
+      warning_wallet_connection: Semua akun di koneksi Apple Wallet ini akan dilepas. Transaksi dan saldonya tetap tersimpan. Kamu bisa menghubungkan ulang lewat aplikasi Sure iOS dengan setup Wallet baru.
+      warning_no_sync: Akun tidak akan lagi tersinkron otomatis dengan provider Anda
+      warning_manual_updates: Anda perlu menambahkan transaksi dan memperbarui saldo secara manual
+      warning_transactions_kept: Semua transaksi dan saldo yang ada akan tetap tersimpan
+      warning_can_delete: Setelah dilepas, kamu bisa menghapus akunnya kalau perlu
+      confirm_button: Konfirmasi dan lepas tautan
+    unlink:
+      success: Akun berhasil dilepas. Sekarang jadi akun manual.
+      not_linked: Akun belum tertaut ke penyedia
+      error: 'Gagal melepaskan tautan akun: %{error}'
+      generic_error: Terjadi kesalahan tak terduga. Silakan coba lagi.
+    select_provider:
+      title: Pilih provider untuk ditautkan
+      description: Pilih provider yang ingin kamu pakai untuk menautkan %{account_name}
+      already_linked: Akun sudah tertaut ke penyedia
+      no_providers: Belum ada penyedia yang dikonfigurasi saat ini
+  email_confirmations:
+    new:
+      invalid_token: Tautan konfirmasi tidak valid atau kedaluwarsa.
+      success_login: Email Anda telah dikonfirmasi. Silakan masuk dengan alamat email baru Anda.

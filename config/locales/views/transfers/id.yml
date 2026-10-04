@@ -1,0 +1,53 @@
+---
+id:
+  transfers:
+    create:
+      success: Transfer dibuat
+      exchange_rate_unavailable: Kurs tidak tersedia untuk mata uang dan tanggal yang dipilih
+      date_invalid: tidak valid
+      stale_form: Formulir ini sudah dikirim dengan detail yang berbeda. Muat ulang halaman lalu coba lagi.
+    destroy:
+      success: Transfer dihapus
+    form:
+      amount: Jumlah
+      bank_charges: Biaya Bank
+      outgoing_fee: Biaya transfer keluar
+      incoming_fee: Biaya transfer masuk
+      date: Tanggal
+      destination_amount: Jumlah tujuan
+      destination_amount_display: 'Jumlah tujuan: %{amount}'
+      exchange_rate_display: 'Kurs: %{rate}'
+      expense: Pengeluaran
+      from: Dari
+      income: Pemasukan
+      select_account: Pilih akun
+      source_amount: Jumlah asal
+      submit: Buat transfer
+      to: Ke
+      transfer: Transfer
+    new:
+      title: Transfer baru
+    show:
+      delete: Hapus transfer
+      delete_subtitle: Ini menghapus transfer tersebut.  Transaksi-transaksi di bawahnya tidak ikut terhapus.
+      delete_title: Hapus transfer?
+      details: Detail
+      mark_recurring: Tandai sebagai berkala
+      mark_recurring_subtitle: Lacak transfer ini sebagai pola berkala di feed yang akan datang dan halaman berkala.
+      mark_recurring_title: Tandai transfer sebagai berkala
+      note_label: Catatan
+      note_placeholder: Tambahkan catatan ke transfer ini
+      overview: Ikhtisar
+      settings: Pengaturan
+      from: Dari
+      to: Ke
+      date: Tanggal
+      transfer_amount: Jumlah transfer
+      total: Total
+      bank_charges: Biaya Bank
+      source_fee: Biaya asal
+      destination_fee: Biaya tujuan
+      category: Kategori
+      uncategorized: Tanpa kategori
+    update:
+      success: Transfer diperbarui

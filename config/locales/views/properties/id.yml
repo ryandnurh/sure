@@ -1,0 +1,107 @@
+---
+id:
+  properties:
+    edit:
+      edit: Edit %{account}
+      title: Masukkan properti secara manual
+    form:
+      address_line1: Alamat jalan
+      address_line1_placeholder: 123 Main St
+      area: area tempat tinggal
+      area_placeholder: '2000'
+      area_unit: Satuan ukuran
+      country: Negara
+      country_placeholder: US
+      locality: Kota
+      locality_placeholder: San Francisco
+      none: Tidak ada
+      postal_code: Kode ZIP/Pos
+      postal_code_placeholder: '94105'
+      region: Provinsi
+      region_placeholder: CA
+      subtype_prompt: Pilih jenis properti
+      year_built: Tahun dibangun
+      year_built_placeholder: '2000'
+    avm_providers:
+      rentcast: RentCast
+      realie: Realie
+    new:
+      title: Masukkan properti secara manual
+      next: Berikutnya
+      avm_option: Tambah via %{provider}
+      avm_title: Tambah properti via %{provider}
+      avm_description: Masukkan nama properti dan alamatnya. %{provider} akan mencarikan detail properti dan estimasi nilai pasarnya untukmu.
+      avm_us_only: '%{provider} hanya mendukung properti di Amerika Serikat.'
+      avm_submit: Cari properti
+      avm_preview_title: Konfirmasi detail properti
+      avm_preview_description: Berikut yang ditemukan %{provider}. Periksa detailnya sebelum menambahkan properti — belum ada yang dibuat.
+      avm_preview_no_record: '%{provider} tidak menemukan data properti di alamat ini, jadi nilai yang ditampilkan adalah estimasi berdasarkan area sekitarnya. Periksa lagi alamatnya sebelum lanjut.'
+      avm_preview_back: Kembali
+      avm_preview_confirm: Tambah properti
+    address:
+      title: Masukkan properti secara manual
+      address_line1_label: Baris Alamat 1
+      address_line1_placeholder: 123 Main Street
+      city_label: Kota
+      city_placeholder: San Francisco
+      state_region_label: Provinsi/Wilayah
+      state_region_placeholder: CA
+      postal_code_label: Kode Pos
+      postal_code_placeholder: '12345'
+      country_label: Negara
+      country_placeholder: USA
+      save: Simpan
+    balances:
+      title: Masukkan properti secara manual
+      market_value_label: Estimasi nilai pasar
+      market_value_tooltip: Estimasi nilai pasar properti Anda. Angka ini sering bisa ditemukan di situs seperti Zillow atau Redfin, dan tidak pernah berupa angka pasti.
+      save: Simpan
+      next: Berikutnya
+    overview_fields:
+      name_label: Nama
+      name_placeholder: Rumah liburan
+      subtype_prompt: Pilih jenis
+      property_type_label: Jenis properti
+      year_built_label: Tahun Dibangun (opsional)
+      year_built_placeholder: '1990'
+      area_label: Luas (opsional)
+      area_placeholder: '1200'
+      square_feet: Kaki Persegi
+      square_meters: Meter Persegi
+      area_unit_label: Satuan luas
+    overview:
+      living_area: Area Tempat Tinggal
+      market_value: Nilai Pasar
+      purchase_price: Harga Beli
+      trend: Tren
+      unknown: Tidak diketahui
+      year_built: Tahun Dibangun
+    tabs:
+      overview:
+        living_area: Area Tempat Tinggal
+        market_value: Nilai Pasar
+        purchase_price: Harga Beli
+        trend: Tren
+        unknown: Tidak diketahui
+        year_built: Tahun Dibangun
+        edit_account_details: Edit detail akun
+    subtypes:
+      apartment:
+        short: Apartemen
+        long: Apartemen
+      plot:
+        short: Petak
+        long: Tanah / Lahan
+      commercial:
+        short: Komersial
+        long: Properti Komersial
+      rented:
+        short: Disewakan
+        long: Properti Disewakan
+      agri_land:
+        short: Lahan Pertanian
+        long: Lahan Pertanian
+    form_tabs:
+      address: Alamat
+      overview: Ikhtisar
+      value: Nilai

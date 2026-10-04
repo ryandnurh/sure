@@ -1,0 +1,9 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        entry:
+          attributes:
+            base:
+              invalid_sell_quantity: tidak bisa menjual %{sell_qty} lembar saham %{ticker} karena Anda hanya memiliki %{current_qty} lembar

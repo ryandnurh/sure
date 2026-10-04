@@ -1,0 +1,117 @@
+---
+id:
+  account_statements:
+    account_tab:
+      coverage_title: Cakupan mutasi
+      coverage_description: Bulan-bulan historis yang didukung oleh mutasi yang diunggah dan pemeriksaan saldo.
+      coverage_range: '%{start} - %{end}'
+      empty: Belum ada mutasi yang ditautkan ke akun ini.
+      open_inbox: Kotak masuk
+      statements_title: Mutasi
+      year_label: Tahun cakupan
+    balance:
+      unknown: Tidak diketahui
+    coverage:
+      status:
+        ambiguous: Ambigu
+        covered: Tercover
+        duplicate: Duplikat
+        mismatched: Tidak cocok
+        missing: Hilang
+        not_expected: Tidak diharapkan
+    create:
+      duplicates:
+        one: 1 mutasi duplikat dilewati.
+        other: '%{count} mutasi duplikat dilewati.'
+      invalid_file_type: Unggah mutasi PDF, CSV, atau XLSX di bawah batas ukuran.
+      no_files: Pilih minimal satu file mutasi.
+      success:
+        one: 1 mutasi diunggah.
+        other: '%{count} mutasi diunggah.'
+    destroy:
+      failure: Mutasi tidak dapat dihapus.
+      success: Mutasi dihapus.
+    form:
+      account_upload: Unggah mutasi
+      files_hint: PDF, CSV, atau XLSX. Maks %{max_size}MB per file.
+      files_label: File mutasi
+      inbox_upload: Unggah
+    index:
+      account_label: Akun
+      confidence: Kecocokan %{confidence}
+      empty_linked: Belum ada mutasi yang terhubung.
+      empty_unmatched: Kotak masuk mutasi kosong.
+      leave_unmatched: Biarkan tidak cocok
+      linked_title: Mutasi-mutasi tertaut
+      no_suggestion: Tidak ada saran
+      storage_used: Penyimpanan terpakai
+      title: Brankas Mutasi
+      unmatched_title: Kotak masuk tak cocok
+      upload_description: Unggah mutasi ke kotak masuk, atau pilih akun untuk langsung ditautkan.
+      upload_title: Unggah mutasi
+    link:
+      no_account: Pilih akun sebelum menautkan mutasi ini.
+      success: Mutasi tertaut ke %{account}.
+    period:
+      unknown: Periode tidak diketahui
+    reconciliation:
+      checks:
+        closing_balance: Saldo penutup
+        opening_balance: Saldo awal
+        period_movement: Pergerakan periode
+        unknown_check: Cek tidak diketahui
+      matched: Cocok
+      mismatched: Tidak cocok
+      unavailable: Belum diperiksa
+    reject:
+      success: Pencocokan mutasi ditolak.
+    show:
+      account_label: Akun
+      account_last4_hint: 4 digit terakhir akun
+      account_name_hint: Petunjuk nama akun
+      closing_balance: Saldo penutup
+      currency: Mata Uang
+      delete: Hapus
+      difference: Selisih
+      download: Unduh
+      institution_name_hint: Petunjuk institusi
+      ledger_amount: Buku besar Sure
+      linked_to: Tertaut ke %{account}.
+      linking_title: Tautan akun
+      link_suggestion: Saran penautan
+      metadata_title: Metadata mutasi
+      no_suggestion: Belum ada saran akun.
+      opening_balance: Saldo awal
+      period_end_on: Akhir periode
+      period_start_on: Awal periode
+      reconciliation_title: Rekonsiliasi
+      reconciliation_unavailable: Tambahkan periode mutasi dan saldo awal atau akhir, lalu pastikan Sure punya riwayat saldo untuk tanggal-tanggal itu.
+      reject: Tolak
+      save: Simpan mutasi
+      statement_amount: Mutasi
+      suggested_account: Akun yang disarankan adalah %{account} (tingkat keyakinan %{confidence}).
+      title: Mutasi
+      unlink: Putuskan tautan
+      unmatched_account: Kotak masuk tak cocok
+      unknown_value: Tidak diketahui
+    status:
+      linked: Tertaut
+      rejected: Ditolak
+      unmatched: Tidak cocok
+    table:
+      account: Akun
+      actions: Aksi
+      download: Unduh
+      edit: Edit
+      file: File
+      link_suggestion: Saran penautan
+      period: Periode
+      reconciliation: Rekonsiliasi
+      reject: Tolak saran
+      suggestion: Saran
+      unlink: Putuskan tautan
+      view: Lihat
+    unlink:
+      success: Mutasi dikembalikan ke kotak masuk yang belum cocok.
+    update:
+      success: Mutasi diperbarui.

@@ -1,0 +1,42 @@
+---
+id:
+  oidc_accounts:
+    link:
+      no_pending_oidc: Tidak ada autentikasi OIDC yang tertunda ditemukan
+      title_link: Tautkan Akun OIDC
+      title_create: Buat Akun
+      verify_heading: Verifikasi Identitasmu
+      verify_description_html: Untuk menautkan akun %{provider} kamu%{email_suffix}, verifikasi identitasmu dengan memasukkan kata sandimu.
+      email_suffix_html: ' (<strong>%{email}</strong>)'
+      email_label: Email
+      email_placeholder: Masukkan emailmu
+      password_label: Kata sandi
+      password_placeholder: Masukkan kata sandimu
+      verify_hint: Ini memastikan hanya kamu yang bisa menautkan akun eksternal ke profilmu.
+      submit_link: Tautkan Akun
+      create_heading: Buat Akun Baru
+      create_description_html: Tidak ada akun yang ditemukan dengan email <strong>%{email}</strong>. Klik di bawah untuk membuat akun baru menggunakan identitas %{provider} Anda.
+      info_email: 'Email:'
+      info_name: 'Nama:'
+      submit_create: Buat Akun
+      submit_accept_invitation: Terima Undangan
+      account_creation_disabled: Pembuatan akun baru via single sign-on dinonaktifkan. Silakan hubungi administrator untuk membuat akun Anda.
+      cancel: Batal
+    create_link:
+      no_pending_oidc: Tidak ada autentikasi OIDC yang tertunda ditemukan
+    new_user:
+      no_pending_oidc: Tidak ada autentikasi OIDC yang tertunda ditemukan
+      title: Lengkapi Akunmu
+      heading: Buat Akunmu
+      description: Konfirmasikan detail Anda untuk menyelesaikan pembuatan akun dengan identitas %{provider} Anda.
+      email_label: Email (dari penyedia SSO)
+      first_name_label: Nama Depan
+      first_name_placeholder: Masukkan nama depanmu
+      last_name_label: Nama Belakang
+      last_name_placeholder: Masukkan nama belakangmu
+      submit: Buat Akun
+      cancel: Batal
+    create_user:
+      no_pending_oidc: Tidak ada autentikasi OIDC yang tertunda ditemukan
+      account_creation_disabled: Pembuatan akun SSO dinonaktifkan. Hubungi administrator.
+      account_created: Selamat datang! Akunmu sudah dibuat.

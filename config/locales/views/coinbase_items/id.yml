@@ -1,0 +1,78 @@
+---
+id:
+  coinbase_items:
+    create:
+      default_name: Coinbase
+      success: Berhasil terhubung ke Coinbase! Akun-akun kamu sedang disinkronkan.
+    update:
+      success: Berhasil memperbarui konfigurasi Coinbase.
+    destroy:
+      success: Koneksi Coinbase dijadwalkan untuk dihapus.
+    setup_accounts:
+      title: Impor Dompet Coinbase
+      subtitle: Pilih wallet yang ingin dipantau
+      instructions: Pilih wallet yang ingin diimpor. Wallet yang tidak dipilih tetap tersedia jika ingin ditambahkan nanti.
+      no_accounts: Semua dompet sudah diimpor.
+      accounts_count:
+        one: '%{count} dompet tersedia'
+        other: '%{count} dompet tersedia'
+      select_all: Pilih semua
+      import_selected: Impor yang Dipilih
+      cancel: Batal
+      creating: Mengimpor...
+    complete_account_setup:
+      success:
+        one: '%{count} dompet diimpor'
+        other: '%{count} dompet diimpor'
+      none_selected: Tidak ada wallet yang dipilih
+      no_accounts: Tidak ada wallet yang bisa diimpor
+    coinbase_item:
+      provider_name: Coinbase
+      syncing: Menyinkronkan...
+      reconnect: Kredensial perlu diperbarui
+      deletion_in_progress: Menghapus...
+      sync_status:
+        no_accounts: Tidak ada akun yang ditemukan
+        all_synced:
+          one: '%{count} akun tersinkron'
+          other: '%{count} akun tersinkron'
+        partial_sync: '%{linked_count} tersinkron, %{unlinked_count} perlu disiapkan'
+      status: Terakhir disinkronkan %{timestamp} lalu
+      status_with_summary: Terakhir disinkronkan %{timestamp} lalu - %{summary}
+      status_never: Belum pernah disinkronkan
+      update_credentials: Perbarui kredensial
+      delete: Hapus
+      no_accounts_title: Tidak ada akun yang ditemukan
+      no_accounts_message: Dompet Coinbase Anda akan muncul di sini setelah sinkronisasi.
+      setup_needed: Dompet siap diimpor
+      setup_description: Pilih wallet Coinbase yang ingin dipantau.
+      setup_action: Impor Dompet
+      import_wallets_menu: Impor Dompet
+      more_wallets_available:
+        one: '%{count} dompet lagi tersedia untuk diimpor'
+        other: '%{count} dompet lagi tersedia untuk diimpor'
+    select_existing_account:
+      title: Tautkan Akun Coinbase
+      no_accounts_found: Tidak ada akun Coinbase yang ditemukan.
+      wait_for_sync: Tunggu Coinbase selesai menyinkronkan
+      check_provider_health: Pastikan kredensial API Coinbase-mu valid
+      balance: Saldo
+      currently_linked_to: 'Saat ini tertaut ke: %{account_name}'
+      link: Tautan
+      cancel: Batal
+    link_existing_account:
+      success: Berhasil terhubung ke akun Coinbase
+      errors:
+        only_manual: Hanya akun manual yang dapat ditautkan ke Coinbase
+        invalid_coinbase_account: Akun Coinbase tidak valid
+  coinbase_item:
+    syncer:
+      checking_credentials: Mengecek kredensial...
+      credentials_invalid: Kredensial API tidak valid. Periksa API key dan secret-mu.
+      importing_accounts: Mengimpor akun dari Coinbase...
+      checking_configuration: Mengecek konfigurasi akun...
+      accounts_need_setup:
+        one: '%{count} akun perlu disiapkan'
+        other: '%{count} akun perlu disiapkan'
+      processing_accounts: Memproses data akun...
+      calculating_balances: Menghitung saldo...

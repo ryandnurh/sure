@@ -1,0 +1,72 @@
+---
+id:
+  trades:
+    api_errors:
+      activity_label_must_match_type: investment_activity_label harus %{label} ketika tipe adalah %{type}
+      invalid_activity_label: Label aktivitas investasi tidak valid
+      invalid_type: Tipe tidak valid
+      supported_types: 'tipe harus salah satu dari: %{types}'
+    form:
+      account: Akun transfer (opsional)
+      account_prompt: Cari akun
+      amount: Jumlah
+      fee: Biaya transaksi
+      holding: Simbol ticker
+      holding_optional: Simbol ticker (opsional)
+      price: Harga per lembar
+      qty: Jumlah
+      submit: Tambah transaksi
+      ticker_placeholder: AAPL
+      type: Jenis
+      type_buy: Beli
+      type_sell: Jual
+      type_deposit: Setoran
+      type_withdrawal: Penarikan
+      type_dividend: Dividen
+      type_interest: Bunga
+      dividend_requires_security: Sekuritas wajib diisi untuk dividen
+      trade_requires_security: Sekuritas (ticker) wajib untuk transaksi beli dan jual
+    header:
+      buy: Beli
+      sell: Jual
+      dividend: Dividen
+      interest: Bunga
+      contribution: Kontribusi
+      exchange: Bursa
+      fee: Biaya
+      other: Lainnya
+      reinvestment: Reinvestasi
+      sweep_in: Sweep in
+      sweep_out: Sweep out
+      transfer: Transfer
+      withdrawal: Penarikan
+      current_market_price_label: Harga Pasar Saat Ini
+      overview: Ikhtisar
+      purchase_price_label: Harga Beli
+      purchase_qty_label: Jumlah Beli
+      symbol_label: Simbol
+      total_return_label: untung/rugi belum terealisasi
+    new:
+      title: Transaksi baru
+    show:
+      additional: Tambahan
+      amount_label: Jumlah
+      buy: Beli
+      category_label: Kategori
+      cost_per_share_label: Biaya per Saham
+      date_label: Tanggal
+      delete: Hapus
+      fee_label: Biaya transaksi
+      delete_subtitle: Tindakan ini tidak bisa dibatalkan
+      delete_title: Hapus Perdagangan
+      details: Detail
+      provider_disabled_warning: Update harga dijeda — provider %{provider} dinonaktifkan. Aktifkan lagi di Pengaturan atau petakan ulang kepemilikan ke provider lain.
+      exclude_subtitle: Trade ini tidak akan disertakan dalam laporan dan perhitungan
+      exclude_title: Kecualikan dari analitik
+      no_category: Tanpa kategori
+      note_label: Catatan
+      note_placeholder: Tambahkan catatan tambahan di sini...
+      quantity_label: Jumlah
+      sell: Jual
+      settings: Pengaturan
+      type_label: Jenis

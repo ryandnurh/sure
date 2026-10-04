@@ -1,0 +1,7 @@
+---
+id:
+  activerecord:
+    errors:
+      models:
+        indexa_capital_item:
+          credentials_required: Diperlukan env var INDEXA_API_TOKEN atau kredensial username/document/password

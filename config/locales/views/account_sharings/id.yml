@@ -1,0 +1,29 @@
+---
+id:
+  account_sharings:
+    show:
+      title: Berbagi Akun
+      subtitle: Atur siapa yang bisa melihat dan berinteraksi dengan akun ini
+      member: Anggota
+      permission: Izin
+      shared: Dibagikan
+      no_members: Tidak ada anggota lain di %{moniker} Anda untuk diajak berbagi
+      permissions:
+        full_control: Kontrol penuh
+        full_control_description: Bisa melihat, mengedit, dan mengelola transaksi
+        read_write: Bisa memberi anotasi
+        read_write_description: Bisa mengategorikan, memberi tag, dan menambah catatan
+        read_only: Lihat saja
+        read_only_description: Hanya bisa melihat data akun
+      save: Simpan pengaturan berbagi
+      owner_label: 'Pemilik: %{name}'
+      shared_with_count:
+        one: Dibagikan ke 1 anggota
+        other: Dibagikan ke %{count} anggota
+      include_in_finances: Sertakan di anggaran & laporanku
+      exclude_from_finances: Kecualikan dari anggaran & laporku
+      finance_toggle_description: Hitung akun ini dalam kekayaan bersih, anggaran, dan laporanmu
+    update:
+      success: Pengaturan berbagi diperbarui
+      not_owner: Hanya pemilik akun yang dapat mengelola berbagi
+      finance_toggle_success: Preferensi inklusi keuangan diperbarui

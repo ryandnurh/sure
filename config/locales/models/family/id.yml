@@ -1,0 +1,10 @@
+---
+id:
+  activerecord:
+    attributes:
+      family:
+        ai_prompt_chat_system: System prompt chat
+        ai_prompt_categorizer_openai: Prompt pengkategorisasi transaksi (OpenAI)
+        ai_prompt_categorizer_anthropic: Prompt pengkategorisasi transaksi (Anthropic)
+        ai_prompt_merchant_openai: Prompt detektor merchant (OpenAI)
+        ai_prompt_merchant_anthropic: Prompt detektor merchant (Anthropic)

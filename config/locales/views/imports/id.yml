@@ -1,0 +1,538 @@
+---
+id:
+  import:
+    qif_category_selections:
+      update:
+        success: Kategori dan tag tersimpan.
+      show:
+        title: Konfigurasi & pilih
+        description: Tinjau format tanggal yang terdeteksi, lalu pilih kategori dan tag dari file QIF yang ingin dibawa ke %{product_name}.
+        categories_heading: Kategori
+        categories_found:
+          one: 1 kategori ditemukan
+          other: '%{count} kategori ditemukan'
+        category_name_col: Nama kategori
+        transactions_col: Transaksi
+        tags_heading: Tag
+        tags_found:
+          one: 1 tag ditemukan
+          other: '%{count} tag ditemukan'
+        tag_name_col: Nama tag
+        txn_count:
+          one: 1 trx
+          other: '%{count} trx'
+        split_warning_title: Transaksi pecahan terdeteksi
+        split_warning_description: File QIF ini berisi transaksi split. Tinjau kategori dan tag split yang terdeteksi di bawah sebelum mengimpor.
+        split_badge: bagi
+        empty_state_primary: Tidak ada kategori atau tag yang ditemukan dalam file QIF ini.
+        empty_state_secondary: Semua transaksi akan diimpor tanpa kategori atau tag.
+        submit: Lanjut ke peninjauan
+    cleans:
+      show:
+        not_configured: Konfigurasikan dulu impor Anda sebelum melanjutkan.
+        description: Edit datamu pada tabel di bawah. Sel merah berarti tidak valid.
+        errors_notice: Ada kesalahan pada data Anda. Arahkan kursor ke kesalahan untuk melihat detail.
+        errors_notice_mobile: Ada kesalahan pada data Anda. Ketuk tooltip kesalahan untuk melihat detail.
+        title: Bersihkan datamu
+        data_cleaned: Data Anda telah dibersihkan
+        next_step: Langkah berikutnya
+        all_rows: Semua baris
+        error_rows: Baris error
+    configurations:
+      update:
+        success: Impor berhasil dikonfigurasi.
+      account_import:
+        leave_empty: Kosongkan
+        default: Default
+        entity_type: Jenis Entitas
+        name: Nama
+        balance: Saldo
+        currency: Mata Uang
+        balance_date: Tanggal Saldo
+        date_format: Format Tanggal
+        select_format: Pilih format
+        apply_configuration: Terapkan konfigurasi
+      transaction_import:
+        date_label: Tanggal
+        select_column: Pilih kolom
+        select_format: Pilih format
+        amount_label: Jumlah
+        default: Default
+        currency_label: Mata Uang
+        format_label: Format
+        amount_type_strategy_label: Strategi tipe jumlah
+        select_strategy: Pilih strategi
+        set: Atur
+        as_amount_type_column: sebagai kolom tipe jumlah
+        select_value: Pilih nilai
+        as_identifier_value: sebagai nilai pengidentifikasi
+        treat_as_html: Anggap "<span class="font-medium">%{value}</span>" sebagai
+        income_inflow: Pemasukan (arus masuk)
+        expense_outflow: Pengeluaran (arus keluar)
+        select_type: Pilih jenis
+        leave_empty: Kosongkan
+        account_label: Akun
+        name_label: Nama
+        category_label: Kategori
+        tags_label: Tag
+        notes_label: Catatan
+        apply_configuration: Terapkan konfigurasi
+        incomes_are_positive: Pemasukan bernilai positif
+        incomes_are_negative: Pemasukan bernilai negatif
+        amount_type_label: Tipe jumlah
+        select_convention: Pilih konvensi
+        date_format_label: format tanggal
+        rows_to_skip_label: Lewati n baris pertama
+      trade_import:
+        select_column: Pilih kolom
+        date_label: Tanggal
+        quantity_label: Jumlah
+        buys_are_positive: Pembelian adalah qty positif
+        buys_are_negative: Pembelian adalah qty negatif
+        default: Default
+        currency_label: Mata Uang
+        format_label: Format
+        select_format: Pilih format
+        ticker_label: Ticker
+        leave_empty: Kosongkan
+        stock_exchange_code_label: Kode bursa saham
+        price_label: Harga
+        account_label: Akun
+        name_label: Nama
+        note_label: Catatan
+        no_security_provider_warning: Provider harga sekuritas tidak dikonfigurasi. Impor trade Anda akan berfungsi, tetapi Sure tidak akan melengkapi riwayat harga. Buka pengaturan untuk mengonfigurasinya.
+        date_format_label: format tanggal
+        apply_configuration: Terapkan konfigurasi
+      category_import:
+        button_label: Lanjutkan
+        description: Unggah file CSV sederhana (seperti yang kami buat saat kamu mengekspor data). Kolomnya akan kami petakan otomatis.
+        instructions: Pilih lanjutkan untuk mengurai CSV Anda dan lanjut ke tahap bersih-bersih.
+      merchant_import:
+        button_label: Lanjutkan
+        description: Unggah file CSV berisi merchant-mu. Kolomnya akan kami petakan otomatis.
+        instructions: Pilih lanjutkan untuk mengurai CSV Anda dan lanjut ke tahap bersih-bersih.
+      mint_import:
+        date_format_label: format tanggal
+        account_optional: Akun (opsional)
+        amount: Jumlah
+        apply_configuration: Terapkan konfigurasi
+        category_optional: Kategori (opsional)
+        currency: Mata Uang
+        date: Tanggal
+        format: Format
+        incomes_negative: Pemasukan bernilai negatif
+        incomes_positive: Pemasukan bernilai positif
+        intro: Impor Mint-mu sudah kami konfigurasi. Silakan lanjut ke langkah berikutnya.
+        leave_empty: Kosongkan
+        name_optional: Nama (opsional)
+        select_format: Pilih format
+        tags_optional: Tag (opsional)
+      actual_import:
+        preconfigured_notice: Impor Actual Budget-mu sudah kami konfigurasi. Silakan lanjut ke langkah berikutnya.
+        leave_empty: Kosongkan
+        date_label: Tanggal
+        date_format_label: format tanggal
+        amount_label: Jumlah
+        signage_convention_label: Konvensi penanda
+        incomes_are_negative: Pemasukan bernilai negatif
+        incomes_are_positive: Pemasukan bernilai positif
+        account_label: Akun (opsional)
+        name_label: Penerima pembayaran (opsional)
+        category_label: Kategori (opsional)
+        notes_label: Catatan (opsional)
+        apply_configuration: Terapkan konfigurasi
+      ynab_import:
+        preconfigured_notice: Impor YNAB-mu sudah kami konfigurasi. Silakan lanjut ke langkah berikutnya.
+        amount_notice: Jumlah terdeteksi otomatis dari kolom Outflow dan Inflow.
+        leave_empty: Kosongkan
+        date_label: Tanggal
+        date_format_label: format tanggal
+        account_label: Akun (opsional)
+        name_label: Penerima pembayaran (opsional)
+        category_label: Kategori (opsional)
+        notes_label: Memo (opsional)
+        apply_configuration: Terapkan konfigurasi
+      rule_import:
+        description: Konfigurasikan impor aturanmu. Aturan akan dibuat atau diperbarui berdasarkan data CSV.
+        process_button: Proses Aturan
+        process_help: Klik tombol di bawah untuk memproses CSV-mu dan menghasilkan baris-baris aturan.
+      show:
+        description: Pilih kolom yang sesuai dengan setiap field di CSV Anda.
+        title: Konfigurasikan impormu
+        template_found: Konfigurasi template ditemukan
+        template_description: Kami menemukan konfigurasi dari impor sebelumnya untuk akun ini.  Mau diterapkan ke impor ini?
+        manually_configure: Konfigurasi manual
+        apply_template: Terapkan template
+        sample_caption: Data contoh dari CSV yang Anda unggah
+    confirms:
+      sure_import:
+        title: Konfirmasi impormu
+        description: Tinjau data yang akan diimpor dari file ekspor Anda.
+        summary: Ringkasan impor
+        empty_summary: Kami tidak menemukan record yang bisa diimpor di file ini. File mungkin kosong, atau baris-barisnya tidak sesuai format ekspor yang diharapkan (setiap baris harus berupa objek JSON dengan key "type" dan "data", memakai jenis yang didukung impor ini).
+        publish_button: Mulai impor
+        cancel: Batal
+      mappings:
+        create_account: Buat akun
+        csv_mapping_label: '%{mapping} di CSV'
+        sure_mapping_label: '%{mapping} di %{product_name}'
+        no_accounts: Anda belum memiliki akun. Silakan buat akun yang bisa kami pakai untuk baris (belum ditugaskan) di CSV Anda, atau kembali ke langkah Clean dan berikan nama akun yang bisa kami pakai.
+        rows_label: Baris
+        unassigned_account: Perlu membuat akun baru untuk baris yang belum ditetapkan?
+        next: Berikutnya
+      show:
+        invalid_data: Data Anda tidak valid, silakan ubah hingga semua kesalahan teratasi
+        account_mapping_description: Tetapkan semua akun dari file imporanmu ke akun yang sudah ada di %{product_name}. Kamu juga bisa menambah akun baru atau membiarkannya tanpa kategori.
+        account_mapping_title: Tetapkan akun-akunmu
+        account_type_mapping_description: Tetapkan semua tipe akun dari file imporanmu ke %{product_name}
+        account_type_mapping_title: Tetapkan tipe akunmu
+        category_mapping_description: Tetapkan semua kategori dari file imporanmu ke kategori yang sudah ada di %{product_name}. Kamu juga bisa menambah kategori baru atau membiarkannya tanpa kategori.
+        category_mapping_title: Tetapkan kategorimu
+        tag_mapping_description: Tetapkan semua tag dari file imporanmu ke tag yang sudah ada di %{product_name}. Kamu juga bisa menambah tag baru atau membiarkannya tanpa kategori.
+        tag_mapping_title: Tetapkan tag-tagmu
+    uploads:
+      handle_qif_upload:
+        qif_uploaded: File QIF berhasil diunggah.
+        qif_account_required: Pilih akun untuk impor QIF
+      update:
+        qif_uploaded: File QIF berhasil diunggah.
+      show:
+        csv_invalid: Harus berupa CSV valid dengan header dan minimal satu baris data
+        drop_csv_title: Letakkan CSV untuk mengunggah
+        drop_csv_subtitle: File Anda akan diunggah secara otomatis
+        upload_csv_tab: Unggah CSV
+        copy_paste_tab: Salin & Tempel
+        account_optional_label: Akun (opsional)
+        multi_account_import: Impor multi-akun
+        upload_csv_button: Unggah CSV
+        paste_csv_placeholder: Tempel isi file CSV Anda di sini
+        download_sample_csv: Unduh contoh CSV
+        to_see_format: untuk melihat format CSV yang dibutuhkan
+        qif_title: Unggah file QIF
+        qif_description: Pilih akun untuk file satu akun, atau kosongkan jika ekspor QIF Anda menyertakan nama akun.
+        qif_account_label: Akun
+        qif_account_placeholder: Pilih akun…
+        qif_file_prompt: untuk menambahkan file QIF Anda di sini
+        qif_file_hint: Hanya file .qif
+        qif_submit: Unggah QIF
+        browse: Jelajahi
+        csv_file_prompt: untuk menambahkan file CSV Anda di sini
+        description: Tempel atau unggah file CSV Anda di bawah.  Harap baca petunjuk dalam tabel di bawah sebelum memulai.
+        instructions_1: Berikut contoh CSV dengan kolom yang tersedia untuk impor.
+        instructions_2: CSV Anda harus memiliki baris header
+        instructions_3: Anda bebas memberi nama kolom sesuka Anda. Anda akan memetakannya di langkah berikutnya.
+        instructions_4: Kolom bertanda asteris (*) adalah data wajib.
+        instructions_5: Tidak boleh ada koma, simbol mata uang, atau tanda kurung pada angka.
+        title: Impor datamu
+      sure_import:
+        title: Impor dari ekspor
+        description: Unggah file all.ndjson dari ekspor datamu untuk memulihkan akun, transaksi, kategori, dan lainnya.
+        drop_title: Letakkan NDJSON untuk mengunggah
+        drop_subtitle: File Anda akan diunggah secara otomatis
+        browse: Jelajahi
+        browse_hint: untuk menambahkan file all.ndjson Anda di sini
+        upload_button: Unggah NDJSON
+        hint_html: Unggah file <strong>all.ndjson</strong> dari ZIP ekspor datamu
+        ndjson_invalid: Harus berupa NDJSON valid dengan minimal satu record
+  imports:
+    mapping_labels:
+      account_type: Tipe Akun
+      account: Akun
+      category: Kategori
+      tag: Tag
+    dry_run_resources:
+      transactions: Transaksi
+      balances: Saldo
+      accounts: Akun
+      categories: Kategori
+      tags: Tag
+      rules: Aturan
+      merchants: Merchant
+      recurring_transactions: Transaksi Berkala
+      transfers: Transfer
+      rejected_transfers: Transfer Ditolak
+      trades: Trade
+      holdings: Kepemilikan
+      valuations: Valuasi
+      budgets: Anggaran
+      budget_categories: Kategori Anggaran
+    column_labels:
+      date: Tanggal
+      amount: Jumlah
+      name: Nama
+      currency: Mata Uang
+      category: Kategori
+      tags: Tag
+      account: Akun
+      notes: Catatan
+      qty: Jumlah
+      ticker: Ticker
+      exchange: Bursa
+      price: Harga
+      entity_type: Jenis
+      category_parent: Kategori induk
+      category_color: Warna
+      category_icon: Ikon Lucide
+      merchant_color: Warna
+      merchant_website: URL situs web
+    summary:
+      title: Ringkasan impor
+      subtitle: Nasib tiap transaksi pada mutasi ini di %{account}.
+      subtitle_no_account: Nasib tiap transaksi pada mutasi ini.
+      extracted: Ditemukan di mutasi
+      already_recorded: Sudah tercatat
+      already_recorded_hint: Dicocokkan ke transaksi yang sudah ada di akun ini, dan ditandai terekonsiliasi.
+      imported: Diimpor sebagai baru
+      awaiting_review: Menunggu diimpor
+      fully_reconciled:
+        one: Tidak ada yang perlu diimpor — satu-satunya transaksi di mutasi ini sudah tercatat.
+        other: Tidak ada yang perlu diimpor — semua %{count} transaksi sudah tercatat.
+      statement_evidence_html: Direkonsiliasi dengan %{statement}.
+      close: Tutup
+    update:
+      account_saved: Akun tersimpan.
+      account_locked: Impor ini sudah diterbitkan, jadi akunnya tidak bisa diubah. Kembalikan dulu kalau kamu perlu mengimpornya ke tempat lain.
+      invalid_account: Akun tidak ditemukan.
+    publish:
+      started: Impor Anda telah dimulai di latar belakang.
+      max_rows_exceeded: Impor Anda melebihi jumlah baris maksimum %{max}.
+    revert:
+      started: Impor sedang dibatalkan di latar belakang.
+    cancel:
+      cancelled: Impor ditandai gagal. Kamu bisa coba lagi dari halaman impor.
+      not_cancellable: Impor ini belum bisa ditandai sebagai gagal — pekerjaannya mungkin masih berjalan. Coba lagi setelah tidak aktif selama satu jam.
+    apply_template:
+      template_applied: Template diterapkan.
+      no_template_found: Tidak ada templat yang ditemukan, silakan konfigurasikan impor Anda secara manual.
+    destroy:
+      deleted: Impor Anda telah dihapus.
+    failure:
+      title: Impor gagal
+      description: Periksa format file Anda, pastikan tidak ada kesalahan dan semua kolom wajib terisi, lalu kembali dan coba lagi.
+      try_again: Coba lagi
+    success:
+      title: Impor berhasil
+      description: Data impor Anda telah berhasil ditambahkan ke aplikasi dan siap digunakan.
+      back_to_dashboard: Kembali ke dasbor
+      verification:
+        title: Verifikasi pembacaan balik
+        checked: Dicentang
+        mismatches: Ketidakcocokan
+        status:
+          not_verified: Belum diverifikasi
+          matched: Cocok
+          mismatch: Ketidakcocokan
+          failed: Gagal
+          reverted: Dikembalikan
+    importing:
+      title: Impor sedang berjalan
+      description: Impor Anda sedang berjalan. Cek menu impor untuk pembaruan status atau klik 'Check Status' untuk memuat ulang halaman. Silakan lanjutkan menggunakan aplikasi.
+      check_status: Cek status
+      back_to_dashboard: Kembali ke dasbor
+    revert_failure:
+      title: Pengembalian impor gagal
+      description: Coba lagi
+      try_again: Coba lagi
+    date_format:
+      heading: format tanggal
+      description: Format tanggal terdeteksi otomatis dari file Anda. Ubah jika tanggal terlihat salah.
+      preview: Tanggal terurai pertama
+      error_title: Gagal mendeteksi format tanggal
+      error_description: Tidak ada format tanggal yang didukung yang dapat memproses tanggal dalam file ini. Periksa apakah file berisi entri tanggal yang valid.
+    type_labels:
+      transaction_import: Impor transaksi
+      trade_import: Impor trade
+      account_import: Impor akun
+      mint_import: Impor Mint
+      actual_import: Impor aktual
+      ynab_import: Impor YNAB
+      qif_import: Impor QIF
+      category_import: Impor kategori
+      rule_import: Impor aturan
+      merchant_import: Impor merchant
+      pdf_import: Impor PDF
+      document_import: Impor dokumen
+      sure_import: Impor Sure
+    steps:
+      upload: Unggah
+      configure: Konfigurasi
+      clean: Bersihkan
+      map: Peta
+      confirm: Konfirmasi
+      select: Pilih
+      label: Langkah %{step}
+      progress: Langkah %{step} dari %{total}
+    empty:
+      message: Tidak ada impor yang ditemukan.
+    index:
+      title: Impor
+      new: Impor Baru
+    table:
+      title: Impor
+      header:
+        date: Tanggal
+        operation: Operasi
+        status: Status
+        actions: Aksi
+      row:
+        type_labels:
+          transaction_import: Transaksi
+          trade_import: Trade
+          account_import: Akun
+          mint_import: Mint
+          actual_import: Aktual
+          ynab_import: YNAB
+          qif_import: QIF
+          category_import: Kategori
+          rule_import: Aturan
+          merchant_import: Merchant
+          pdf_import: PDF
+          document_import: Dokumen
+          sure_import: Sure
+        status:
+          in_progress: Sedang berjalan
+          uploading: Memproses baris
+          reverting: Mengembalikan
+          revert_failed: Pengembalian gagal
+          complete: Selesai
+          failed: Gagal
+        actions:
+          revert: Kembalikan
+          confirm_revert: Ini akan menghapus transaksi yang sudah diimpor, tetapi kamu tetap bisa meninjau dan mengimpor ulang datamu kapan saja.
+          delete: Hapus
+          view: Lihat
+          mark_failed: Tandai sebagai gagal
+          confirm_mark_failed: Impor ini sudah tidak aktif cukup lama dan pekerjaan latarnya kemungkinan terputus. Tandai sebagai gagal agar bisa coba lagi? Tidak ada data impor yang disimpan.
+      empty: Belum ada impor.
+    new:
+      description: Impor dari aplikasi keuangan atau unggah file data mentah.
+      tab_financial_tools: Perkakas & File Keuangan
+      tab_raw_data: Data Mentah
+      import_ynab: Impor dari YNAB
+      import_accounts: Impor akun
+      import_categories: Impor kategori
+      import_merchants: Impor merchant
+      import_mint: Impor dari Mint
+      import_actual: Impor dari Actual Budget
+      import_portfolio: Impor investasi
+      import_rules: Aturan impor
+      import_transactions: Impor transaksi
+      import_qif: Impor dari Quicken (QIF)
+      import_sure: Impor dari Sure
+      import_sure_description: File .ndjson ekspor penuh
+      import_file: Impor dokumen
+      import_file_description: Analisis bertenaga AI untuk PDF dan upload file yang bisa dicari
+      requires_account: Impor akun dulu untuk membuka opsi ini.
+      resume: Lanjutkan %{type}
+      sources: Sumber
+      title: Impor Baru
+    create:
+      file_too_large: File terlalu besar. Ukuran maksimal %{max_size}MB.
+      invalid_file_type: Tipe file tidak valid. Unggah file CSV.
+      csv_uploaded: CSV berhasil diunggah.
+      ndjson_uploaded: File NDJSON berhasil diunggah.
+      pdf_too_large: File PDF terlalu besar. Ukuran maksimum adalah %{max_size}MB.
+      pdf_processing: PDF Anda sedang diproses. Anda akan menerima email saat analisis selesai.
+      invalid_pdf: File yang diunggah bukan PDF yang valid.
+      duplicate_pdf_unavailable: PDF ini sudah tersimpan sebagai mutasi yang tidak bisa Anda akses.
+      document_too_large: File dokumen terlalu besar. Ukuran maksimal %{max_size}MB.
+      invalid_document_file_type: Tipe file dokumen tidak valid untuk vector store yang aktif.
+      document_uploaded: Dokumen berhasil diunggah.
+      document_upload_failed: Kami tidak bisa mengunggah dokumen ke vector store. Silakan coba lagi.
+      invalid_ndjson_file_type: Tipe atau format file tidak valid. Unggah file ekspor .ndjson atau .json yang valid.
+      document_provider_not_configured: Tidak ada vector store yang dikonfigurasi untuk unggahan dokumen.
+    show:
+      finalize_upload: Selesaikan upload file Anda.
+      finalize_mappings: Selesaikan pemetaan Anda sebelum lanjut.
+    ready:
+      description: Berikut ringkasan item baru yang akan ditambahkan ke akunmu setelah impor ini dipublikasikan.
+      title: Konfirmasi data impormu
+      summary_item_label: Item
+      summary_count_label: Jumlah
+      empty_summary: Kami tidak menemukan record yang bisa diimpor di file ini. File mungkin kosong, atau baris-barisnya tidak sesuai format ekspor yang diharapkan (setiap baris harus berupa objek JSON dengan key "type" dan "data", memakai jenis yang didukung impor ini).
+      publish_import: Publikasikan impor
+      back_to_imports: Kembali ke impor
+      missing_merchant_warning_title: Beberapa merchant hilang dari ekspor ini
+      missing_merchant_warning_description:
+        one: 1 referensi merchant di file ini menunjuk ke merchant yang tidak termasuk. Ini bisa terjadi pada export yang dibuat sebelum merchant bawaan penyedia ditambahkan ke export Sure. Kamu tetap bisa mempublish impor ini -- record yang terdampak akan diimpor tanpa merchant, dan kamu bisa menandainya setelahnya.
+        other: '%{count} referensi merchant di file ini menunjuk ke merchant yang tidak termasuk. Ini bisa terjadi pada export yang dibuat sebelum merchant bawaan penyedia ditambahkan ke export Sure. Kamu tetap bisa mempublish impor ini -- record yang terdampak akan diimpor tanpa merchant, dan kamu bisa menandainya setelahnya.'
+      skipped_recurring_description:
+        one: 1 transaksi berkala tidak punya nama dan merchant-nya hilang, jadi akan dilewati. Transaksi berkala yang terdeteksi otomatis akan dibangun ulang setelah impor.
+        other: '%{count} transaksi berkala tidak punya nama dan merchant-nya hilang, jadi akan dilewati. Transaksi berkala yang terdeteksi otomatis akan dibangun ulang setelah impor.'
+      reused_taxonomy_notice_title: Beberapa kategori, tag, atau merchant sudah ada
+      reused_taxonomy_notice_description:
+        one: 1 kategori, tag, atau merchant di file ini sudah ada di akunmu (misalnya dari kategori default saat onboarding). Data ini akan dipakai ulang dan diperbarui dengan data file ini, bukan dibuat duplikat.
+        other: '%{count} kategori, tag, atau merchant di file ini sudah ada di akunmu (misalnya dari kategori default saat onboarding). Data ini akan dipakai ulang dan diperbarui dengan data file ini, bukan dibuat duplikat.'
+      provider_merchant_diff_title: Beberapa merchant sudah ada dengan detail berbeda
+      provider_merchant_diff_description:
+        one: 1 merchant di file ini sudah ada dengan detail berbeda. Merchant yang sudah ada akan dipertahankan dan nilai dari file ini tidak akan diterapkan.
+        other: '%{count} merchant di file ini sudah ada dengan detail berbeda. Merchant yang sudah ada akan dipertahankan dan nilai dari file ini tidak akan diterapkan.'
+      provider_merchant_diff_summary: Lihat perbedaan
+      provider_merchant_diff_none: tidak ada
+      provider_merchant_diff_fields:
+        website_url: Situs web
+        name: Nama
+        provider_merchant_id: ID Provider
+      provider_merchant_diff_row: '%{field}: %{kept} dipertahankan, file berisi %{imported}'
+    errors:
+      custom_column_requires_inflow: Impor kolom kustom memerlukan kolom pemasukan yang dipilih
+      interrupted: Worker latar terinterupsi sebelum ini selesai. Data impor dibatalkan (rollback) — Anda bisa mencoba lagi dengan aman.
+      presumed_lost: Ditandai gagal setelah background job diduga hilang. Data impor sudah di-rollback — kamu bisa coba lagi dengan aman.
+    document_types:
+      bank_statement: Mutasi Bank
+      credit_card_statement: Mutasi Kartu Kredit
+      investment_statement: Mutasi Investasi
+      financial_document: Dokumen Keuangan
+      contract: Kontrak
+      other: Dokumen Lainnya
+      unknown: Dokumen tidak diketahui
+    pdf_import:
+      processing_title: Memproses PDF Anda
+      processing_description: Kami sedang menganalisis dokumenmu memakai AI. Mungkin butuh waktu sebentar. Kamu akan menerima email saat analisis selesai.
+      check_status: Cek status
+      back_to_dashboard: Kembali ke dasbor
+      failed_title: Pemrosesan gagal
+      failed_description: Kami tidak bisa memproses dokumen PDF-mu. Coba lagi atau hubungi dukungan.
+      try_again: Coba lagi
+      delete_import: Hapus impor
+      complete_title: Dokumen dianalisis
+      complete_description: PDF-mu sudah kami analisis dan ini hasilnya.
+      document_type_label: Jenis Dokumen
+      source_statement: Mutasi asal
+      summary_label: Ringkasan
+      email_sent_notice: Email berisi langkah selanjutnya sudah dikirim kepadamu.
+      back_to_imports: Kembali ke impor
+      unknown_state_title: Status tidak diketahui
+      unknown_state_description: Impor ini dalam kondisi yang tidak terduga. Kembali ke daftar impor.
+      processing_failed_with_message: '%{message}'
+      processing_failed_generic: 'Pemrosesan gagal: %{error}'
+      errors:
+        provider_not_configured: Penyedia AI belum dikonfigurasi
+        provider_no_pdf_support: Penyedia AI tidak mendukung pemrosesan PDF
+      ready_for_review_title: Siap Ditinjau
+      ready_for_review_description:
+        one: '%{count} transaksi dari mutasimu belum ada di akun ini. Tinjau dan publish untuk menambahkannya.'
+        other: '%{count} transaksi dari mutasimu belum ada di akun ini. Tinjau dan publish untuk menambahkannya.'
+      transactions_extracted: Transaksi Diekstrak
+      transactions_extracted_count:
+        one: '%{count} transaksi'
+        other: '%{count} transaksi'
+      select_account: Impor ke Akun
+      select_account_placeholder: Pilih akun...
+      select_account_hint: Pilih akun tujuan impor transaksi-transaksi ini.
+      no_accounts: Tidak ada akun yang tersedia. Buat akun terlebih dahulu.
+      create_account: Buat Akun
+      save_account: Simpan
+      publish_transactions:
+        one: Publikasikan %{count} Transaksi
+        other: Publikasikan %{count} Transaksi
+      review_transactions: Tinjau Transaksi
+      view_summary: Lihat ringkasan impor
+      already_recorded_note:
+        one: '%{count} sudah ada di akun ini dan dicocokkan dengan mutasi.'
+        other: '%{count} sudah ada di akun ini dan dicocokkan dengan mutasi.'
+      complete_fully_reconciled:
+        one: Setiap transaksi di mutasi ini sudah ada di akunmu. %{count} dicocokkan dan ditandai rekonsiliasi — tidak ada yang perlu diimpor.
+        other: Setiap transaksi di mutasi ini sudah ada di akunmu. Semua %{count} dicocokkan dan ditandai rekonsiliasi — tidak ada yang perlu diimpor.
+      select_account_to_continue: Pilih akun di atas untuk lanjut.
+      unknown_document_type: Tidak diketahui

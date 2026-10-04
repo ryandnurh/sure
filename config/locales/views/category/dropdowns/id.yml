@@ -1,0 +1,12 @@
+---
+id:
+  category:
+    dropdowns:
+      row:
+        delete: Hapus kategori
+        edit: Edit kategori
+      show:
+        clear: Hapus kategori
+        no_categories: Tidak ada kategori yang ditemukan
+        recent: Terbaru
+        search_placeholder: Cari
