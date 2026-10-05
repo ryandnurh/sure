@@ -258,7 +258,8 @@ jobs:
 
   deploy_demo:
     name: Deploy alpha to Render demo
-    if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref_name, '-alpha.')
+    # Dinonaktifkan di fork: tidak pakai Render demo (secrets tidak ada)
+    if: false # startsWith(github.ref, 'refs/tags/v') && contains(github.ref_name, '-alpha.')
     needs: [merge]
 
     timeout-minutes: 15
@@ -513,7 +514,8 @@ jobs:
 
   bump-pre_release-version:
     name: Bump Pre-release Version
-    if: startsWith(github.ref, 'refs/tags/v') && (contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc'))
+    # Dinonaktifkan di fork: versi ikut upstream via sync, tidak perlu auto-bump
+    if: false # startsWith(github.ref, 'refs/tags/v') && (contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') || contains(github.ref_name, 'rc'))
     needs: [merge]
     runs-on: ubuntu-latest
     timeout-minutes: 10
