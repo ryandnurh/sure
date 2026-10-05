@@ -14,8 +14,8 @@ class Provider::GithubTest < ActiveSupport::TestCase
     release.stubs(author: author, name: "v1.0.0", published_at: Time.current, body: "notes")
 
     client = mock
-    client.expects(:release_for_tag).with("we-promise/sure", "v1.0.0").returns(release)
-    client.expects(:markdown).with("notes", mode: "gfm", context: "we-promise/sure").returns("<p>notes</p>")
+    client.expects(:release_for_tag).with("ryandnurh/sure", "v1.0.0").returns(release)
+    client.expects(:markdown).with("notes", mode: "gfm", context: "ryandnurh/sure").returns("<p>notes</p>")
     @provider.stubs(:client).returns(client)
 
     notes = @provider.fetch_release_notes("v1.0.0")
