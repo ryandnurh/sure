@@ -258,7 +258,8 @@ jobs:
 
   deploy_demo:
     name: Deploy alpha to Render demo
-    if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref_name, '-alpha.')
+    # Dinonaktifkan di fork: tidak pakai Render demo (secrets tidak ada)
+    if: false # startsWith(github.ref, 'refs/tags/v') && contains(github.ref_name, '-alpha.')
     needs: [merge]
 
     timeout-minutes: 15
