@@ -609,10 +609,13 @@ class Provider::Openai < Provider
 
         tools = build_generic_tools(functions)
 
-        # Force synchronous calls for generic chat (streaming not supported for custom providers)
+        # Force synchronous calls for generic chat (streaming not supported for custom providers).
+        # NOTE (fork): some OpenAI-compatible gateways (e.g. 9Router) default to
+        # SSE streaming when the `stream` param is absent, so send it explicitly.
         params = {
           model: model,
-          messages: messages
+          messages: messages,
+          stream: false
         }
         params[:tools] = tools if tools.present?
         params[:tool_choice] = "none" if tool_choice == :none && tools.present?
