@@ -35,7 +35,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     assert_selector "[data-controller='time-series-chart']"
 
     # Fill out preferences form
-    select "English (en)", from: "user_family_attributes_locale"
+    select "English (en)", from: "user_locale"
     select "United States Dollar (USD)", from: "user_family_attributes_currency"
     select "MM/DD/YYYY", from: "user_family_attributes_date_format"
     select_theme("light")
@@ -138,7 +138,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     visit preferences_onboarding_path
 
     # Clear required fields and try to submit
-    select "", from: "user_family_attributes_locale"
+    select "", from: "user_family_attributes_date_format"
     click_button I18n.t("onboardings.preferences.submit")
 
     # Should stay on preferences page with validation errors (may have query params)
@@ -149,7 +149,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     visit preferences_onboarding_path
 
     # Fill out form with specific values
-    select "Spanish (es)", from: "user_family_attributes_locale"
+    select "Spanish (es)", from: "user_locale"
     select "Euro (EUR)", from: "user_family_attributes_currency"
     select "DD/MM/YYYY", from: "user_family_attributes_date_format"
     select_theme("dark")
@@ -164,7 +164,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     @family.reload
     @user.reload
 
-    assert_equal "es", @family.locale
+    assert_equal "es", @user.locale
     assert_equal "EUR", @family.currency
     assert_equal "%d/%m/%Y", @family.date_format
     assert_equal "dark", @user.theme
@@ -196,7 +196,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     assert_current_path preferences_onboarding_path
 
     # Complete preferences
-    select "English (en)", from: "user_family_attributes_locale"
+    select "English (en)", from: "user_locale"
     select "United States Dollar (USD)", from: "user_family_attributes_currency"
     select "MM/DD/YYYY", from: "user_family_attributes_date_format"
     click_button I18n.t("onboardings.preferences.submit")
