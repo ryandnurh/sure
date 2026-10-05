@@ -138,7 +138,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     visit preferences_onboarding_path
 
     # Clear required fields and try to submit
-    select "", from: "user_locale"
+    select "", from: "user_family_attributes_date_format"
     click_button I18n.t("onboardings.preferences.submit")
 
     # Should stay on preferences page with validation errors (may have query params)
@@ -164,7 +164,7 @@ class OnboardingsTest < ApplicationSystemTestCase
     @family.reload
     @user.reload
 
-    assert_equal "es", @family.locale
+    assert_equal "es", @user.locale
     assert_equal "EUR", @family.currency
     assert_equal "%d/%m/%Y", @family.date_format
     assert_equal "dark", @user.theme
