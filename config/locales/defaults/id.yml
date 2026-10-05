@@ -81,16 +81,16 @@ id:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: sekitar satu jam
+        one: "sekitar %{count} jam"
         other: sekitar %{count} jam
       about_x_months:
-        one: sekitar sebulan
+        one: "sekitar %{count} bulan"
         other: sekitar %{count} bulan
       about_x_years:
-        one: sekitar setahun
+        one: "sekitar %{count} tahun"
         other: sekitar %{count} tahun
       almost_x_years:
-        one: hampir setahun
+        one: "hampir %{count} tahun"
         other: hampir %{count} tahun
       half_a_minute: setengah menit
       less_than_x_minutes:
@@ -102,22 +102,22 @@ id:
         other: kurang dari %{count} detik
         zero: kurang dari 1 detik
       over_x_years:
-        one: lebih dari setahun
+        one: "lebih dari %{count} tahun"
         other: lebih dari %{count} tahun
       x_days:
-        one: sehari
+        one: "%{count} hari"
         other: "%{count} hari"
       x_minutes:
-        one: satu menit
+        one: "%{count} menit"
         other: "%{count} menit"
       x_months:
-        one: sebulan
+        one: "%{count} bulan"
         other: "%{count} bulan"
       x_seconds:
-        one: satu detik
+        one: "%{count} detik"
         other: "%{count} detik"
       x_years:
-        one: setahun
+        one: "%{count} tahun"
         other: "%{count} tahun"
     prompts:
       day: Hari

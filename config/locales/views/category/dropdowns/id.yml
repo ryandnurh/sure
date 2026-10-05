@@ -10,6 +10,9 @@ id:
         back: Kembali
         choose_parent: 'Buat "%{name}" di bawah:'
         clear: Hapus kategori
+        create: 'Buat "%{name}"'
+        create_as_subcategory: Tambahkan sebagai subkategori…
+        create_error: Kategori tidak bisa dibuat. Coba lagi.
         no_categories: Tidak ada kategori yang ditemukan
         recent: Terbaru
         search_placeholder: Cari
