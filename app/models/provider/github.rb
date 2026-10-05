@@ -3,7 +3,7 @@ class Provider::Github
 
   def initialize
     @name = "sure"
-    @owner = "we-promise"
+    @owner = "ryandnurh"
     @branch = "main"
     @client = Octokit::Client.new(
       connection_options: {
