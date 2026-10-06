@@ -696,7 +696,7 @@ class Provider::Openai < Provider
           # follow-up payloads stay in sync for strict OpenAI-compatible endpoints.
           arguments_str = ToolCall::Function.serialize_arguments(fn_result[:arguments])
 
-          {
+          call = {
             id: fn_result[:call_id],
             type: "function",
             function: {
@@ -704,6 +704,8 @@ class Provider::Openai < Provider
               arguments: arguments_str
             }
           }
+          call[:extra_content] = fn_result[:extra_content] if fn_result[:extra_content].present?
+          call
         end
 
         payload << {
