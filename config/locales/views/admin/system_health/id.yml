@@ -2,6 +2,65 @@
 id:
   admin:
     system_health:
+      hosted_usage:
+        loading: Memuat hosted usage…
+        title: Hosted usage
+        snapshot: Snapshot database read-only per %{time}
+        summary:
+          trial_households_count: Keluarga trial (30 hari terakhir)
+          trial_members_count: Akun anggota trial saat ini
+          trials_expiring_soon_count: Trial yang kedaluwarsa 7 hari ke depan
+          cleanup_eligible_count: Keluarga yang memenuhi syarat cleanup
+          active_supporter_households_count: Keluarga supporter aktif (lokal)
+          supporter_subscription_count: Baris langganan tertaut Stripe
+        summary_help: Total trial mencakup langganan yang tercatat dalam 30 hari terakhir. Total trial kedaluwarsa, cleanup, dan supporter mencakup semua baris saat ini yang cocok, tanpa batas tabel.
+        limitations_title: Yang bisa disampaikan angka-angka ini
+        limitations: Tabel saat ini tidak menyimpan riwayat lengkap trial, pembayaran, atau aktivitas sesi. Pembuatan langganan bisa mencerminkan hasil impor. Akun anggota bukan orang unik yang terverifikasi. Tampilan ini tidak mengubah data keluarga maupun langganan. Reset demo-bersama menghapus keluarga dan sesi lama, sehingga riwayat pengunjung tidak bisa direkonstruksi.
+        trials:
+          title: Keluarga trial terbaru
+          description: Langganan yang tercatat sejak %{date} yang masih menyimpan tanggal berakhir trial, termasuk trial yang sudah konversi. Menampilkan hingga %{limit} keluarga.
+          sessions_help: Sesi adalah catatan sign-in yang disimpan untuk pengguna aktif, bukan pengguna yang sedang online atau kunjungan. Keluar (sign out) menghapus catatan. Waktu pembuatan terbaru bukan waktu terakhir terlihat.
+          empty: Tidak ada keluarga trial yang tercatat dalam rentang ini
+        cleanup:
+          title: Kelayakan cleanup
+          description: 'Sesuai cakupan cleanup yang berlaku: langganan yang dijeda atau trial yang berakhir lebih dari 14 hari lalu, atau tanpa langganan dan keluarga berumur lebih dari 45 + 14 hari. Menampilkan hingga %{limit} keluarga.'
+          eligibility_help: Login terbaru tidak mencegah kecocokan. Kelayakan tidak memastikan penghapusan; 90 hari adalah retensi arsip, bukan ambang cleanup trial.
+          disabled: Cleanup trial terjadwal dinonaktifkan di luar mode managed. Ini hanya kecocokan cakupan.
+          empty: Tidak ada keluarga yang cocok dengan cakupan cleanup
+          reasons:
+            expired_trial_grace_elapsed: Trial berakhir; masa tenggang 14 hari lewat
+            no_subscription_grace_elapsed: Tanpa langganan; 45 + 14 hari lewat
+        supporters:
+          title: Status supporter lokal
+          description: Baris langganan lokal saat ini dengan ID customer dan langganan berformat Stripe; langganan demo sintetis dikecualikan. Status tidak memverifikasi pembayaran yang diterima atau tanggal pembayaran pertama. Tidak ada request ke Stripe.
+          empty: Tidak ada baris langganan tertaut Stripe
+        columns:
+          household: ID keluarga
+          recorded_at: Langganan tercatat
+          trial_ends_at: Trial berakhir
+          status: Status saat ini
+          members: Akun anggota
+          retained_sessions: Sesi sign-in tersimpan
+          recent_sessions: Sesi tersimpan yang dibuat 30 hari terakhir
+          latest_session: Sign-in tersimpan terbaru
+          cleanup_eligible: Memenuhi syarat cleanup
+          cleanup_reason: Alasan
+          subscription_rows: Baris langganan
+        statuses:
+          unknown: Tidak diketahui
+          incomplete: Tidak lengkap
+          incomplete_expired: Tidak lengkap, kedaluwarsa
+          trialing: Trial
+          active: Aktif
+          past_due: Jatuh tempo
+          canceled: Dibatalkan
+          unpaid: Belum dibayar
+          paused: Dijeda
+          no_subscription: Tanpa langganan
+        not_recorded: Tidak tercatat
+        eligible: Memenuhi syarat
+        not_eligible: Tidak memenuhi syarat
+        synthetic_demo: Demo sintetis
       push_notifications:
         send_test: Kirim notifikasi push tes
         queueing: Mengantre…
@@ -49,6 +108,7 @@ id:
       show:
         title: Kesehatan sistem
         tabs:
+          hosted_usage: Hosted usage
           background_jobs: Background job
           ai: Status AI
         alert:
