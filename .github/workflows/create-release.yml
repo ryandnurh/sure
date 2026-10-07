@@ -2,6 +2,11 @@ name: Create release
 
 # Bikin GitHub Release otomatis setiap versi di .sure-version berubah di main,
 # supaya popup "Yang baru" selalu ada isinya tanpa langkah manual.
+#
+# Isi notes = auto-generated notes GitHub (daftar PR) + bagian
+# "Perubahan dari upstream" yang di-expand per commit. Ini perlu karena
+# sync upstream masuk sebagai SATU merge PR, jadi tanpa expand, semua
+# perubahan upstream ketelan jadi satu baris judul merge di popup.
 on:
   push:
     branches: [ main ]
@@ -39,7 +44,41 @@ jobs:
           case "$TAG" in
             *alpha*|*beta*|*rc*) PRERELEASE="--prerelease" ;;
           esac
+
+          REPO="$(gh repo view --json nameWithOwner --jq .nameWithOwner)"
+          PREV_TAG="$(gh release list --limit 1 --json tagName --jq '.[0].tagName')"
+
+          # 1. Base notes: daftar PR ala GitHub (seperti --generate-notes).
+          if [ -n "$PREV_TAG" ]; then
+            gh api "repos/$REPO/releases/generate-notes" \
+              -f tag_name="$TAG" -f previous_tag_name="$PREV_TAG" \
+              --jq .body > /tmp/notes.md
+          else
+            gh api "repos/$REPO/releases/generate-notes" \
+              -f tag_name="$TAG" --jq .body > /tmp/notes.md
+          fi
+
+          # 2. Expand commit upstream dari merge sync: cari merge commit yang
+          # membawa 'upstream/main', lalu list commit non-merge dari parent
+          # keduanya (dedupe per SHA biar nggak dobel kalau merge-nya tumpuk).
+          # Pakai HEAD sebagai ujung range karena tag baru belum ada saat
+          # workflow jalan (tag dibuat di akhir oleh gh release create).
+          if [ -n "$PREV_TAG" ] && git rev-parse "$PREV_TAG" >/dev/null 2>&1; then
+            UPSTREAM_COMMITS="$(git log --merges --pretty='%H %s' "$PREV_TAG..HEAD" \
+              | grep -i 'upstream/main' | cut -d' ' -f1 \
+              | while read -r m; do git log --no-merges --pretty='%H %s' "$m^1..$m^2"; done \
+              | awk '!seen[$1]++' | cut -d' ' -f2-)"
+            if [ -n "$UPSTREAM_COMMITS" ]; then
+              {
+                echo ""
+                echo "### Perubahan dari upstream (we-promise/sure)"
+                echo ""
+                echo "$UPSTREAM_COMMITS" | sed 's/^/* /'
+              } >> /tmp/notes.md
+            fi
+          fi
+
           gh release create "$TAG" \
             --title "$TAG" \
-            --generate-notes \
+            --notes-file /tmp/notes.md \
             $PRERELEASE
