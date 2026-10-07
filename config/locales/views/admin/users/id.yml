@@ -21,8 +21,6 @@ id:
           trial_expiring_soon: Kedaluwarsa dalam 7 hari
           trial_trialing: Masa percobaan
           submit: Filter
-        summary:
-          trials_expiring_7_days: Trial yang kedaluwarsa 7 hari ke depan
         table:
           user: Pengguna
           trial_ends_at: Masa trial berakhir

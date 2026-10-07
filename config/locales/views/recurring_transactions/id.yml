@@ -51,7 +51,6 @@ id:
       add_link_aria: Tambahkan tautan pembayaran untuk %{name}
       autopay: Autopay
       autopay_aria: '%{name} membayar otomatis, buka portalnya di tab baru'
-      open_site: Buka situs tagihan
     new:
       title: Tambah tagihan
       income_title: Tambah pemasukan
