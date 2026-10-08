@@ -37,6 +37,7 @@ id:
       current: Saat Ini
       next_payment: Pembayaran berikutnya
       around: sekitar %{date}
+      overview: Ringkasan
       rules: Cara tagihan ini dicocokkan
       rule_named: '%{name}'
       rule_amount_range: dari %{min} hingga %{max}
@@ -97,6 +98,7 @@ id:
     match:
       same_merchant: Merchant yang sama
       name_matches: Nama cocok
+      same_transfer: Transfer ke akun yang sama
       exact_amount: Jumlah pasti
       amount_off: '%{amount} diskon'
       due_date: Kecocokan tanggal jatuh tempo
@@ -107,8 +109,9 @@ id:
         one: 1 hari setelah jatuh tempo
         other: '%{count} hari setelah jatuh tempo'
     attention:
+      paused: Dijeda
       needs_review: Kecocokan perlu diperiksa
-      partial: Sebagian · tersisa %{amount}
+      partial: Sebagian
       amount_changed: Jumlah berubah
       overdue:
         one: 1 hari terlambat
@@ -120,7 +123,7 @@ id:
     cancelled_still_scheduled: Anda menandai ini batal pada %{date}, tetapi masih terjadwal, sehingga tagihan mendatang akan terus muncul.
     paid_over: Terbayar %{paid}, lebih besar dari perkiraan
     remaining_label: tersisa
-    debt_payment: · pembayaran utang
+    debt_payment: Pembayaran utang
     paid_from: dari %{account}
     amount_range: berkisar %{min} hingga %{max}
     possible_duplicate: Kemungkinan duplikat
@@ -260,6 +263,7 @@ id:
         one: Kami menemukan 1 pembayaran berkala di transaksimu. Periksa lagi agar total di sini sesuai dengan yang sebenarnya kamu bayar.
         other: Kami menemukan %{count} pembayaran berkala di transaksimu. Periksa lagi agar total di sini sesuai dengan yang sebenarnya kamu bayar.
       detected_review_action: Tinjau
+      notices_heading: Perubahan
       needs_review: Perlu ditinjau
       notice_trial: Masa trial %{name} berakhir %{date}
       notice_renewal: '%{name} diperpanjang %{date}'
