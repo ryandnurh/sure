@@ -123,7 +123,7 @@ id:
     cancelled_still_scheduled: Anda menandai ini batal pada %{date}, tetapi masih terjadwal, sehingga tagihan mendatang akan terus muncul.
     paid_over: Terbayar %{paid}, lebih besar dari perkiraan
     remaining_label: tersisa
-    debt_payment: · pembayaran utang
+    debt_payment: Pembayaran utang
     paid_from: dari %{account}
     amount_range: berkisar %{min} hingga %{max}
     possible_duplicate: Kemungkinan duplikat
