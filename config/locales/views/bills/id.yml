@@ -297,7 +297,7 @@ id:
       this_month: Bulan ini
       later: Setelah bulan ini
       paid_this_month: Terbayar bulan ini
-      dormant: Tidak aktif
+      dormant: Dijeda
       kpi_remaining: Sisa bulan ini
       kpi_paid: Terbayar bulan ini
       kpi_next_seven: Jatuh tempo 7 hari ke depan
