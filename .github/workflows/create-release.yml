@@ -3,10 +3,13 @@ name: Create release
 # Bikin GitHub Release otomatis setiap versi di .sure-version berubah di main,
 # supaya popup "Yang baru" selalu ada isinya tanpa langkah manual.
 #
-# Isi notes = auto-generated notes GitHub (daftar PR) + bagian
-# "Perubahan dari upstream" yang di-expand per commit. Ini perlu karena
-# sync upstream masuk sebagai SATU merge PR, jadi tanpa expand, semua
-# perubahan upstream ketelan jadi satu baris judul merge di popup.
+# Isi notes = auto-generated notes GitHub (daftar PR fork) + Ringkasan +
+# "Perubahan dari upstream" (judul PR upstream + author, dikelompokkan per
+# area). Ini perlu karena sync upstream masuk sebagai SATU merge PR, jadi
+# tanpa expand, semua perubahan upstream ketelan jadi satu baris judul merge
+# di popup. Judul PR diambil dari API upstream (bukan subject commit, yang
+# kadang beda), dikelompokkan dari scope/keyword judulnya.
+# Kalau expand gagal (git/API error), rilis tetap dibuat dengan base notes saja.
 on:
   push:
     branches: [ main ]
@@ -58,24 +61,271 @@ jobs:
               -f tag_name="$TAG" --jq .body > /tmp/notes.md
           fi
 
-          # 2. Expand commit upstream dari merge sync: cari merge commit yang
-          # membawa 'upstream/main', lalu list commit non-merge dari parent
-          # keduanya (dedupe per SHA biar nggak dobel kalau merge-nya tumpuk).
-          # Pakai HEAD sebagai ujung range karena tag baru belum ada saat
-          # workflow jalan (tag dibuat di akhir oleh gh release create).
+          # 2. Expand perubahan upstream dari merge sync: cari merge commit
+          # branch sync/upstream-* di range PREV_TAG..HEAD, lalu list commit
+          # non-merge dari parent keduanya (dedupe per SHA biar nggak dobel
+          # kalau merge-nya tumpuk). Untuk tiap commit, ambil nomor PR dari
+          # subject-nya, fetch judul + author PR dari API upstream, lalu
+          # kelompokkan per area + susun Ringkasan. Pakai HEAD sebagai ujung
+          # range karena tag baru belum ada saat workflow jalan (tag dibuat
+          # di akhir oleh gh release create). Kegagalan di sini TIDAK BOLEH
+          # menggagalkan rilis: lanjut dengan base notes saja.
           if [ -n "$PREV_TAG" ] && git rev-parse "$PREV_TAG" >/dev/null 2>&1; then
-            UPSTREAM_COMMITS="$(git log --merges --pretty='%H %s' "$PREV_TAG..HEAD" \
-              | grep -i 'upstream/main' | cut -d' ' -f1 \
-              | while read -r m; do git log --no-merges --pretty='%H %s' "$m^1..$m^2"; done \
-              | awk '!seen[$1]++' | cut -d' ' -f2-)"
-            if [ -n "$UPSTREAM_COMMITS" ]; then
-              {
-                echo ""
-                echo "### Perubahan dari upstream (we-promise/sure)"
-                echo ""
-                echo "$UPSTREAM_COMMITS" | sed 's/^/* /'
-              } >> /tmp/notes.md
-            fi
+            PREV_TAG="$PREV_TAG" NOTES_FILE=/tmp/notes.md python3 - <<'PYEOF' || echo "Expand upstream gagal, lanjut dengan base notes saja."
+          import json
+          import os
+          import re
+          import subprocess
+          import sys
+          import time
+          import urllib.error
+          import urllib.request
+
+          UPSTREAM_REPO = "we-promise/sure"
+          UPSTREAM_API = f"https://api.github.com/repos/{UPSTREAM_REPO}/pulls"
+
+          GROUP_ORDER = [
+              ("Sinkronisasi bank & broker", "perbaikan sinkronisasi bank & broker"),
+              ("Wallet kripto & onchain", "dukungan wallet kripto"),
+              ("Rules", "peningkatan Rules"),
+              ("AI, chat & MCP", "pembaruan AI/chat"),
+              ("Privasi keluarga", "perbaikan privasi keluarga"),
+              ("Investasi & laporan", "perbaikan investasi & laporan"),
+              ("Dashboard", "perbaikan dashboard"),
+              ("Bills", "perbaikan Bills"),
+              ("Transaksi", "perbaikan transaksi"),
+              ("Impor", "perbaikan impor"),
+              ("Lainnya", "perubahan lainnya"),
+          ]
+
+          SCOPE_TO_GROUP = {
+              "trade-republic": "Sinkronisasi bank & broker",
+              "kraken": "Sinkronisasi bank & broker",
+              "trading212": "Sinkronisasi bank & broker",
+              "snaptrade": "Sinkronisasi bank & broker",
+              "ibkr": "Sinkronisasi bank & broker",
+              "sophtron": "Sinkronisasi bank & broker",
+              "chimnie": "Sinkronisasi bank & broker",
+              "statements": "Sinkronisasi bank & broker",
+              "holdings": "Sinkronisasi bank & broker",
+              "exchange": "Sinkronisasi bank & broker",
+              "trades": "Sinkronisasi bank & broker",
+              "provider": "Sinkronisasi bank & broker",
+              "onchain": "Wallet kripto & onchain",
+              "rules": "Rules",
+              "mcp": "AI, chat & MCP",
+              "ai": "AI, chat & MCP",
+              "dashboard": "Dashboard",
+              "bills": "Bills",
+              "api": "Transaksi",
+              "attachments": "Transaksi",
+              "import": "Impor",
+              "reports": "Investasi & laporan",
+          }
+
+          # Fallback untuk judul tanpa scope conventional-commit. Urutan
+          # penting: keyword yang lebih spesifik dicek lebih dulu
+          # (mis. "provider accounts" sebelum "provider", "holding"
+          # sebelum "import" agar PR holdings tidak jatuh ke Impor).
+          KEYWORD_GROUPS = [
+              ("broadcasting", "Privasi keluarga"),
+              ("provider accounts", "Privasi keluarga"),
+              ("balancesheet", "Investasi & laporan"),
+              ("dividend", "Investasi & laporan"),
+              ("categor", "Investasi & laporan"),
+              ("card holds", "Transaksi"),
+              ("attachments", "Transaksi"),
+              ("bills", "Bills"),
+              ("transfer", "Rules"),
+              ("mcp", "AI, chat & MCP"),
+              ("holding", "Sinkronisasi bank & broker"),
+              ("snaptrade", "Sinkronisasi bank & broker"),
+              ("exchange", "Sinkronisasi bank & broker"),
+              ("sync", "Sinkronisasi bank & broker"),
+              ("provider", "Sinkronisasi bank & broker"),
+              ("chimnie", "Sinkronisasi bank & broker"),
+              ("import", "Impor"),
+          ]
+
+          SCOPE_RE = re.compile(
+              r"^(?:fix|feat|test|chore|docs|refactor|perf|style|build|ci)"
+              r"(?:\(([^)]+)\))?:",
+              re.IGNORECASE,
+          )
+          PR_RE = re.compile(r"\(#(\d+)\)")
+
+
+          def git(*args):
+              return subprocess.run(
+                  ["git", *args], check=True, capture_output=True, text=True
+              ).stdout
+
+
+          def fetch_pr(num):
+              token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+              headers = {
+                  "Accept": "application/vnd.github+json",
+                  "User-Agent": "sure-release-notes",
+              }
+              if token:
+                  headers["Authorization"] = f"Bearer {token}"
+              req = urllib.request.Request(f"{UPSTREAM_API}/{num}", headers=headers)
+              for attempt in (1, 2):
+                  try:
+                      with urllib.request.urlopen(req, timeout=30) as resp:
+                          data = json.load(resp)
+                      return data["title"], data["user"]["login"], data["html_url"]
+                  except urllib.error.HTTPError as exc:
+                      if exc.code in (403, 429) and attempt == 1:
+                          print(
+                              f"PR #{num}: rate limit, tidur 60 detik lalu retry",
+                              file=sys.stderr,
+                          )
+                          time.sleep(60)
+                          continue
+                      print(
+                          f"PR #{num}: HTTP {exc.code}, pakai fallback subject",
+                          file=sys.stderr,
+                      )
+                      return None
+                  except Exception as exc:  # noqa: BLE001 - fallback apa pun
+                      print(
+                          f"PR #{num}: gagal fetch ({exc}), pakai fallback subject",
+                          file=sys.stderr,
+                      )
+                      return None
+              return None
+
+
+          def group_for(title):
+              match = SCOPE_RE.match(title)
+              if match and match.group(1):
+                  scope = match.group(1).lower()
+                  if scope in SCOPE_TO_GROUP:
+                      return SCOPE_TO_GROUP[scope]
+              lowered = title.lower()
+              for keyword, group in KEYWORD_GROUPS:
+                  if keyword in lowered:
+                      return group
+              return "Lainnya"
+
+
+          def main():
+              prev_tag = os.environ["PREV_TAG"]
+              notes_file = os.environ["NOTES_FILE"]
+
+              merges = git(
+                  "log", "--merges", "--pretty=format:%H %s", f"{prev_tag}..HEAD"
+              ).splitlines()
+              merge_shas = [
+                  line.split(" ", 1)[0]
+                  for line in merges
+                  if len(line.split(" ", 1)) > 1
+                  and "sync/upstream-" in line.split(" ", 1)[1].lower()
+              ]
+              if not merge_shas:
+                  print("Tidak ada merge commit sync/upstream-, lewati expand.")
+                  return 0
+
+              # git log = terbaru-dulu; dibalik jadi tertua-dulu.
+              seen_shas = set()
+              commits = []
+              for merge_sha in merge_shas:
+                  out = git(
+                      "log",
+                      "--no-merges",
+                      "--pretty=format:%H%x00%an%x00%s",
+                      f"{merge_sha}^1..{merge_sha}^2",
+                  )
+                  for line in out.splitlines():
+                      sha, author, subject = line.split("\x00")
+                      if sha not in seen_shas:
+                          seen_shas.add(sha)
+                          commits.append((sha, author, subject))
+              commits.reverse()
+
+              groups = {name: [] for name, _ in GROUP_ORDER}
+              seen_prs = set()
+              for sha, author, subject in commits:
+                  pr_match = PR_RE.search(subject)
+                  title_for_group = subject
+                  if pr_match:
+                      num = pr_match.group(1)
+                      if num in seen_prs:
+                          continue
+                      seen_prs.add(num)
+                      fetched = fetch_pr(num)
+                      if fetched:
+                          pr_title, pr_author, url = fetched
+                          line = f"* {pr_title} by @{pr_author} in {url}"
+                          title_for_group = pr_title
+                      else:
+                          clean = re.sub(r"\s*\(#\d+\)\s*$", "", subject)
+                          line = (
+                              f"* {clean} by @{author} in "
+                              f"https://github.com/{UPSTREAM_REPO}/commit/{sha}"
+                          )
+                  else:
+                      line = (
+                          f"* {subject} by @{author} in "
+                          f"https://github.com/{UPSTREAM_REPO}/commit/{sha}"
+                      )
+                  groups[group_for(title_for_group)].append(line)
+
+              summary_map = dict(GROUP_ORDER)
+              parts = []
+              total = 0
+              for name, _ in GROUP_ORDER:
+                  count = len(groups[name])
+                  if count:
+                      total += count
+                      parts.append(f"{count} {summary_map[name]}")
+              if total == 0:
+                  print("Tidak ada PR upstream ditemukan, lewati expand.")
+                  return 0
+              if len(parts) == 1:
+                  summary = parts[0]
+              else:
+                  summary = ", ".join(parts[:-1]) + ", dan " + parts[-1]
+
+              block = []
+              block.append("")
+              block.append("### Ringkasan")
+              block.append(
+                  f"Pembaruan ini membawa {total} perubahan dari upstream "
+                  f"we-promise/sure: {summary}."
+              )
+              block.append("")
+              block.append("### Perubahan dari upstream (we-promise/sure)")
+              for name, _ in GROUP_ORDER:
+                  items = groups[name]
+                  if not items:
+                      continue
+                  block.append("")
+                  block.append(f"**{name} ({len(items)})**")
+                  block.extend(items)
+              block_text = "\n".join(block) + "\n"
+
+              with open(notes_file, encoding="utf-8") as handle:
+                  content = handle.read()
+              marker = "**Full Changelog**"
+              if marker in content:
+                  head, sep, tail = content.partition(marker)
+                  content = head + block_text + "\n" + sep + tail
+              else:
+                  content = content.rstrip("\n") + "\n" + block_text
+              with open(notes_file, "w", encoding="utf-8") as handle:
+                  handle.write(content)
+              print(f"Expand upstream: {total} PR ditulis ke notes.")
+              return 0
+
+
+          try:
+              sys.exit(main())
+          except Exception as exc:  # noqa: BLE001 - jangan gagalkan rilis
+              print(f"Expand upstream dibatalkan: {exc}", file=sys.stderr)
+              sys.exit(0)
+          PYEOF
           fi
 
           gh release create "$TAG" \
