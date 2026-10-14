@@ -262,12 +262,12 @@ jobs:
                       else:
                           clean = re.sub(r"\s*\(#\d+\)\s*$", "", subject)
                           line = (
-                              f"* {clean} by {author} in "
+                              f"* {clean} by @{author} in "
                               f"https://github.com/{UPSTREAM_REPO}/commit/{sha}"
                           )
                   else:
                       line = (
-                          f"* {subject} by {author} in "
+                          f"* {subject} by @{author} in "
                           f"https://github.com/{UPSTREAM_REPO}/commit/{sha}"
                       )
                   groups[group_for(title_for_group)].append(line)
