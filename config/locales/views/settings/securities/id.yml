@@ -14,6 +14,8 @@ id:
         mfa_title: Autentikasi Dua Faktor
         webauthn_add: Tambah passkey atau kunci keamanan
         webauthn_added: Ditambahkan %{date}
+        webauthn_code_label: Kode authenticator atau kode cadangan
+        webauthn_code_placeholder: Kode authenticator saat ini atau kode cadangan yang belum digunakan
         webauthn_description: Gunakan passkey, Touch ID, Windows Hello, atau kunci keamanan hardware sebagai faktor kedua saat masuk.
         webauthn_empty: Belum ada passkey atau kunci keamanan yang terdaftar.
         webauthn_last_used: Terakhir dipakai %{time_ago} lalu
@@ -25,7 +27,10 @@ id:
         webauthn_title: Passkey dan kunci keamanan
         webauthn_unsupported: Browser ini tidak mendukung passkey atau kunci keamanan.
   webauthn_credentials:
+    code_already_used: Kode itu sudah digunakan. Tunggu kode berikutnya dari aplikasi authenticator Anda.
     default_name: Kunci keamanan
     failure: Tidak bisa menyimpan passkey atau kunci keamanan itu. Silakan coba lagi.
+    invalid_code: Kode itu tidak valid. Masukkan kode saat ini dari aplikasi authenticator Anda atau kode cadangan yang belum digunakan.
     mfa_required: Aktifkan autentikasi dua faktor sebelum menambahkan passkey atau kunci keamanan.
+    rate_limited: Terlalu banyak percobaan. Silakan tunggu sebentar lalu coba lagi.
     success: Passkey atau kunci keamanan dihapus.
