@@ -83,6 +83,7 @@ id:
       amount_invalid: Masukkan jumlah sebagai angka biasa
       account_invalid: Pilih akun yang bisa ditambahi tagihan, atau biarkan kosong
       already_exists: Tagihan ini sudah ada
+      amount_too_precise: Gunakan maksimal 4 angka desimal
     edit:
       trigger_label: Edit tagihan
       title: Edit %{name}
@@ -127,7 +128,6 @@ id:
       income_amount_edit_hint: Berlaku untuk hari gajian mulai sekarang. Yang sudah jatuh tempo tetap memakai nominal semula.
       cancelled_on_label: Dibatalkan
       cancelled_on_hint: Mencatat tanggal hanya untuk referensi Anda. Jeda tagihannya agar tagihan berikutnya tidak muncul.
-      category_label: Kategori
       category_blank: Tanpa kategori
       frequency_new_hint: Detail hari berasal dari tanggal jatuh tempo di atas. Anda bisa menyempurnakan jadwal setelah menyimpan.
       frequency_label: Seberapa sering
@@ -205,3 +205,8 @@ id:
     transfer_already_exists: Transfer berkala untuk pasangan akun ini sudah ada
     transfer_creation_failed: Gagal membuat transfer berkala. Periksa detail transfernya lalu coba lagi.
     transfer_feature_disabled: Transaksi berkala dinonaktifkan untuk family ini
+    suggested_income:
+      title: Kemungkinan pendapatan baru
+      confirm: Tambah pendapatan
+      dismiss: Bukan pendapatan
+    confirmed_income: Pendapatan ditambahkan ke transaksi berulang Anda
