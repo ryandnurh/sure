@@ -34,6 +34,7 @@ id:
       next_year: Tahun depan
       previous_decade: Dekade sebelumnya
       next_decade: Dekade berikutnya
+      sections_aria: Bagian laporan
     invalid_date_range: Tanggal akhir tidak bisa sebelum tanggal mulai. Tanggalnya telah ditukar.
     summary:
       total_income: Total Pemasukan

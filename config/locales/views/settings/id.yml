@@ -322,6 +322,9 @@ id:
         sso_confirm_body: Yakin ingin memutuskan akun %{provider}-mu? Kamu bisa menghubungkannya lagi nanti dengan masuk memakai provider tersebut.
         sso_confirm_button: Putuskan
         sso_warning_message: Ini adalah satu-satunya metode login kamu. Kamu sebaiknya mengatur kata sandi di pengaturan keamanan sebelum memutuskan sambungan, kalau tidak kamu bisa terkunci dari akunmu.
+        disable_mfa_password_label: Konfirmasi dengan kata sandi Anda
+        disable_mfa_password_placeholder: Masukkan kata sandi Anda
+        mfa_sso_only: Autentikasi dua faktor dikelola melalui penyedia identitas Anda.
     mcp:
       show:
         page_title: Server MCP
@@ -443,6 +446,8 @@ id:
           one: Perlu persetujuan ulang dalam 1 hari
           other: Perlu persetujuan ulang dalam %{count} hari
         last_synced: Tersinkron %{time} yang lalu
+        login_required: Perlu login
+        login_expires_soon: Login kedaluwarsa dalam %{time} (%{at})
       sync_all: Sinkronkan semua
       sync_all_in_progress: Menyinkronkan semua penyedia yang terhubung…
       sync_all_recently: Sinkronisasi sudah berjalan. Coba lagi sebentar lagi.
@@ -617,6 +622,7 @@ id:
         syncing: Menyinkronkan
         select_country: Pilih negara...
         country_label: Negara
+        keep_client_certificate_hint: Kosongkan untuk mempertahankan sertifikat saat ini
       lunchflow_panel:
         step_1_html: Buka %{link} dan buat API key.
         step_2: Tempel kunci Anda di bawah ini lalu sambungkan.
@@ -772,6 +778,8 @@ id:
           other: '%{count} akun Trade Republic ditemukan.'
         status_configured_suffix: tab untuk mengelola akun yang ditemukan.
         not_configured: Belum dikonfigurasi.
+        requires_update: Masuk lagi untuk melanjutkan sinkronisasi.
+        session_expires_in: Login kedaluwarsa dalam %{time} (%{at}).
       trading212_panel:
         steps:
           step_1: Buka Trading 212 → Pengaturan → API (aplikasi web atau seluler).

@@ -56,6 +56,7 @@ id:
           pending: Tertunda
           syncing: Menyinkronkan
           stale: Basi
+      session_expires_in: Login kedaluwarsa dalam %{time} (%{at}).
     setup_accounts:
       page_title: Siapkan Akun Trade Republic
       dialog_title: Siapkan Akun Trade Republic Anda

@@ -104,6 +104,8 @@ id:
         confirm_disconnect:
           title: Putuskan asisten eksternal?
           body: Ini akan menghapus URL, token, dan ID agen yang tersimpan, lalu beralih ke asisten bawaan. Kamu bisa menyambung ulang nanti dengan memasukkan kredensial baru.
+        type_mcp_only: Tidak ada di aplikasi (hubungkan agen Anda sendiri via MCP)
+        mcp_only_help: Asisten dalam aplikasi nonaktif untuk semua orang di rumah tangga ini. Pintasan AI Bills dan teks wawasan yang ditulis AI juga berhenti. MCP dan kategorisasi latar tetap tersedia; hubungkan agen eksternal di Pengaturan > MCP.
       brand_fetch_settings:
         description: Masukkan Client ID yang disediakan oleh Brandfetch
         env_configured_message: Anda telah berhasil mengonfigurasi Brandfetch Client ID melalui environment variable BRAND_FETCH_CLIENT_ID.
@@ -127,6 +129,8 @@ id:
         not_configured_hint: Tambahkan kunci API %{provider} di bawah untuk mengaktifkannya.
         data_retention_heading: Penanganan data
         data_retention: Input API tidak dipakai untuk melatih model secara default; API hosted penyedia menyimpan data ~30 hari untuk kepercayaan & keamanan. Endpoint kustom atau self-hosted mengikuti kebijakanmu sendiri.
+        max_items_per_call_label: Jumlah Item Maksimum per Batch (Opsional)
+        max_items_per_call_help: 'Batas atas untuk batch kategorisasi otomatis / deteksi merchant. Default: 25. Dengan penyedia yang kompatibel dengan OpenAI, batch yang lebih besar otomatis dipecah agar muat di jendela konteks.'
       anthropic_settings:
         title: Anthropic (Claude)
         description: Masukkan API key Anthropic-mu. Opsional arahkan Base URL ke AWS Bedrock atau GCP Vertex.
@@ -199,8 +203,6 @@ id:
         context_window_help: 'Total token yang akan diterima model. Default: 2048 — naikkan ke 8192+ untuk OpenAI cloud atau model lokal konteks besar.'
         max_response_tokens_label: Token Respons Maks (Opsional)
         max_response_tokens_help: 'Token yang dicadangkan untuk balasan model. Default: 512. Turunkan untuk memberi ruang pada riwayat yang lebih panjang.'
-        max_items_per_call_label: Item Maks per Batch (Opsional)
-        max_items_per_call_help: 'Batas atas batch kategorisasi otomatis / deteksi merchant. Bawaan: 25. Batch yang lebih besar dipotong otomatis agar muat di context window.'
         timeout_heading: Timeout
         timeout_description: Mengatur berapa lama panggilan model yang kompatibel dengan OpenAI boleh berjalan sebelum Sure menyerah. Naikkan jika kamu menjalankan model lokal di hardware lambat.
         openai_request_timeout_label: Timeout Request dalam Detik (Opsional)
@@ -208,6 +210,8 @@ id:
         ai_response_timeout_label: Timeout Respons dalam Detik (Opsional)
         ai_response_timeout_help: 'Default: 90. Hanya berlaku untuk pengawas seluruh giliran chat, jadi ukur sebagai jumlah: (1 + ASSISTANT_MAX_TOOL_CALL_ITERATIONS) × request timeout, ditambah waktu eksekusi tool dan antrean. AI_RESPONSE_TIMEOUT menggantikan kolom ini.'
         title: OpenAI
+        ai_health_probe_timeout_label: Batas Waktu Pemeriksaan Kesehatan dalam Detik (Opsional)
+        ai_health_probe_timeout_help: 'Default: 5. Hanya berlaku untuk pemeriksaan AI langsung di Pengaturan → Kesehatan sistem, tidak pernah untuk panggilan AI sebenarnya. Naikkan jika pemeriksaan PDF melaporkan timeout dengan model cloud. AI_HEALTH_PROBE_TIMEOUT menimpa kolom ini.'
       yahoo_finance_settings:
         title: Yahoo Finance
         description: Yahoo Finance memberikan akses gratis ke harga saham, kurs, dan data keuangan tanpa perlu API key.
@@ -334,3 +338,10 @@ id:
         include_pending_label: Sertakan transaksi tertunda
         include_pending_description: Saat diaktifkan, transaksi pending (belum clear) akan diimpor dan otomatis direkonsiliasi saat posted. Nonaktifkan jika bank-mu memberikan data pending yang tidak bisa diandalkan.
         env_configured_message: Pengaturan ini dinonaktifkan karena environment variable provider (SIMPLEFIN_INCLUDE_PENDING atau PLAID_INCLUDE_PENDING) sedang diatur. Hapus untuk mengaktifkan pengaturan ini.
+      chimnie_settings:
+        title: Chimnie
+        description: Masukkan kunci API Chimnie Anda untuk menilai properti residensial UK berdasarkan UPRN-nya. Buat kunci gratis di dashboard.chimnie.com (pendaftaran memerlukan email bisnis atau domain khusus; alamat Gmail, Outlook, dan sejenisnya tidak diterima). Valuasi UPRN gratis dan diperbarui bulanan; Sure membatasinya hingga 1.000 permintaan per bulan, yang dapat Anda ubah dengan variabel lingkungan CHIMNIE_MAX_REQUESTS_PER_MONTH.
+        env_configured_message: Berhasil dikonfigurasi melalui variabel lingkungan CHIMNIE_API_KEY.
+        label: Kunci API
+        placeholder: Masukkan kunci API Chimnie Anda di sini
+        usage: '%{used} dari %{limit} permintaan bulanan telah digunakan'

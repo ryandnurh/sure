@@ -65,6 +65,10 @@ id:
       errors:
         only_manual: Hanya akun manual yang dapat ditautkan ke Coinbase
         invalid_coinbase_account: Akun Coinbase tidak valid
+    select_accounts:
+      connection_unavailable: Koneksi Coinbase tersebut tidak tersedia. Pilih salah satu di Pengaturan Penyedia.
+      no_credentials_configured: Hubungkan Coinbase di Pengaturan Penyedia sebelum menambahkan dompetnya.
+      select_connection: Pilih koneksi Coinbase di Pengaturan Penyedia.
   coinbase_item:
     syncer:
       checking_credentials: Mengecek kredensial...

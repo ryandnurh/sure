@@ -63,6 +63,10 @@ id:
       errors:
         only_manual: Hanya akun manual yang dapat ditautkan ke Binance
         invalid_binance_account: Akun Binance tidak valid
+    select_accounts:
+      connection_unavailable: Koneksi Binance tersebut tidak tersedia. Pilih salah satu di Pengaturan Penyedia.
+      no_credentials_configured: Hubungkan Binance di Pengaturan Penyedia sebelum menambahkan akunnya.
+      select_connection: Pilih koneksi Binance di Pengaturan Penyedia.
   binance_item:
     syncer:
       checking_credentials: Mengecek kredensial...

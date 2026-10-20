@@ -33,6 +33,9 @@ id:
       empty: Tidak ada kategori yang ditemukan
       merge: Gabungkan kategori
       new: Kategori baru
+      lock_categories: Kunci pembuatan kategori
+      locked_message: Pembuatan kategori dikunci. Impor dan sinkronisasi bank tetap bisa menambahkan kategori.
+      unlock_categories: Buka kunci pembuatan kategori
     merge:
       title: Gabungkan kategori
       description: Pilih kategori target dan kategori yang akan digabungkan ke dalamnya. Transaksi yang cocok dan baris anggaran akan pindah ke target.
@@ -59,6 +62,10 @@ id:
       transfer: Transfer
       payment: Pembayaran
       trade: Trade
+    locked: Kategori terkunci. Buka kuncinya untuk menambahkan kategori baru.
+    toggle_lock:
+      locked: Kategori dikunci
+      unlocked: Kategori dibuka
   category:
     dropdowns:
       show:

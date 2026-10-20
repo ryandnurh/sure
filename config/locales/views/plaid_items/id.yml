@@ -3,6 +3,9 @@ id:
   plaid_items:
     create:
       success: Akun berhasil ditautkan.  Tunggu akun tersinkron.
+      already_connected: Anda sudah memiliki koneksi untuk institusi ini, jadi koneksi ini tidak ditambahkan.
+      exchange_failed: Kami tidak dapat menambahkan koneksi ini. Coba lagi, dan jika masalah berlanjut, periksa log server.
+      token_expired: Koneksi ini kedaluwarsa sebelum ditambahkan. Hubungkan institusi lagi.
     destroy:
       success: Akun dijadwalkan untuk dihapus.
     errors:
@@ -37,3 +40,45 @@ id:
       invalid_account: Akun Plaid yang dipilih tidak valid
       already_linked: Akun Plaid ini sudah ditautkan
       success: Akun berhasil ditautkan ke Plaid
+    auto_link_opener:
+      create_failed: Kami tidak dapat memastikan koneksi ini telah ditambahkan. Muat ulang halaman untuk memeriksa sebelum mencoba lagi.
+    duplicate_warning:
+      close: Tutup
+      confirm: Konfirmasi koneksi ini
+      connected_by: Dihubungkan oleh %{name}
+      eu_no_add_accounts: Plaid tidak mendukung penambahan akun ke koneksi UE yang sudah ada. Untuk mengubah akun yang terhubung, hapus koneksi ini dan tambahkan lagi.
+      linked_on: Terhubung %{date}
+      manage_connection: Ke daftar akun
+      mask: '****%{mask}'
+      no_accounts: Belum ada akun yang tersinkron dari koneksi ini.
+      overlap:
+        all_connected:
+          one: Akun yang Anda coba tambahkan sudah terhubung, jadi menambahkannya lagi hanya akan membuat duplikat.
+          other: '%{count} akun yang Anda coba tambahkan semuanya sudah terhubung, jadi menambahkannya lagi hanya akan membuat duplikat.'
+        different_login: Untuk menghubungkan login %{institution} yang berbeda, pilih Akun baru lagi, dan masuk dengan login tersebut melalui Plaid.
+        more_accounts: Untuk menambahkan lebih banyak akun ke koneksi ini, tutup ini dan pilih Tambah akun pada koneksi %{institution}.
+        others_connected:
+          one: Sure sudah memiliki akun ini melalui koneksi %{name}, jadi menambahkan milik Anda hanya akan membuat duplikat.
+          other: Sure sudah memiliki akun-akun ini melalui koneksi %{name}, jadi menambahkan milik Anda hanya akan membuat duplikat.
+        others_connected_several:
+          one: Sure sudah memiliki akun ini melalui koneksi anggota lain, jadi menambahkan milik Anda hanya akan membuat duplikat.
+          other: Sure sudah memiliki akun-akun ini melalui koneksi anggota lain, jadi menambahkan milik Anda hanya akan membuat duplikat.
+        none_connected: Tidak ada akun yang Anda coba tambahkan yang sudah terhubung, jadi ini kemungkinan login yang berbeda. Menambahkannya hanya terhitung sebagai koneksi Plaid lain.
+        some_connected:
+          connected:
+            one: Akun lainnya sudah terhubung, jadi menambahkan koneksi ini akan menduplikatnya dan terhitung sebagai koneksi Plaid lain.
+            other: '%{count} akun lainnya sudah terhubung, jadi menambahkan koneksi ini akan menduplikatnya dan terhitung sebagai koneksi Plaid lain.'
+          unconnected:
+            one: 'Satu akun yang Anda coba tambahkan belum terhubung:'
+            other: '%{count} akun yang Anda coba tambahkan belum terhubung:'
+        unknown:
+          one: Akun-akun ini tidak dapat diperiksa terhadap koneksi Anda yang sudah ada. Jika akunnya sama, menambahkan koneksi ini akan menduplikatnya dan terhitung sebagai koneksi Plaid lain.
+          other: Akun-akun ini tidak dapat diperiksa terhadap koneksi Anda yang sudah ada. Jika akunnya sama, menambahkan koneksi ini akan menduplikatnya dan terhitung sebagai koneksi Plaid lain.
+      title:
+        one: Anda sudah memiliki koneksi untuk institusi ini
+        other: Anda sudah memiliki %{count} koneksi untuk institusi ini
+      title_all_connected: Anda sudah membuat koneksi ini
+      title_others_connected:
+        one: Akun ini sudah terhubung
+        other: Akun-akun ini sudah terhubung
+      update_existing: Perbarui koneksi yang ada

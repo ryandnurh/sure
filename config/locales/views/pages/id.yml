@@ -104,6 +104,13 @@ id:
         feedback_thanks: Terima kasih sudah membantu meningkatkan grafiknya!
         feedback_privacy: Respons Anda dikirim ke PostHog. Jelaskan masalah tanpa nomor akun, saldo, atau detail keuangan pribadi lainnya.
         feedback_submit: Kirim masukan
+        group_by_label: Tampilkan arus berdasarkan
+        group_by_category: Kategori
+        group_by_account: Akun
+        sort_label: Urutkan arus
+        sort_auto: Otomatis
+        sort_ascending: Terkecil dulu
+        sort_descending: Terbesar dulu
       cashflow_sankey:
         loading: Memuat arus kas…
         load_error: Arus kas tidak bisa dimuat. Silakan coba lagi.
@@ -158,3 +165,7 @@ id:
         period_scope_hint: Menampilkan bulan yang Anda pilih di sini — terpisah dari periode waktu dasbor di atas.
         no_data: Tidak ada data pengeluaran untuk bulan ini
         previous_comparison_days: (1-%{end_day})
+        filter_categories: Filter kategori (%{count})
+        filter_categories_all: Semua kategori
+        search_categories: Cari kategori
+        apply: Terapkan
