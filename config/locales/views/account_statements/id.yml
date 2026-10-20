@@ -36,6 +36,7 @@ id:
       files_hint: PDF, CSV, atau XLSX. Maks %{max_size}MB per file.
       files_label: File mutasi
       inbox_upload: Unggah
+      period_hint: Sure membaca periode dari PDF bila tercantum, atau dari tanggal di nama file (mis. 2026-04). Anda juga bisa mengaturnya di laporan.
     index:
       account_label: Akun
       confidence: Kecocokan %{confidence}

@@ -97,6 +97,7 @@ id:
         password_missing_number: Kata sandi harus mengandung setidaknya satu angka.
         password_missing_special: Kata sandi harus mengandung setidaknya satu karakter khusus.
         last_super_admin_error: Tidak bisa menurunkan super admin terakhir di sistem.
+        password_disabled: Pengaturan kata sandi dinonaktifkan karena pengguna hanya bisa masuk dengan SSO.
       destroy:
         success: Akses pengguna dicabut dan penghapusan permanen dijadwalkan.
         failure: Gagal menghapus pengguna.

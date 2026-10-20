@@ -38,6 +38,7 @@ id:
       unavailable_description_html: Untuk menggunakan asisten AI, kamu perlu mengatur environment variable <code class="bg-surface-inset px-1 py-0.5 rounded font-mono text-xs">OPENAI_ACCESS_TOKEN</code> atau mengonfigurasinya di pengaturan Self-Hosting instansimu.
       enable_button: Aktifkan Chat AI
       disable_note: Nonaktifkan kapan saja. Semua data yang dikirim ke penyedia LLM kami dianonimkan.
+    ai_busy: Sistem sedang sibuk. Pesan Anda akan diproses setelah pekerjaan saat ini.
   assistant_messages:
     assistant_message:
       assistant_reasoning: Penalaran asisten

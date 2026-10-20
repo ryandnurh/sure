@@ -20,5 +20,12 @@ id:
       simplefin_balance_sign_label: Arti saldo SimpleFIN
       treat_balance_as_available_credit_description: Aktifkan jika bankmu melaporkan saldo kartu ini sebagai sisa kredit tersedia, bukan jumlah terutang. Utangnya lalu diturunkan dari limit kredit yang dilaporkan bankmu, atau dari kolom Kredit tersedia jika bankmu tidak menyediakannya.
       treat_balance_as_available_credit_label: Saldo adalah kredit tersedia
+      sophtron_balance_sign_auto: Otomatis
+      sophtron_balance_sign_credit: Kredit (bank berutang kepada Anda)
+      sophtron_balance_sign_debt: Utang (Anda berutang kepada bank)
+      sophtron_balance_sign_description: Gunakan penggantian hanya bila Sophtron melaporkan tanda yang ambigu. Otomatis tetap menegasikan saldo kartu kredit.
+      sophtron_balance_sign_label: Makna saldo Sophtron
     new:
       title: Masukkan detail kartu kredit
+    update:
+      sophtron_balance_sign_error: Tidak dapat menerapkan makna saldo Sophtron. Pengaturan Anda sebelumnya dipertahankan. Silakan coba lagi.

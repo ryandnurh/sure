@@ -54,3 +54,5 @@ id:
         no_worker_processes: Tidak ada proses worker Sidekiq yang terhubung. Jalankan container worker atau unit systemd.
         stale_heartbeat: Worker Sidekiq belum melaporkan heartbeat baru-baru ini. Mungkin macet atau crash.
         queue_backed_up: Job antrean tertua sudah menunggu melebihi anggaran latensi. Worker masih hidup tetapi kewalahan.
+        ai_queues_not_polled: Tidak ada worker yang memproses antrean AI (chat, deteksi merchant, kategorisasi). Periksa bahwa worker memuat config/sidekiq.yml.
+    require_non_guest: Tamu tidak dapat melakukan tindakan ini
