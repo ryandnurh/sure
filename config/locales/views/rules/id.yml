@@ -25,6 +25,8 @@ id:
       action_label_to: '%{label} ke %{value}'
       all_past_and_future: Semua %{resource} yang lalu dan yang akan datang
       on_or_after: '%{resource} pada atau setelah %{date}'
+      stop_processing: Berhenti
+      stop_processing_hint: Aturan di bawahnya tidak mengubah transaksi yang cocok dengan aturan ini.
     form:
       rule_name_label: Nama aturan (opsional)
       rule_name_placeholder: Masukkan nama untuk aturan ini
@@ -34,18 +36,18 @@ id:
       all_past_and_future: Semua %{resource} yang lalu dan yang akan datang
       starting_from: Mulai dari
       then: THEN
+      stop_processing_label: Berhenti memproses aturan berikutnya
+      stop_processing_description: Aturan di bawahnya tidak mengubah transaksi yang cocok dengan aturan ini.
     index:
       page_title: Aturan
       delete_all_rules: Hapus semua aturan
       new_rule: Aturan baru
       ai_cost_warning: Aksi aturan berbasis AI berbayar.  Pastikan filternya sesempit mungkin agar tidak ada biaya yang tidak perlu.
       rules_heading: Aturan
-      sort_by: 'Urutkan berdasarkan:'
-      sort_name: Nama
-      sort_updated_at: Diperbarui Pada
-      toggle_sort_direction: Alihkan arah pengurutan
       no_rules_title: Belum ada aturan
       no_rules_description: Siapkan aturan untuk menjalankan aksi ke transaksi dan data lain Anda di setiap sinkronisasi akun.
+      order_hint: Aturan dijalankan dari atas ke bawah. Setelah sebuah aturan menetapkan kolom pada transaksi, aturan di bawahnya tidak mengubah kolom tersebut. Tag ditambahkan oleh setiap aturan yang cocok. Seret aturan untuk mengubah urutannya.
+      reorder_rule: Pindahkan aturan %{name}. Tekan Enter atau Spasi untuk mengambilnya, lalu gunakan tombol panah untuk memindahkannya.
     confirm:
       title: Konfirmasi perubahan
       title_with_name: Konfirmasi perubahan pada "%{name}"
@@ -58,6 +60,9 @@ id:
       cost_warning: Anda mungkin dikenakan biaya, silakan cek ke penyedia model untuk harga terbaru.
       view_usage_history: Lihat histori pemakaian
       confirm_changes: Konfirmasi perubahan
+      rules_above_notice:
+        one: Aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.
+        other: '%{count} aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.'
     actions:
       to_label: ke
       value_placeholder: Masukkan nilai

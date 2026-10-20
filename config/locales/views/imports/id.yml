@@ -296,6 +296,7 @@ id:
     publish:
       started: Impor Anda telah dimulai di latar belakang.
       max_rows_exceeded: Impor Anda melebihi jumlah baris maksimum %{max}.
+      guest_new_categories_or_tags: Tamu tidak dapat membuat kategori atau tag. Petakan ke yang sudah ada atau kosongkan.
     revert:
       started: Impor sedang dibatalkan di latar belakang.
     cancel:
@@ -441,6 +442,7 @@ id:
       document_upload_failed: Kami tidak bisa mengunggah dokumen ke vector store. Silakan coba lagi.
       invalid_ndjson_file_type: Tipe atau format file tidak valid. Unggah file ekspor .ndjson atau .json yang valid.
       document_provider_not_configured: Tidak ada vector store yang dikonfigurasi untuk unggahan dokumen.
+      missing_upload: Kami tidak menerima file Anda. Silakan coba unggah lagi.
     show:
       finalize_upload: Selesaikan upload file Anda.
       finalize_mappings: Selesaikan pemetaan Anda sebelum lanjut.

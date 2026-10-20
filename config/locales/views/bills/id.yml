@@ -55,7 +55,6 @@ id:
       ytd: Terbayar tahun ini
       last_account: Akun terakhir dipakai
       upcoming: Mendatang
-      recent_payments: Pembayaran terbaru
       manual_payment: Pembayaran manual
       history: Riwayat
       payment_count:
@@ -86,7 +85,6 @@ id:
     summary:
       remaining: '%{amount} tersisa'
       paid_headline: '%{amount} terbayar'
-      cost_line: Rata-rata %{average} per pembayaran, sekitar %{annualized} per tahun
     add_bill: Tambah tagihan
     manage: Kelola
     find_payment: Cari pembayaran
@@ -94,7 +92,6 @@ id:
     review_match: Tinjau kecocokan
     resolve: Selesaikan
     manage_payments: Kelola pembayaran
-    view_full_bill: Lihat tagihan penuh
     match:
       same_merchant: Merchant yang sama
       name_matches: Nama cocok
@@ -234,12 +231,8 @@ id:
       no_matches_title: Tidak ada yang cocok
       no_matches_description: Coba hapus filter atau pencariannya.
       col_name: Nama
-      col_type: Jenis
-      col_frequency: Frekuensi
       col_amount: Jumlah
       col_next: Jatuh tempo berikutnya
-      next_short: '%{date} berikutnya'
-      col_status: Status
       col_actions: Aksi
       monthly_equivalent: '%{amount}/bln'
       types:
