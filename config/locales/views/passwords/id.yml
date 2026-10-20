@@ -8,3 +8,4 @@ id:
       title: Perbarui Kata Sandi
     update:
       success: Kata sandi Anda telah di-reset.
+    disabled: Mengganti kata sandi di Sure dinonaktifkan. Silakan kelola kata sandi Anda melalui penyedia identitas Anda.

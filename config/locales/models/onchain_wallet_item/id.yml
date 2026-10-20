@@ -10,6 +10,8 @@ id:
       optimism: Optimism
       polygon: Polygon
       solana: Solana
+      cosmos: Cosmos Hub
+      polkadot: Polkadot
     institution_name: Wallet self-custody
   onchain_wallet_item:
     movement:
