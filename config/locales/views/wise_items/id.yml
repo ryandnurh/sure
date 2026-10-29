@@ -72,7 +72,7 @@ id:
       disconnect: Putuskan
       disconnect_label: Putuskan %{name}
       disconnect_confirm: Yakin ingin memutuskan %{name}? Ini akan menghapus semua data akun yang tersinkron.
-      sandbox_note_html: Gunakan base URL <strong>sandbox</strong> (<code>https://api.sandbox.transferwise.tech</code>) untuk pengujian. Atur <code>WISE_BASE_URL</code> di environment-mu.
+      sandbox_note_html: Gunakan base URL <strong>sandbox</strong> (<code>https://api.wise-sandbox.com</code>) untuk pengujian. Atur <code>WISE_BASE_URL</code> di environment-mu.
       encryption_warning:
         title: Enkripsi database belum dikonfigurasi
         message: Konfigurasikan key enkripsi Active Record sebelum menambahkan token Wise di production. Tanpa enkripsi, token disimpan dalam plaintext.
