@@ -13,15 +13,16 @@ id:
       unsupported_protocol_version: "Versi protokol MCP tidak didukung: %{version}"
   oauth:
     registration:
-      invalid_redirect_uris: "redirect_uris harus menggunakan https, http loopback, atau skema URI aplikasi native"
+      invalid_redirect_uris: "redirect_uris harus menggunakan https, loopback http, atau skema URI aplikasi bawaan"
+      invalid_client_name: "client_name tidak boleh berisi karakter kontrol dua arah"
+      reserved_client_name: "client_name dicadangkan untuk aplikasi pihak pertama"
   activerecord:
     errors:
       messages:
         record_invalid: 'Validasi gagal: %{errors}'
         restrict_dependent_destroy:
           has_many: Tidak bisa menghapus record karena terdapat %{record} yang bergantung
-          has_one: Tidak bisa menghapus record karena terdapat satu %{record} yang
-            bergantung
+          has_one: Tidak bisa menghapus record karena terdapat satu %{record} yang bergantung
   date:
     abbr_day_names:
     - Min
@@ -81,16 +82,16 @@ id:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: "sekitar %{count} jam"
+        one: sekitar satu jam
         other: sekitar %{count} jam
       about_x_months:
-        one: "sekitar %{count} bulan"
+        one: sekitar sebulan
         other: sekitar %{count} bulan
       about_x_years:
-        one: "sekitar %{count} tahun"
+        one: sekitar setahun
         other: sekitar %{count} tahun
       almost_x_years:
-        one: "hampir %{count} tahun"
+        one: hampir setahun
         other: hampir %{count} tahun
       half_a_minute: setengah menit
       less_than_x_minutes:
@@ -102,22 +103,22 @@ id:
         other: kurang dari %{count} detik
         zero: kurang dari 1 detik
       over_x_years:
-        one: "lebih dari %{count} tahun"
+        one: lebih dari setahun
         other: lebih dari %{count} tahun
       x_days:
-        one: "%{count} hari"
+        one: sehari
         other: "%{count} hari"
       x_minutes:
-        one: "%{count} menit"
+        one: satu menit
         other: "%{count} menit"
       x_months:
-        one: "%{count} bulan"
+        one: sebulan
         other: "%{count} bulan"
       x_seconds:
-        one: "%{count} detik"
+        one: satu detik
         other: "%{count} detik"
       x_years:
-        one: "%{count} tahun"
+        one: 1 tahun
         other: "%{count} tahun"
     prompts:
       day: Hari
@@ -138,7 +139,7 @@ id:
       exclusion: sudah digunakan
       greater_than: harus lebih besar dari %{count}
       greater_than_or_equal_to: harus sama atau lebih besar dari %{count}
-      in: harus dalam %{count}
+      in: "harus berada di antara %{count}"
       inclusion: tidak termasuk
       invalid: tidak valid
       less_than: harus lebih kecil dari %{count}
@@ -161,15 +162,15 @@ id:
         one: jumlah karakter salah (seharusnya %{count} karakter)
         other: jumlah karakter salah (seharusnya %{count} karakter)
     template:
-      body: 'Ada masalah dengan field berikut:'
+      body: 'Terdapat kesalahan pada isian berikut:'
       header:
         one: "%{count} kesalahan mengakibatkan %{model} ini tidak bisa disimpan"
         other: "%{count} kesalahan mengakibatkan %{model} ini tidak bisa disimpan"
   helpers:
     select:
-      default_label: Pilih...
       prompt: Silakan pilih
-      search_placeholder: Cari
+      search_placeholder: "Cari"
+      default_label: "Pilih..."
     submit:
       create: Buat %{model}
       submit: Simpan %{model}
@@ -199,7 +200,7 @@ id:
           million:
             one: Juta
             other: Juta
-          quadrillion: Quadriliun
+          quadrillion: Kuadriliun
           thousand: Ribu
           trillion:
             one: Triliun

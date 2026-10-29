@@ -184,6 +184,8 @@ id:
         dashboard_account_groups_description: Bagian akun ini akan dimulai dalam keadaan terbuka di dashboard dan sidebar akun. Anda tetap bisa menutupnya manual kapan saja.
         split_grouped_title: Transaksi patungan grup
         split_grouped_description: Tampilkan transaksi split yang dikelompokkan di bawah induknya di daftar transaksi. Saat mati, anak split muncul sebagai baris tersendiri.
+        auto_generate_transaction_names_title: Buat nama transaksi otomatis
+        auto_generate_transaction_names_description: Bila nama transaksi yang dimasukkan manual dibiarkan kosong, isi dari kategori dan merchant yang dipilih (mis. "Hiburan - Netflix"). Nama tetap wajib bila keduanya tidak dipilih. Berlaku untuk seluruh keluarga, dan hanya memengaruhi transaksi baru.
     preferences:
       show:
         country: Negara

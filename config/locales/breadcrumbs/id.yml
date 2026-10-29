@@ -1,9 +1,9 @@
 ---
 id:
   breadcrumbs:
-    account_sharings: Berbagi akun
-    account_statements: Brankas mutasi
-    accounts: Akun
+    account_sharings: Berbagi rekening
+    account_statements: Brankas rekening koran
+    accounts: Rekening
     ai_prompts: Prompt AI
     api_key: Kunci API
     api_keys: Kunci API
@@ -17,29 +17,30 @@ id:
     categories: Kategori
     categorize: Kategorikan
     changelog: Yang baru
-    chats: Chat
+    chats: Obrolan
+    classifier: Pengklasifikasi
     coinbase_items: Coinbase
     coinstats_items: CoinStats
-    credit_cards: kartu kredit
+    credit_cards: Kartu kredit
     cryptos: Kripto
     dashboard: Dasbor
     debug: Debug
     debugs: Debug
-    depositories: Akun-akun tunai
-    enable_banking_items: Aktifkan Perbankan
+    depositories: Rekening kas
+    enable_banking_items: Enable Banking
     exports: Ekspor
     family_exports: Ekspor
     family_merchants: Merchant
-    feedback: Masukan
+    feedback: Umpan balik
     guides: Panduan
     holdings: Kepemilikan
     home: Beranda
     hostings: Self-Hosting
     ibkr_items: Interactive Brokers
-    impersonation_sessions: Penyamaran
+    impersonation_sessions: Sesi penyamaran
     imports: Impor
     indexa_capital_items: Indexa Capital
-    intro: Intro
+    intro: Pengantar
     investments: Investasi
     invitations: Undangan
     invite_codes: Kode undangan
@@ -52,7 +53,7 @@ id:
     merchants: Merchant
     mercury_items: Mercury
     messages: Pesan
-    mfa: autentikasi dua faktor
+    mfa: Autentikasi dua faktor
     monobank_items: Monobank
     oidc_accounts: Akun SSO
     onboardings: Onboarding
@@ -66,28 +67,28 @@ id:
     profile: Info Profil
     profiles: Info Profil
     properties: Properti
-    providers: Provider
-    recurring_transactions: Berkala
+    providers: Penyedia
+    recurring_transactions: Transaksi berulang
     redbark_items: Redbark
     registrations: Daftar
     reports: Laporan
     rules: Aturan
     securities: Sekuritas
-    security: Sekuritas
+    security: Keamanan
     self_hosting: Self-Hosting
     sessions: Masuk
     simplefin_items: SimpleFIN
     snaptrade_items: SnapTrade
     sophtron_items: Sophtron
-    splits: Pecah
+    splits: Pemisahan transaksi
     sso_identities: Koneksi SSO
-    sso_providers: provider SSO
+    sso_providers: Penyedia SSO
     subscriptions: Langganan
     system_health: Kesehatan Sistem
     tags: Tag
-    trades: Trade
+    trades: Transaksi efek
     transactions: Transaksi
-    transfer_matches: Transfer yang cocok
+    transfer_matches: Pencocokan transfer
     transfers: Transfer
     users: Pengguna
     valuations: Valuasi

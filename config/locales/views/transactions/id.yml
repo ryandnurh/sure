@@ -38,6 +38,7 @@ id:
       date: Tanggal
       description: Deskripsi
       description_placeholder: Jelaskan transaksi
+      description_placeholder_optional: Biarkan kosong untuk memakai nama kategori/merchant, atau pilih salah satunya dulu
       expense: Pengeluaran
       income: Pemasukan
       merchant_label: Merchant
