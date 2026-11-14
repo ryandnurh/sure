@@ -26,6 +26,9 @@ id:
       type_interest: Bunga
       dividend_requires_security: Sekuritas wajib diisi untuk dividen
       trade_requires_security: Sekuritas (ticker) wajib untuk transaksi beli dan jual
+    trade:
+      scheduled: Terjadwal
+      scheduled_tooltip: Bertanggal di masa depan, tidak akan memengaruhi saldo Anda sampai tanggal tersebut.
     header:
       buy: Beli
       sell: Jual

@@ -1,6 +1,18 @@
 ---
 id:
   valuations:
+    names:
+      current_account_value: Nilai rekening saat ini
+      current_balance: Saldo saat ini
+      current_loan_balance: Saldo pinjaman saat ini
+      current_market_value: Nilai pasar saat ini
+      manual_balance_update: Pembaruan saldo manual
+      manual_principal_update: Pembaruan pokok manual
+      manual_value_update: Pembaruan nilai manual
+      opening_account_value: Nilai awal rekening
+      opening_balance: Saldo awal
+      original_principal: Pokok pinjaman awal
+      original_purchase_price: Harga pembelian awal
     confirmation_contents:
       this_will: Ini akan %{action_verb} nilai akun pada
       to_colon: 'kepada:'
@@ -44,6 +56,8 @@ id:
       value: nilai
     new:
       title: Saldo baru
+      amount: Jumlah
+      submit: Tambah pembaruan saldo
     show:
       amount: Jumlah
       amount_label: Nilai akun pada tanggal

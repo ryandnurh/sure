@@ -41,6 +41,40 @@ id:
     configurations:
       update:
         success: Impor berhasil dikonfigurasi.
+        monarch_success: Pilihan rekening disimpan.
+      monarch:
+        title: Periksa setiap rekening Monarch
+        description: Pilih tujuan masing-masing rekening, jenisnya, dan data yang ingin dibawa.
+        help_title: Cara kerja setiap pilihan
+        help_account: Impor ke rekening baru dengan nama sesuai keinginan Anda, atau ke salah satu rekening manual Anda. Rekening yang sudah ada mempertahankan nama, jenis, dan entrinya sendiri, serta saldo awalnya bergeser ke awal riwayat Monarch jika berada di dalamnya. Statusnya mengikuti Status yang Anda pilih. Rekening dengan kepemilikan atau perdagangan tidak dapat menjadi tujuan impor.
+        help_closed: Ubah Status ke Ditutup untuk rekening yang sudah Anda tutup. Nilainya turun menjadi nol sehari setelah saldo Monarch terakhir dan disembunyikan dari saldo saat ini, tetapi tetap ada di riwayat kekayaan bersih Anda. Rekening yang ditandai tidak aktif tidak memiliki aktivitas dalam %{days} hari terakhir, yang tidak selalu berarti rekening tersebut ditutup.
+        help_transactions: Nonaktifkan transaksi untuk mengimpor riwayat saldo rekening saja.
+        help_balance: Saldo hari ini dimulai dari saldo terbaru Monarch. Ubah jika sudah kedaluwarsa, dan nilainya akan dicatat sebagai saldo hari ini. Masukkan jumlah utang pada kartu dan pinjaman sebagai angka positif.
+        table_label: Rekening Monarch
+        import_column: Impor
+        account_column: Nama rekening
+        destination_column: Impor ke
+        type_column: Jenis
+        status_column: Status
+        status_open: Terbuka
+        status_closed: Ditutup
+        toggle_all_label: '%{column} untuk setiap rekening'
+        transactions_column: Transaksi
+        balance_column: Saldo hari ini
+        import_label: Impor %{name}
+        destination_label: Tujuan impor %{name}
+        name_label: Nama di Sure untuk %{name}
+        monarch_name: 'Di Monarch: %{name}'
+        type_label: Jenis %{name}
+        status_label: '%{name} terbuka'
+        transactions_label: Impor transaksi %{name}
+        balance_label: Saldo hari ini untuk %{name}
+        new_account: Rekening baru
+        inactive: Tidak aktif
+        last_activity: Aktivitas terakhir %{date}
+        no_activity: Tidak ada aktivitas
+        no_transactions: Tidak ada
+        submit: Tinjau impor
       account_import:
         leave_empty: Kosongkan
         default: Default
@@ -196,7 +230,23 @@ id:
         qif_account_required: Pilih akun untuk impor QIF
       update:
         qif_uploaded: File QIF berhasil diunggah.
+        qif_account_required: Harap pilih rekening untuk impor QIF
+        monarch_uploaded: Ekspor Monarch diunggah.
+        monarch_balances_required: Pilih ekspor saldo Monarch.
       show:
+        monarch_title: Unggah ekspor Monarch Anda
+        monarch_description: Pindahkan rekening, transaksi, dan riwayat saldo Anda dari Monarch.
+        monarch_export_title: Unduh data Anda dari Monarch
+        monarch_export_step_settings_html: Masuk ke Monarch di web dan buka %{link}.
+        monarch_export_settings_link: Settings → Data
+        monarch_export_step_download: Unduh transaksi dan riwayat saldo rekening Anda, masing-masing sebagai file CSV.
+        monarch_export_step_upload: Pilih file di bawah ini.
+        monarch_export_help_html: Monarch menjelaskan setiap unduhan di %{link}.
+        monarch_export_help_link: artikel bantuannya
+        monarch_balances_label: Ekspor saldo
+        monarch_transactions_label: Ekspor transaksi
+        monarch_transactions_hint: Kosongkan ekspor transaksi untuk mengimpor riwayat saldo saja.
+        monarch_upload_button: Unggah ekspor
         csv_invalid: Harus berupa CSV valid dengan header dan minimal satu baris data
         drop_csv_title: Letakkan CSV untuk mengunggah
         drop_csv_subtitle: File Anda akan diunggah secara otomatis
@@ -235,6 +285,7 @@ id:
         hint_html: Unggah file <strong>all.ndjson</strong> dari ZIP ekspor datamu
         ndjson_invalid: Harus berupa NDJSON valid dengan minimal satu record
   imports:
+    configuration_locked: Data impor ini sudah berada di Sure, sehingga file dan pilihannya tidak dapat diubah. Coba lagi untuk menyelesaikannya, atau hapus untuk memulai ulang.
     mapping_labels:
       account_type: Tipe Akun
       account: Akun
@@ -347,6 +398,7 @@ id:
       mint_import: Impor Mint
       actual_import: Impor aktual
       ynab_import: Impor YNAB
+      monarch_import: Impor Monarch
       qif_import: Impor QIF
       category_import: Impor kategori
       rule_import: Impor aturan
@@ -356,6 +408,7 @@ id:
       sure_import: Impor Sure
     steps:
       upload: Unggah
+      accounts: Rekening
       configure: Konfigurasi
       clean: Bersihkan
       map: Peta
@@ -410,6 +463,7 @@ id:
       tab_financial_tools: Perkakas & File Keuangan
       tab_raw_data: Data Mentah
       import_ynab: Impor dari YNAB
+      import_monarch: Impor dari Monarch
       import_accounts: Impor akun
       import_categories: Impor kategori
       import_merchants: Impor merchant
@@ -435,6 +489,7 @@ id:
       pdf_too_large: File PDF terlalu besar. Ukuran maksimum adalah %{max_size}MB.
       pdf_processing: PDF Anda sedang diproses. Anda akan menerima email saat analisis selesai.
       invalid_pdf: File yang diunggah bukan PDF yang valid.
+      missing_upload: Kami tidak menerima file Anda. Silakan coba unggah lagi.
       duplicate_pdf_unavailable: PDF ini sudah tersimpan sebagai mutasi yang tidak bisa Anda akses.
       document_too_large: File dokumen terlalu besar. Ukuran maksimal %{max_size}MB.
       invalid_document_file_type: Tipe file dokumen tidak valid untuk vector store yang aktif.
@@ -442,12 +497,31 @@ id:
       document_upload_failed: Kami tidak bisa mengunggah dokumen ke vector store. Silakan coba lagi.
       invalid_ndjson_file_type: Tipe atau format file tidak valid. Unggah file ekspor .ndjson atau .json yang valid.
       document_provider_not_configured: Tidak ada vector store yang dikonfigurasi untuk unggahan dokumen.
-      missing_upload: Kami tidak menerima file Anda. Silakan coba unggah lagi.
     show:
       finalize_upload: Selesaikan upload file Anda.
       finalize_mappings: Selesaikan pemetaan Anda sebelum lanjut.
     ready:
       description: Berikut ringkasan item baru yang akan ditambahkan ke akunmu setelah impor ini dipublikasikan.
+      monarch_existing_names_title: Rekening dengan nama ini sudah ada
+      monarch_existing_names_description: Anda sudah memiliki rekening bernama %{names}. Menerbitkan impor akan membuat rekening baru di sampingnya. Untuk mengimpor ke salah satu rekening tersebut, pilih pada langkah Rekening.
+      monarch_conflicts_title: Beberapa saldo yang ada berbeda dengan Monarch
+      monarch_conflicts_description:
+        one: Pada 1 hari, rekening tujuan impor sudah memiliki pembaruan saldo yang berbeda dengan Monarch. Nilai Anda yang sudah ada tetap dipertahankan.
+        other: Pada %{count} hari, rekening tujuan impor sudah memiliki pembaruan saldo yang berbeda dengan Monarch. Nilai Anda yang sudah ada tetap dipertahankan.
+      monarch_overlap_title: Transaksi yang ada pada periode yang sama
+      monarch_overlap_description:
+        one: 1 transaksi yang ada berada dalam rentang riwayat Monarch dari rekening tujuan impor dan tidak cocok dengan transaksi Monarch. Transaksi tersebut dipertahankan dan dihitung ke dalam saldo.
+        other: '%{count} transaksi yang ada berada dalam rentang riwayat Monarch dari rekening tujuan impor dan tidak cocok dengan transaksi Monarch. Transaksi tersebut dipertahankan dan dihitung ke dalam saldo.'
+      monarch_duplicates_title: Transaksi yang sudah ada di Sure dilewati
+      monarch_duplicates_description:
+        one: 1 transaksi Monarch sudah ada di rekening tujuannya, dari impor sebelumnya atau dengan tanggal dan jumlah yang sama, sehingga dilewati.
+        other: '%{count} transaksi Monarch sudah ada di rekening tujuannya, dari impor sebelumnya atau dengan tanggal dan jumlah yang sama, sehingga dilewati.'
+      monarch_kept_title: Beberapa saldo awal dibiarkan sesuai suntingan Anda
+      monarch_kept_description: Membatalkan impor tidak memulihkan saldo awal %{names}, karena nilainya diubah setelah impor. Periksa terlebih dahulu sebelum mengimpor lagi.
+      monarch_opening_title: Saldo awal akan bergeser
+      monarch_opening_description:
+        one: Saldo awal dari 1 rekening yang ada bergeser ke awal riwayat Monarch-nya. Membatalkan impor akan mengembalikannya ke posisi semula.
+        other: Saldo awal dari %{count} rekening yang ada bergeser ke awal riwayat Monarch-nya. Membatalkan impor akan mengembalikannya ke posisi semula.
       title: Konfirmasi data impormu
       summary_item_label: Item
       summary_count_label: Jumlah

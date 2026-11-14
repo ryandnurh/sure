@@ -3,14 +3,57 @@ id:
   rules:
     no_action: Tidak ada tindakan
     no_condition: Tidak ada kondisi
+    notification_baseline_timed_out: Aturan ini masih nonaktif. Memeriksa transaksi mana yang sudah cocok memakan waktu terlalu lama, dan tanpa pemeriksaan tersebut, email akan terkirim untuk semua transaksi. Sederhanakan kondisinya, lalu aktifkan kembali.
     category_rule_cta:
       close: Tutup
       create_rule: Buat aturan
       description: Anda bisa membuat aturan untuk mengategorikan transaksi seperti ini secara otomatis
-      dont_show_again: Jangan tampilkan lagi
-      hide_for_today: Sembunyikan untuk hari ini
-      hide_for_today_hint: Menyembunyikan untuk hari ini akan menjeda saran-saran ini selama 24 jam.
+      not_today: Tidak hari ini
+      turn_off_suggestions: Matikan saran aturan
       message: Diperbarui ke %{category_name}
+    classifier_rules:
+      category_classifier: Pengklasifikasi kategori
+      merchant_matcher: Pencocok merchant
+    filters:
+      search_label: Cari aturan
+      search_placeholder: Cari nama, kondisi, dan tindakan
+      reset: Atur ulang
+      button: Filter
+      done: Selesai
+      active_label: Filter aktif
+      remove: Hapus filter %{filter}
+      status:
+        label: Status
+        all: Semua status
+        active: Aktif
+        inactive: Nonaktif
+      action_type:
+        label: Tindakan
+        all: Semua tindakan
+      condition_type:
+        label: Kondisi
+        all: Semua kondisi
+      account:
+        label: Akun
+        all: Semua akun
+      group:
+        label: Grup
+        all: Semua grup
+        none: Tanpa grup
+    group:
+      rules_count:
+        one: 1 aturan
+        other: '%{count} aturan'
+      inactive_count:
+        one: 1 nonaktif
+        other: '%{count} nonaktif'
+      empty: Belum ada aturan di grup ini. Pilih grup pada formulir aturan.
+      activate_all: Aktifkan semua aturan
+      deactivate_all: Nonaktifkan semua aturan
+      rename: Ganti nama
+      delete: Hapus grup
+      delete_confirm_title: Hapus grup "%{name}"?
+      delete_confirm_body: Aturan tetap berada di tempatnya, tanpa grup. Tidak ada aturan yang dihapus.
     rule:
       edit: Edit
       re_apply_rule: Terapkan ulang aturan
@@ -38,20 +81,35 @@ id:
       then: THEN
       stop_processing_label: Berhenti memproses aturan berikutnya
       stop_processing_description: Aturan di bawahnya tidak mengubah transaksi yang cocok dengan aturan ini.
+      group_label: Grup (opsional)
+      group_select_label: Grup
+      no_group: Tanpa grup
+      new_group_label: Atau grup baru
+      new_group_placeholder: Nama grup baru
+      group_hint: Grup hanya mengatur daftar. Aturan dalam grup berjalan sesuai urutan grup dalam daftar.
     index:
       page_title: Aturan
       delete_all_rules: Hapus semua aturan
       new_rule: Aturan baru
       ai_cost_warning: Aksi aturan berbasis AI berbayar.  Pastikan filternya sesempit mungkin agar tidak ada biaya yang tidak perlu.
       rules_heading: Aturan
+      order_hint: Aturan dijalankan dari atas ke bawah. Setelah sebuah aturan menetapkan kolom pada transaksi, aturan di bawahnya tidak mengubah kolom tersebut. Tag ditambahkan oleh setiap aturan yang cocok. Seret aturan untuk mengubah urutannya.
+      new_group: Grup baru
+      reorder_group: Pindahkan grup %{name}. Tekan Enter atau Spasi untuk mengambilnya, lalu gunakan tombol panah untuk memindahkannya.
+      filters:
+        no_matches: Tidak ada aturan yang cocok dengan pencarian atau filter.
+        drag_disabled: Pengurutan dinonaktifkan saat pencarian atau filter aktif. Atur ulang untuk mengubah urutan.
+      fold_rule: Ciutkan atau rentangkan aturan %{name}
+      reorder_rule: Pindahkan aturan %{name}. Tekan Enter atau Spasi untuk mengambilnya, lalu gunakan tombol panah untuk memindahkannya.
       no_rules_title: Belum ada aturan
       no_rules_description: Siapkan aturan untuk menjalankan aksi ke transaksi dan data lain Anda di setiap sinkronisasi akun.
-      order_hint: Aturan dijalankan dari atas ke bawah. Setelah sebuah aturan menetapkan kolom pada transaksi, aturan di bawahnya tidak mengubah kolom tersebut. Tag ditambahkan oleh setiap aturan yang cocok. Seret aturan untuk mengubah urutannya.
-      reorder_rule: Pindahkan aturan %{name}. Tekan Enter atau Spasi untuk mengambilnya, lalu gunakan tombol panah untuk memindahkannya.
     confirm:
       title: Konfirmasi perubahan
       title_with_name: Konfirmasi perubahan pada "%{name}"
       apply_notice_html: Anda akan menerapkan aturan ini ke <span class="text-primary font-medium">%{count} %{resource}</span> yang memenuhi kriteria aturan yang ditentukan. Konfirmasi jika Anda ingin melanjutkan perubahan ini.
+      rules_above_notice:
+        one: Aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.
+        other: '%{count} aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.'
       ai_cost_title: Estimasi Biaya AI
       ai_cost_with_estimate_html: 'Ini akan menggunakan AI untuk mengkategorikan %{count} transaksi. Perkiraan biaya: <span class="font-semibold">~$%{cost}</span>'
       ai_cost_no_estimate_html: Ini akan menggunakan AI untuk mengkategorikan %{count} transaksi.
@@ -60,12 +118,25 @@ id:
       cost_warning: Anda mungkin dikenakan biaya, silakan cek ke penyedia model untuk harga terbaru.
       view_usage_history: Lihat histori pemakaian
       confirm_changes: Konfirmasi perubahan
-      rules_above_notice:
-        one: Aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.
-        other: '%{count} aturan aktif di atasnya dijalankan terlebih dahulu, jadi hasilnya sama seperti menjalankan semuanya.'
     actions:
       to_label: ke
       value_placeholder: Masukkan nilai
+      split:
+        type_fixed: Jumlah tetap
+        type_percentage: Persentase
+        type_label: Jenis pembagian
+        add_split: Tambah pembagian
+        name_placeholder: Nama pembagian
+        share_label: Jumlah atau persentase pembagian
+        category_label: Kategori pembagian
+        merchant_label: Merchant pembagian
+        tags_label: Tag pembagian
+        remove_split: Hapus pembagian
+        hint: Pembagian tetap dikurangkan terlebih dahulu, sebagai jumlah pasti. Pembagian persentase kemudian membagi sisa yang ada. Jika setiap pembagian di sini menggunakan jumlah tetap, tambahkan juga kondisi yang cocok dengan jumlah transaksi yang tepat (misalnya Jumlah = 42,00), karena setiap transaksi yang cocok membutuhkan nominal yang sama agar total pembagian tetap ini pas. Aturan pembagian tidak boleh memiliki tindakan lain.
+        fixed_summary_label: tetap
+        summary:
+          one: '%{count} pembagian'
+          other: '%{count} pembagian'
     update:
       success: Aturan diperbarui
     destroy:
@@ -121,6 +192,9 @@ id:
       operators:
         contains: Mengandung
         does_not_contain: Tidak mengandung
+        starts_with: Diawali dengan
+        ends_with: Diakhiri dengan
+        matches_regex: Cocok dengan regex
         equal_to: Sama dengan
         is_equal_to: Sama dengan
         not_equal_to: Tidak sama dengan

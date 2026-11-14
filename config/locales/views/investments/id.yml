@@ -116,6 +116,9 @@ id:
       life_insurance:
         short: Asuransi Jiwa
         long: Asuransi Jiwa
+      epf:
+        short: EPF
+        long: Employees' Provident Fund (EPF)
       ppf:
         short: PPF
         long: Dana Provident Publik
@@ -188,5 +191,7 @@ id:
     value_tooltip:
       cash: Tunai
       holdings: Kepemilikan
+      projected: Saldo proyeksi
+      scheduled: Terjadwal
       total: Saldo portofolio
       total_value_tooltip: Total saldo portofolio adalah jumlah dari kas broker (tersedia untuk trading) dan nilai pasar saat ini dari kepemilikan Anda.
