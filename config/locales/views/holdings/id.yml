@@ -29,7 +29,7 @@ id:
     cost_basis_cell:
       unknown: --
       set: Atur
-      set_cost_basis_header: Tetapkan harga perolehan untuk %{ticker} (%{qty} lembar)
+      set_cost_basis_header: Atur dasar biaya untuk %{ticker}
       total_cost_basis_label: Total basis biaya
       per_share_label: Per lembar
       cancel: Batal
