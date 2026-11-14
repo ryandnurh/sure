@@ -11,6 +11,8 @@ id:
       mileage_unit: Unit
       model: Model
       model_placeholder: Camry
+      purchase_date: Tanggal pembelian
+      purchase_price: Harga pembelian
       year: Tahun
       year_placeholder: '2023'
       mileage_unit_kilometers: Kilometer

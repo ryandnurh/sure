@@ -7,6 +7,11 @@ id:
       interest_rate: Suku bunga
       interest_rate_placeholder: '5.25'
       initial_balance: Saldo pinjaman awal
+      day_count_convention: Basis perhitungan bunga
+      day_count_convention_actual_365: Aktual/365
+      day_count_convention_actual_actual: Aktual/aktual
+      day_count_convention_hint: Cara pemberi pinjaman mengukur setiap periode terhadap satu tahun. Aktual/365 mengenakan bunga berdasarkan jumlah hari dalam sebulan dan merupakan standar hipotek di Inggris Raya dan Australia. 30/360 mengenakan bunga satu per dua belas tetap, basis yang selalu digunakan Sure.
+      day_count_convention_thirty_360: 30/360 (satu per dua belas tetap)
       rate_type: Jenis suku bunga
       term_months: Tenor (bulan)
       term_months_placeholder: '360'
@@ -32,6 +37,8 @@ id:
       insurance_rate_type: Jenis asuransi
       insurance_rate_type_decreasing_life: Menurun
       insurance_rate_type_level_term: Suku tingkat
+      principal_only_transfers: Transfer terkait hanya pokok
+      principal_only_transfers_hint: Aktifkan ini jika transfer hanya mencakup pokok dan bunga dicatat secara terpisah. Biarkan nonaktif jika transfer terkait adalah pembayaran penuh.
     new:
       title: Masukkan detail pinjaman
     overview:
@@ -45,6 +52,35 @@ id:
       type: Jenis
       unknown: Tidak diketahui
     tabs:
+      extra_repayments:
+        amount_label: Pembayaran ekstra
+        amount_placeholder: '0.00'
+        apply: Terapkan
+        baseline_not_cleared: Dengan cicilan saat ini, pinjaman ini tidak akan lunas pada jatuh tempo awal, dan %{balloon} masih akan terutang, sehingga tidak ada tanggal lebih cepat atau penghematan bunga untuk dibandingkan. Dengan pembayaran ekstra ini, pinjaman akan lunas pada tanggal di atas.
+        clear: Bersihkan
+        comparison_basis: Dibandingkan dengan membayar cicilan saat ini tanpa tambahan ekstra, dari saldo hari ini.
+        dated_note: Pembayaran ekstra mingguan dan dua mingguan diperhitungkan pada cicilan berikutnya setelah dibayarkan, sehingga penghematan bunga yang ditampilkan mungkin lebih rendah dari sebenarnya.
+        extra_not_cleared: Bahkan dengan pembayaran ekstra ini, pinjaman tidak akan lunas pada jatuh tempo awal. Coba jumlah yang lebih besar.
+        frequencies:
+          fortnightly: Dua mingguan
+          monthly: Bulanan
+          weekly: Mingguan
+        frequency_label: Seberapa sering
+        interest_saved: Bunga yang dihemat
+        intro: Lihat seberapa lebih cepat pinjaman lunas, dan berapa banyak bunga yang Anda hemat, jika Anda membayar jumlah ekstra setiap minggu, dua minggu, atau bulan di atas cicilan rutin Anda.
+        invalid_amount: Masukkan jumlah nol atau lebih, dalam angka.
+        invalid_frequency: Pilih mingguan, dua mingguan, atau bulanan.
+        months_sooner:
+          zero: Lunas pada bulan yang sama
+          one: '%{count} bulan lebih cepat'
+          other: '%{count} bulan lebih cepat'
+        no_scheduled_repayments: Tidak ada jadwal cicilan tersisa untuk pinjaman ini, tetapi masih ada sisa saldo, sehingga tidak ada cicilan untuk ditambahkan pembayaran ekstra.
+        not_applicable: Tidak ada lagi yang harus dilunasi pada pinjaman ini, sehingga tidak ada simulasi pembayaran ekstra.
+        payoff_with_extra: Pelunasan dengan ekstra
+        total_cost: Total biaya mulai hari ini
+        total_cost_not_cleared: Tidak lunas pada jatuh tempo awal
+        total_cost_saved: '%{amount} lebih hemat daripada tanpa ekstra'
+        variable_rate_notice: Suku bunga pinjaman ini berubah seiring waktu. Angka-angka ini menerapkan perubahan suku bunga yang telah dicatat; perubahan yang belum dicatat akan memengaruhi angka-angka ini.
       repayment_progress:
         instalment: Pembayaran %{number} · %{date}
         insurance: Asuransi

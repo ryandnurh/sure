@@ -8,6 +8,7 @@ id:
     api_keys:
       create:
         success: API key Anda telah berhasil dibuat
+        creation_failed: Tidak dapat membuat kunci API Anda. Silakan coba lagi.
       destroy:
         revoked_successfully: Kunci API berhasil dicabut
         revoke_failed: Gagal mencabut API key

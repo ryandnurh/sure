@@ -5,13 +5,13 @@ id:
       arbitrum: Arbitrum
       base: Dasar
       bitcoin: Bitcoin
+      cosmos: Cosmos Hub
       ethereum: Ethereum
       gnosis: Gnosis
       optimism: Optimism
+      polkadot: Polkadot
       polygon: Polygon
       solana: Solana
-      cosmos: Cosmos Hub
-      polkadot: Polkadot
     institution_name: Wallet self-custody
   onchain_wallet_item:
     movement:
